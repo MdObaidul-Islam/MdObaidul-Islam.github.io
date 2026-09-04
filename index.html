@@ -8,69 +8,70 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
         html { scroll-behavior: smooth; }
-        body { background-color: #f4f9f9; color: #1e293b; line-height: 1.5; }
+        body { background-color: #fffafb; color: #1e293b; line-height: 1.6; }
         
         /* Navigation */
-        header { background: #ffffff; position: sticky; top: 0; border-bottom: 1px solid #e2e8f0; padding: 0.8rem 8%; display: flex; justify-content: space-between; align-items: center; z-index: 100; }
-        .logo { font-size: 1.1rem; font-weight: 700; color: #0f172a; }
-        nav a { margin-left: 18px; text-decoration: none; color: #475569; font-weight: 500; font-size: 0.88rem; transition: 0.2s; }
-        nav a:hover { color: #0d9488; }
+        header { background: #ffffff; position: sticky; top: 0; border-bottom: 1px solid #ffe4e6; padding: 1rem 8%; display: flex; justify-content: space-between; align-items: center; z-index: 100; box-shadow: 0 2px 10px rgba(225, 29, 72, 0.03); }
+        .logo { font-size: 1.15rem; font-weight: 700; color: #0f172a; }
+        nav a { margin-left: 20px; text-decoration: none; color: #475569; font-weight: 500; font-size: 0.9rem; transition: 0.2s; }
+        nav a:hover { color: #e11d48; }
 
         /* Hero / About Section */
-        .hero { display: flex; align-items: center; justify-content: space-between; padding: 2.2rem 8%; gap: 2.5rem; background: linear-gradient(180deg, #e6f4f1 0%, #f4f9f9 100%); border-bottom: 1px solid #e2e8f0; }
+        .hero { display: flex; align-items: center; justify-content: space-between; padding: 3rem 8%; gap: 2.5rem; background: linear-gradient(135deg, #fff1f2 0%, #fffafb 100%); border-bottom: 1px solid #ffe4e6; }
         .hero-text { flex: 1.2; }
-        .hero-text h1 { font-size: 2rem; color: #0f172a; margin-bottom: 0.3rem; font-weight: 700; letter-spacing: -0.02em; }
-        .hero-text h3 { font-size: 1rem; color: #0d9488; margin-bottom: 0.8rem; font-weight: 600; }
-        .hero-text p { font-size: 0.9rem; color: #334155; margin-bottom: 1.2rem; max-width: 650px; text-align: justify; }
+        .hero-text h1 { font-size: 2.2rem; color: #0f172a; margin-bottom: 0.3rem; font-weight: 700; letter-spacing: -0.02em; }
+        .hero-text h3 { font-size: 1.05rem; color: #e11d48; margin-bottom: 0.9rem; font-weight: 600; }
+        .hero-text p { font-size: 0.92rem; color: #334155; margin-bottom: 1.4rem; max-width: 650px; text-align: justify; }
         
         /* Hero Buttons */
         .hero-btns { display: flex; gap: 0.8rem; flex-wrap: wrap; }
-        .btn-primary { background: #0d9488; color: #ffffff; padding: 8px 18px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: 0.2s; display: inline-flex; align-items: center; gap: 6px; border: none; cursor: pointer; }
-        .btn-primary:hover { background: #0f766e; }
-        .btn-secondary { background: #ffffff; color: #0f766e; border: 1px solid #ccfbf1; padding: 8px 18px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: 0.2s; display: inline-flex; align-items: center; gap: 6px; }
-        .btn-secondary:hover { background: #f0fdfa; border-color: #99f6e4; }
+        .btn-primary { background: #e11d48; color: #ffffff; padding: 9px 20px; border-radius: 8px; text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: 0.25s; display: inline-flex; align-items: center; gap: 6px; border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(225, 29, 72, 0.2); }
+        .btn-primary:hover { background: #be123c; transform: translateY(-1px); }
+        .btn-secondary { background: #ffffff; color: #e11d48; border: 1px solid #fecdd3; padding: 9px 20px; border-radius: 8px; text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: 0.25s; display: inline-flex; align-items: center; gap: 6px; }
+        .btn-secondary:hover { background: #fff1f2; border-color: #fda4af; }
 
         .hero-img { flex: 0.8; display: flex; justify-content: center; }
-        .hero-img img { width: 210px; height: 230px; border-radius: 10px; object-fit: cover; border: 2px solid #ccfbf1; box-shadow: 0 8px 20px rgba(13, 148, 136, 0.08); }
+        .hero-img img { width: 210px; height: 230px; border-radius: 14px; object-fit: cover; border: 3px solid #ffe4e6; box-shadow: 0 10px 25px rgba(225, 29, 72, 0.12); }
 
         /* Compact Sections */
-        .section { padding: 2rem 8%; border-bottom: 1px solid #e2e8f0; }
-        .section-title { font-size: 1.25rem; color: #0f172a; margin-bottom: 1.2rem; font-weight: 700; position: relative; }
-        .section-title::after { content: ''; display: block; width: 30px; height: 3px; background: #0d9488; margin-top: 4px; border-radius: 2px; }
+        .section { padding: 2.5rem 8%; border-bottom: 1px solid #ffe4e6; }
+        .section-title { font-size: 1.35rem; color: #0f172a; margin-bottom: 1.4rem; font-weight: 700; position: relative; }
+        .section-title::after { content: ''; display: block; width: 35px; height: 3.5px; background: #e11d48; margin-top: 5px; border-radius: 2px; }
 
         /* Sub-sections inside Research & Expertise */
-        .sub-title { font-size: 1.05rem; color: #0f766e; font-weight: 600; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.4rem; }
-        .sub-title svg { width: 18px; height: 18px; fill: #0d9488; }
-        .expertise-block { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.2rem; margin-bottom: 1rem; }
+        .sub-title { font-size: 1.05rem; color: #be123c; font-weight: 600; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.4rem; }
+        .sub-title svg { width: 18px; height: 18px; fill: #e11d48; }
+        .expertise-block { background: #ffffff; border: 1px solid #ffe4e6; border-radius: 10px; padding: 1.4rem; margin-bottom: 1.2rem; box-shadow: 0 2px 8px rgba(225, 29, 72, 0.02); }
 
         /* Cards Layout */
-        .card { background: #ffffff; border: 1px solid #e2e8f0; padding: 1.2rem; border-radius: 8px; margin-bottom: 1rem; box-shadow: 0 1px 4px rgba(0,0,0,0.02); }
-        .card h3 { color: #0f172a; margin-bottom: 0.2rem; font-size: 1rem; }
-        .card-sub { color: #0d9488; font-weight: 600; font-size: 0.85rem; margin-bottom: 0.4rem; }
-        .card-tag { display: inline-block; background: #ccfbf1; color: #0f766e; border: 1px solid #99f6e4; font-size: 0.72rem; font-weight: 600; padding: 2px 8px; border-radius: 4px; margin-bottom: 0.5rem; }
+        .card { background: #ffffff; border: 1px solid #ffe4e6; padding: 1.3rem; border-radius: 10px; margin-bottom: 1.2rem; box-shadow: 0 2px 10px rgba(225, 29, 72, 0.03); transition: 0.25s ease; }
+        .card:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(225, 29, 72, 0.08); border-color: #fda4af; }
+        .card h3 { color: #0f172a; margin-bottom: 0.2rem; font-size: 1.02rem; font-weight: 600; }
+        .card-sub { color: #e11d48; font-weight: 600; font-size: 0.85rem; margin-bottom: 0.4rem; }
+        .card-tag { display: inline-block; background: #fff1f2; color: #be123c; border: 1px solid #fecdd3; font-size: 0.73rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; margin-bottom: 0.6rem; }
         .card p, .card li { color: #334155; font-size: 0.88rem; }
         .card ul { margin-left: 1.1rem; margin-top: 0.4rem; }
 
         /* Links inside Cards */
-        .card-links { margin-top: 0.8rem; display: flex; gap: 0.8rem; flex-wrap: wrap; }
-        .link-btn { font-size: 0.78rem; font-weight: 600; color: #0d9488; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; border: 1px solid #ccfbf1; background: #f0fdfa; padding: 3px 10px; border-radius: 4px; transition: 0.2s; }
-        .link-btn:hover { background: #ccfbf1; color: #0f766e; }
+        .card-links { margin-top: 0.9rem; display: flex; gap: 0.8rem; flex-wrap: wrap; }
+        .link-btn { font-size: 0.8rem; font-weight: 600; color: #e11d48; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; border: 1px solid #fecdd3; background: #fff1f2; padding: 4px 12px; border-radius: 6px; transition: 0.2s; }
+        .link-btn:hover { background: #ffe4e6; color: #9f1239; border-color: #fda4af; }
 
         /* Grouped Grids for Interests & Skills */
-        .grouped-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.8rem; margin-top: 0.6rem; }
-        .group-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1rem; }
-        .group-card h4 { font-size: 0.88rem; color: #0f172a; margin-bottom: 0.6rem; font-weight: 600; display: flex; align-items: center; gap: 0.4rem; }
+        .grouped-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 0.6rem; }
+        .group-card { background: #fffafb; border: 1px solid #ffe4e6; border-radius: 8px; padding: 1.1rem; }
+        .group-card h4 { font-size: 0.88rem; color: #0f172a; margin-bottom: 0.7rem; font-weight: 600; display: flex; align-items: center; gap: 0.4rem; }
 
-        .pills-container { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-        .pill { background: #f0fdfa; border: 1px solid #ccfbf1; color: #0f766e; padding: 4px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 500; }
+        .pills-container { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+        .pill { background: #fff1f2; border: 1px solid #fecdd3; color: #be123c; padding: 4px 11px; border-radius: 14px; font-size: 0.78rem; font-weight: 500; }
 
         /* Contact Details */
-        .contact-list { list-style: none; font-size: 0.88rem; color: #334155; }
-        .contact-list li { margin-bottom: 0.4rem; }
-        .contact-list a { color: #0d9488; text-decoration: none; font-weight: 500; }
+        .contact-list { list-style: none; font-size: 0.9rem; color: #334155; }
+        .contact-list li { margin-bottom: 0.5rem; }
+        .contact-list a { color: #e11d48; text-decoration: none; font-weight: 500; }
         .contact-list a:hover { text-decoration: underline; }
 
-        footer { text-align: center; padding: 1.2rem; background: #ffffff; border-top: 1px solid #e2e8f0; color: #64748b; font-size: 0.78rem; }
+        footer { text-align: center; padding: 1.4rem; background: #ffffff; border-top: 1px solid #ffe4e6; color: #64748b; font-size: 0.8rem; }
 
         @media (max-width: 768px) {
             .hero { flex-direction: column-reverse; text-align: left; padding: 2rem 5%; }
@@ -122,7 +123,7 @@
             
             <div class="grouped-grid">
                 <div class="group-card">
-                    <h4><span style="color: #0d9488;">📊</span> Statistical Modeling & Methods</h4>
+                    <h4><span style="color: #e11d48;">📊</span> Statistical Modeling & Methods</h4>
                     <div class="pills-container">
                         <span class="pill">Applied Statistics</span>
                         <span class="pill">Statistical Modeling</span>
@@ -132,7 +133,7 @@
                 </div>
 
                 <div class="group-card">
-                    <h4><span style="color: #0d9488;">🤖</span> Data Science & Analytics</h4>
+                    <h4><span style="color: #e11d48;">🤖</span> Data Science & Analytics</h4>
                     <div class="pills-container">
                         <span class="pill">Data Science & Machine Learning</span>
                         <span class="pill">Predictive Modeling</span>
@@ -140,7 +141,7 @@
                 </div>
 
                 <div class="group-card">
-                    <h4><span style="color: #0d9488;">🩺</span> Health Data & Population</h4>
+                    <h4><span style="color: #e11d48;">🩺</span> Health Data & Population</h4>
                     <div class="pills-container">
                         <span class="pill">Health Data Science</span>
                         <span class="pill">Biostatistics & Epidemiology</span>
@@ -217,8 +218,7 @@
             <div class="card-sub">Survey-Weighted Analysis & Explainable AI</div>
             <p>Analyzed BDHS 2022 survey data using survey-weighted statistical modeling and ML classification algorithms (SVM, XGBoost, Random Forest) with SHAP interpretation.</p>
             <div class="card-links">
-                <a href="https://github.com/MdObaidul-Islam" target="_blank" class="link-btn">🔗 GitHub Repo</a>
-                <a href="#" class="link-btn">📌 View Details</a>
+                <a href="https://github.com/MdObaidul-Islam/cesarean-delivery-healthcare-bd" target="_blank" class="link-btn">🔗 GitHub Repo</a>
             </div>
         </div>
 
@@ -233,33 +233,33 @@
 
     </section>
 
-<!-- Publications Section -->
-<section class="section" id="publications">
-    <h2 class="section-title">Publications</h2>
-    
-    <!-- ১. জার্নাল ম্যানুস্ক্রিপ্ট -->
-    <div class="card">
-        <span class="card-tag">Submitted Manuscript</span>
-        <h3>Journal Manuscript</h3>
-        <p><strong>Title:</strong> Socioeconomic and Health-System Correlates of Cesarean Delivery in Bangladesh: Survey-Weighted Statistical Analysis and Explainable Machine Learning Using BDHS 2022.</p>
-        <p><strong>Journal:</strong> <em>Scientific Reports</em> (Springer Nature).</p>
-        <div class="card-links">
-            <a href="Research Summary.pdf" target="_blank" class="link-btn">📄 View Research Summary</a>
+    <!-- Publications Section -->
+    <section class="section" id="publications">
+        <h2 class="section-title">Publications</h2>
+        
+        <!-- ১. জার্নাল ম্যানুস্ক্রিপ্ট -->
+        <div class="card">
+            <span class="card-tag">Submitted Manuscript</span>
+            <h3>Journal Manuscript</h3>
+            <p><strong>Title:</strong> Socioeconomic and Health-System Correlates of Cesarean Delivery in Bangladesh: Survey-Weighted Statistical Analysis and Explainable Machine Learning Using BDHS 2022.</p>
+            <p><strong>Journal:</strong> <em>Scientific Reports</em> (Springer Nature).</p>
+            <div class="card-links">
+                <a href="Research Summary.pdf" target="_blank" class="link-btn">📄 View Research Summary</a>
+            </div>
         </div>
-    </div>
 
-    <!-- ২. কনফারেন্স প্রেজেন্টেশন -->
-    <div class="card">
-        <span class="card-tag">Conference Presentation</span>
-        <h3>EFAST 2026 Conference</h3>
-        <p><strong>Title:</strong> Socioeconomic Determinants of Cesarean Section Delivery in Bangladesh: A Survey-Weighted Statistical and Explainable Machine Learning Analysis.</p>
-        <p><strong>Role:</strong> First Author & Oral Presenter. Abstract published in the official booklet.</p>
-        <div class="card-links">
-            <a href="https://github.com/MdObaidul-Islam/cesarean-delivery-healthcare-bd/blob/main/paper/Conference_Abstruct.pdf" target="_blank" class="link-btn">📄 View Abstract</a>
+        <!-- ২. কনফারেন্স প্রেজেন্টেশন -->
+        <div class="card">
+            <span class="card-tag">Conference Presentation</span>
+            <h3>EFAST 2026 Conference</h3>
+            <p><strong>Title:</strong> Socioeconomic Determinants of Cesarean Section Delivery in Bangladesh: A Survey-Weighted Statistical and Explainable Machine Learning Analysis.</p>
+            <p><strong>Role:</strong> First Author & Oral Presenter. Abstract published in the official booklet.</p>
+            <div class="card-links">
+                <a href="https://github.com/MdObaidul-Islam/cesarean-delivery-healthcare-bd/blob/main/paper/Conference_Abstruct.pdf" target="_blank" class="link-btn">📄 View Abstract</a>
+            </div>
         </div>
-    </div>
-</section>
-    
+    </section>
+        
     <!-- Education Section -->
     <section class="section" id="education">
         <h2 class="section-title">Education</h2>
