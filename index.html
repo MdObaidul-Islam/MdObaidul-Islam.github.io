@@ -53,16 +53,15 @@
         .group-card:hover { transform: translateY(-4px); background: #ffffff; border-color: #be123c; box-shadow: 0 8px 20px rgba(13, 148, 136, 0.12); }
         .group-card h4 { font-size: 1rem; color: #000000; margin-bottom: 1rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; }
 
-        /* 2-Column Grid for Pills (পাশাপাশি ২টি করে দেখাবে) */
+        /* 2-Column Grid for Pills (Fix: Text wrapping issue resolved) */
         .pills-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
-        .pill { background: #ffffff; border: 1.5px solid #5eead4; color: #0f766e; padding: 8px 10px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.03); transition: 0.2s ease; display: flex; align-items: center; justify-content: center; }
+        .pill { background: #ffffff; border: 1.5px solid #5eead4; color: #0f766e; padding: 8px 6px; border-radius: 16px; font-size: 0.78rem; font-weight: 700; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.03); transition: 0.2s ease; display: flex; align-items: center; justify-content: center; line-height: 1.2; }
         .pill:hover { background: #be123c; color: #ffffff; border-color: #be123c; }
 
-        /* Highlight Label for Research Experience (With Blue Shadow) */
+        /* Highlight Label for Research Experience (Blue Text) */
         .highlight-label { 
-            color: #be123c; 
+            color: #0f172a; 
             font-weight: 800; 
-            text-shadow: 0px 1px 3px rgba(15, 23, 42, 0.35); 
         }
 
         /* Standard Cards & Hover Effect */
@@ -171,7 +170,7 @@
             </div>
         </div>
 
-        <!-- 2. Research Experience (Updated with Blue Text Shadow) -->
+        <!-- 2. Research Experience (Clean Blue Text, No Shadow) -->
         <div class="expertise-block">
             <h3 class="sub-title">
                 <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
