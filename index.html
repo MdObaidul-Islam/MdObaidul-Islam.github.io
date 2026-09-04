@@ -25,9 +25,9 @@
         
         /* Hero Buttons */
         .hero-btns { display: flex; gap: 0.8rem; flex-wrap: wrap; }
-        .btn-primary { background: #0d9488; color: #ffffff; padding: 7px 16px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: 0.2s; display: inline-flex; align-items: center; gap: 6px; }
+        .btn-primary { background: #0d9488; color: #ffffff; padding: 8px 18px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: 0.2s; display: inline-flex; align-items: center; gap: 6px; border: none; cursor: pointer; }
         .btn-primary:hover { background: #0f766e; }
-        .btn-secondary { background: #ffffff; color: #0f766e; border: 1px solid #ccfbf1; padding: 7px 16px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: 0.2s; }
+        .btn-secondary { background: #ffffff; color: #0f766e; border: 1px solid #ccfbf1; padding: 8px 18px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: 0.2s; display: inline-flex; align-items: center; gap: 6px; }
         .btn-secondary:hover { background: #f0fdfa; border-color: #99f6e4; }
 
         .hero-img { flex: 0.8; display: flex; justify-content: center; }
@@ -60,7 +60,6 @@
         .grouped-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.8rem; margin-top: 0.6rem; }
         .group-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1rem; }
         .group-card h4 { font-size: 0.88rem; color: #0f172a; margin-bottom: 0.6rem; font-weight: 600; display: flex; align-items: center; gap: 0.4rem; }
-        .group-card p { font-size: 0.85rem; color: #475569; line-height: 1.4; }
 
         .pills-container { display: flex; flex-wrap: wrap; gap: 0.4rem; }
         .pill { background: #f0fdfa; border: 1px solid #ccfbf1; color: #0f766e; padding: 4px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 500; }
@@ -101,7 +100,7 @@
             <h3>Statistical Modeling | Data Science | Health Data Research</h3>
             <p>I am a Statistics graduate interested in statistical modeling, data science, machine learning, and health data research. My research experience involves analyzing real-world survey data and applying statistical and machine learning methods to better understand complex problems in population health.</p>
             <div class="hero-btns">
-                <a href="#" class="btn-primary">📄 Download CV</a>
+                <a href="CV.pdf" download="Md_Obaidul_Islam_CV.pdf" class="btn-primary">📄 Download CV</a>
                 <a href="#contact" class="btn-secondary">✉️ Get In Touch</a>
             </div>
         </div>
@@ -186,12 +185,23 @@
 
                 <div class="group-card">
                     <h4>Data Management</h4>
-                    <p>Data cleaning, preprocessing, validation, and large-scale dataset handling</p>
+                    <div class="pills-container">
+                        <span class="pill">Data Cleaning</span>
+                        <span class="pill">Preprocessing</span>
+                        <span class="pill">Data Validation</span>
+                        <span class="pill">Large-Scale Dataset Handling</span>
+                    </div>
                 </div>
 
                 <div class="group-card">
                     <h4>Visualization & Reporting</h4>
-                    <p>Power BI, Excel dashboards, data visualization, technical reporting, and documentation</p>
+                    <div class="pills-container">
+                        <span class="pill">Power BI</span>
+                        <span class="pill">Excel Dashboards</span>
+                        <span class="pill">Data Visualization</span>
+                        <span class="pill">Technical Reporting</span>
+                        <span class="pill">Documentation</span>
+                    </div>
                 </div>
             </div>
         </div>
