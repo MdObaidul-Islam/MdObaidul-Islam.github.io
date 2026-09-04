@@ -8,16 +8,16 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
         html { scroll-behavior: smooth; }
-        body { background-color: #fff0f3; color: #000000; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        body { background-color: #f0fdfa; color: #000000; line-height: 1.6; -webkit-font-smoothing: antialiased; }
         
         /* Navigation Bar */
         header { background: #0f172a; position: sticky; top: 0; padding: 1rem 8%; display: flex; justify-content: space-between; align-items: center; z-index: 100; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.15); border-bottom: 3px solid #be123c; }
         .logo { font-size: 1.25rem; font-weight: 800; color: #ffffff; letter-spacing: 0.5px; }
         nav a { margin-left: 20px; text-decoration: none; color: #f1f5f9; font-weight: 700; font-size: 0.92rem; transition: 0.25s ease; }
-        nav a:hover { color: #f43f5e; }
+        nav a:hover { color: #2dd4bf; }
 
         /* Hero / About Section */
-        .hero { display: flex; align-items: center; justify-content: space-between; padding: 3.5rem 8%; gap: 2.5rem; background: #ffe5ec; border-bottom: 2px solid #fecdd3; }
+        .hero { display: flex; align-items: center; justify-content: space-between; padding: 3.5rem 8%; gap: 2.5rem; background: #ccfbf1; border-bottom: 2px solid #99f6e4; }
         .hero-text { flex: 1.2; }
         .hero-text h1 { font-size: 2.4rem; color: #000000; margin-bottom: 0.4rem; font-weight: 800; letter-spacing: -0.02em; }
         .hero-text h3 { font-size: 1.15rem; color: #be123c; margin-bottom: 1rem; font-weight: 800; }
@@ -25,46 +25,46 @@
         
         /* Buttons */
         .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-        .btn-primary { background: #be123c; color: #ffffff; padding: 10px 22px; border-radius: 8px; text-decoration: none; font-size: 0.92rem; font-weight: 700; transition: 0.3s ease; display: inline-flex; align-items: center; gap: 6px; border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(190, 18, 60, 0.3); }
-        .btn-primary:hover { background: #9f1239; transform: translateY(-2px); }
-        .btn-secondary { background: #ffffff; color: #0d9488; border: 2px solid #0d9488; padding: 10px 22px; border-radius: 8px; text-decoration: none; font-size: 0.92rem; font-weight: 700; transition: 0.3s ease; display: inline-flex; align-items: center; gap: 6px; }
-        .btn-secondary:hover { background: #ccfbf1; color: #0f766e; transform: translateY(-2px); }
+        .btn-primary { background: #0d9488; color: #ffffff; padding: 10px 22px; border-radius: 8px; text-decoration: none; font-size: 0.92rem; font-weight: 700; transition: 0.3s ease; display: inline-flex; align-items: center; gap: 6px; border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3); }
+        .btn-primary:hover { background: #0f766e; transform: translateY(-2px); }
+        .btn-secondary { background: #ffffff; color: #be123c; border: 2px solid #be123c; padding: 10px 22px; border-radius: 8px; text-decoration: none; font-size: 0.92rem; font-weight: 700; transition: 0.3s ease; display: inline-flex; align-items: center; gap: 6px; }
+        .btn-secondary:hover { background: #fff0f3; color: #9f1239; transform: translateY(-2px); }
 
         .hero-img { flex: 0.8; display: flex; justify-content: center; }
-        .hero-img img { width: 220px; height: 240px; border-radius: 14px; object-fit: cover; border: 3px solid #be123c; box-shadow: 0 12px 28px rgba(190, 18, 60, 0.2); transition: 0.3s ease; }
+        .hero-img img { width: 220px; height: 240px; border-radius: 14px; object-fit: cover; border: 3px solid #be123c; box-shadow: 0 12px 28px rgba(13, 148, 136, 0.2); transition: 0.3s ease; }
         .hero-img img:hover { transform: scale(1.02); border-color: #0d9488; }
 
         /* Sections */
-        .section { padding: 3rem 8%; border-bottom: 1px solid #fecdd3; }
-        .section-alt { background: #fff0f3; }
+        .section { padding: 3rem 8%; border-bottom: 1px solid #99f6e4; }
+        .section-alt { background: #f0fdfa; }
         
-        .section-title { font-size: 1.5rem; color: #000000; margin-bottom: 1.5rem; font-weight: 800; position: relative; }
+        .section-title { font-size: 1.5rem; color: #be123c; margin-bottom: 1.5rem; font-weight: 800; position: relative; }
         .section-title::after { content: ''; display: block; width: 45px; height: 4px; background: linear-gradient(90deg, #be123c, #0d9488); margin-top: 6px; border-radius: 2px; }
 
         /* Expertise Main Card Frame */
-        .expertise-block { background: #ffffff; border: 1.5px solid #fecdd3; border-radius: 12px; padding: 1.8rem; margin-bottom: 1.5rem; box-shadow: 0 4px 16px rgba(190, 18, 60, 0.06); }
+        .expertise-block { background: #ffffff; border: 1.5px solid #99f6e4; border-radius: 12px; padding: 1.8rem; margin-bottom: 1.5rem; box-shadow: 0 4px 16px rgba(13, 148, 136, 0.06); }
 
-        .sub-title { font-size: 1.2rem; color: #0f766e; font-weight: 800; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.5rem; }
-        .sub-title svg { width: 22px; height: 22px; fill: #0f766e; }
+        .sub-title { font-size: 1.2rem; color: #be123c; font-weight: 800; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.5rem; }
+        .sub-title svg { width: 22px; height: 22px; fill: #be123c; }
 
-        /* 3-Column Grouped Grid Layout matching image */
+        /* 3-Column Grouped Grid Layout */
         .grouped-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
-        .group-card { background: #fff5f7; border: 1.5px solid #fbcfe8; border-radius: 10px; padding: 1.4rem; transition: 0.3s ease; }
-        .group-card:hover { transform: translateY(-4px); background: #ffffff; border-color: #f43f5e; box-shadow: 0 8px 20px rgba(190, 18, 60, 0.12); }
+        .group-card { background: #e6fffa; border: 1.5px solid #99f6e4; border-radius: 10px; padding: 1.4rem; transition: 0.3s ease; }
+        .group-card:hover { transform: translateY(-4px); background: #ffffff; border-color: #be123c; box-shadow: 0 8px 20px rgba(13, 148, 136, 0.12); }
         .group-card h4 { font-size: 1rem; color: #000000; margin-bottom: 1rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; }
 
-        /* Highlighted Pills Styles matching image */
-        .pills-container { display: flex; flex-wrap: wrap; gap: 0.6rem; }
-        .pill { background: #e6fffa; border: 1.5px solid #99f6e4; color: #0f766e; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; box-shadow: 0 1px 3px rgba(0,0,0,0.03); transition: 0.2s ease; }
-        .pill:hover { background: #0d9488; color: #ffffff; border-color: #0d9488; }
+        /* 2-Column Grid for Pills (পাশাপাশি দুটি করে দেখাবে) */
+        .pills-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
+        .pill { background: #ffffff; border: 1.5px solid #5eead4; color: #0f766e; padding: 8px 10px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.03); transition: 0.2s ease; display: flex; align-items: center; justify-content: center; }
+        .pill:hover { background: #be123c; color: #ffffff; border-color: #be123c; }
 
         /* Standard Cards & Hover Effect */
-        .card { background: #ffffff; border: 1.5px solid #fecdd3; padding: 1.5rem; border-radius: 12px; margin-bottom: 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.03); transition: all 0.3s ease; }
-        .card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(190, 18, 60, 0.12); border-color: #be123c; }
+        .card { background: #ffffff; border: 1.5px solid #99f6e4; padding: 1.5rem; border-radius: 12px; margin-bottom: 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.03); transition: all 0.3s ease; }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(13, 148, 136, 0.12); border-color: #be123c; }
         .card h3 { color: #000000; margin-bottom: 0.3rem; font-size: 1.15rem; font-weight: 800; }
         .card-sub { color: #be123c; font-weight: 700; font-size: 0.9rem; margin-bottom: 0.5rem; }
         
-        .card-tag { display: inline-block; background: #ffe5ec; color: #be123c; border: 1px solid #fecdd3; font-size: 0.78rem; font-weight: 800; padding: 3px 12px; border-radius: 20px; margin-bottom: 0.6rem; }
+        .card-tag { display: inline-block; background: #fff0f3; color: #be123c; border: 1px solid #fecdd3; font-size: 0.78rem; font-weight: 800; padding: 3px 12px; border-radius: 20px; margin-bottom: 0.6rem; }
         .card p, .card li { color: #0f172a; font-size: 0.95rem; font-weight: 500; }
         .card ul { margin-left: 1.2rem; margin-top: 0.5rem; }
 
@@ -85,6 +85,7 @@
             .hero { flex-direction: column-reverse; text-align: left; padding: 2rem 5%; }
             .hero-img img { width: 190px; height: 210px; }
             .section { padding: 2rem 5%; }
+            .pills-container { grid-template-columns: 1fr; } /* Mobile View Alignment */
         }
     </style>
 </head>
@@ -122,7 +123,7 @@
     <section class="section section-alt" id="expertise">
         <h2 class="section-title">Research & Expertise</h2>
         
-        <!-- 1. Research Interests (Matches provided image layout) -->
+        <!-- 1. Research Interests -->
         <div class="expertise-block">
             <h3 class="sub-title">
                 <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
@@ -165,7 +166,7 @@
                 <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
                 2. Research Experience
             </h3>
-            <p style="font-weight: 800; color: #000000; font-size: 1rem;">Undergraduate Researcher</p>
+            <p style="font-weight: 800; color: #be123c; font-size: 1rem;">Undergraduate Researcher</p>
             <ul style="margin-left: 1.2rem; margin-top: 0.5rem; line-height: 1.6;">
                 <li><strong>Statistical Modeling & Research Design:</strong> Applied statistical modeling and quantitative research methods to investigate real-world socioeconomic and population health problems using complex survey data.</li>
                 <li><strong>Data Management & Statistical Analysis:</strong> Conducted data preprocessing, quality assessment, exploratory data analysis, feature engineering, and statistical inference to derive reliable and interpretable research findings.</li>
@@ -198,7 +199,7 @@
                         <span class="pill">Data Cleaning</span>
                         <span class="pill">Preprocessing</span>
                         <span class="pill">Data Validation</span>
-                        <span class="pill">Large-Scale Dataset Handling</span>
+                        <span class="pill">Large Dataset Handling</span>
                     </div>
                 </div>
 
@@ -209,7 +210,6 @@
                         <span class="pill">Excel Dashboards</span>
                         <span class="pill">Data Visualization</span>
                         <span class="pill">Technical Reporting</span>
-                        <span class="pill">Documentation</span>
                     </div>
                 </div>
             </div>
