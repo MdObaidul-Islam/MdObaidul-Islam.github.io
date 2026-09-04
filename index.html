@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Obaidul Islam | Research & Academic Portfolio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        body { background-color: #fcfcfd; color: #1e293b; line-height: 1.6; }
+        
+        /* Navigation */
+        header { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); position: sticky; top: 0; border-bottom: 1px solid #e2e8f0; padding: 1rem 8%; display: flex; justify-content: space-between; align-items: center; z-index: 100; }
+        .logo { font-size: 1.2rem; font-weight: 700; color: #0284c7; }
+        nav a { margin-left: 20px; text-decoration: none; color: #475569; font-weight: 500; font-size: 0.9rem; transition: 0.2s; }
+        nav a:hover { color: #0284c7; }
+
+        /* Hero Section */
+        .hero { display: flex; align-items: center; justify-content: space-between; padding: 5rem 8%; gap: 3rem; background: linear-gradient(180deg, #f0f9ff 0%, #fcfcfd 100%); }
+        .hero-text { flex: 1.2; }
+        .badge { background: #e0f2fe; color: #0369a1; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; display: inline-block; margin-bottom: 1rem; }
+        .hero-text h1 { font-size: 2.5rem; color: #0f172a; margin-bottom: 0.5rem; font-weight: 800; letter-spacing: -0.02em; }
+        .hero-text h3 { font-size: 1.15rem; color: #0284c7; margin-bottom: 1rem; font-weight: 600; }
+        .hero-text p { font-size: 1rem; color: #475569; margin-bottom: 1.8rem; max-width: 600px; }
+        
+        /* Action Buttons */
+        .btn-group { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+        .btn-primary { background: #0284c7; color: white; padding: 9px 18px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: 0.2s; }
+        .btn-primary:hover { background: #0369a1; }
+        .btn-outline { background: white; color: #334155; border: 1px solid #cbd5e1; padding: 9px 18px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: 0.2s; }
+        .btn-outline:hover { background: #f8fafc; border-color: #0284c7; color: #0284c7; }
+
+        .hero-img { flex: 0.8; display: flex; justify-content: center; }
+        .hero-img img { width: 260px; height: 260px; border-radius: 50%; object-fit: cover; border: 4px solid white; box-shadow: 0 15px 25px -5px rgba(0,0,0,0.08); }
+
+        /* Sections */
+        .section { padding: 4rem 8%; border-bottom: 1px solid #f1f5f9; }
+        .section-title { font-size: 1.6rem; color: #0f172a; margin-bottom: 1.5rem; font-weight: 700; position: relative; }
+        .section-title::after { content: ''; display: block; width: 40px; height: 3px; background: #0284c7; margin-top: 6px; border-radius: 2px; }
+
+        /* Cards & Grids */
+        .card { background: white; border: 1px solid #e2e8f0; padding: 1.75rem; border-radius: 12px; margin-bottom: 1.25rem; transition: 0.2s; }
+        .card:hover { border-color: #38bdf8; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+        .card h3 { color: #0f172a; margin-bottom: 0.4rem; font-size: 1.15rem; }
+        .card-sub { color: #0284c7; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem; }
+        .card-tag { display: inline-block; background: #f1f5f9; color: #0369a1; font-size: 0.75rem; font-weight: 600; padding: 3px 8px; border-radius: 4px; margin-bottom: 0.75rem; }
+        .card p { color: #64748b; font-size: 0.95rem; }
+
+        /* Research Interests Pills */
+        .interests-container { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
+        .interest-pill { background: #f0f9ff; border: 1px solid #bae6fd; color: #0369a1; padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; }
+
+        /* Technical Skills Grid */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+        .skill-box { background: white; border: 1px solid #e2e8f0; padding: 1.25rem; border-radius: 8px; }
+        .skill-box h4 { color: #0f172a; font-size: 0.95rem; margin-bottom: 0.5rem; }
+        .skill-box p { color: #64748b; font-size: 0.85rem; }
+
+        footer { text-align: center; padding: 2rem; background: #f8fafc; color: #94a3b8; font-size: 0.85rem; }
+
+        @media (max-width: 768px) {
+            .hero { flex-direction: column-reverse; text-align: center; padding: 3rem 5%; }
+            .hero-text p { margin: 0 auto 1.5rem auto; }
+            .btn-group { justify-content: center; }
+            .section { padding: 3rem 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Md. Obaidul Islam</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#interests">Interests</a>
+            <a href="#research">Research</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="hero-text">
+            <span class="badge">Statistics & Health Data Research</span>
+            <h1>Md. Obaidul Islam</h1>
+            <h3>Statistics Graduate | Data Science & Machine Learning | Health Data Research</h3>
+            <p>Statistics graduate with research experience in statistical modeling, machine learning, health data analysis, and explainable AI, with a focus on applying data-driven methods to real-world research problems.</p>
+            
+            <div class="btn-group">
+                <a href="https://github.com/MdObaidul-Islam" target="_blank" class="btn-primary">GitHub Profile</a>
+                <a href="#" class="btn-outline">Download CV (PDF)</a>
+                <a href="mailto:obaidulislam0325@gmail.com" class="btn-outline">Email Me</a>
+                <a href="#" target="_blank" class="btn-outline">LinkedIn</a>
+            </div>
+        </div>
+        <div class="hero-img">
+            <img src="profile.jpg" alt="Md. Obaidul Islam" onerror="this.src='https://via.placeholder.com/260/e0f2fe/0369a1?text=Upload+profile.jpg'">
+        </div>
+    </section>
+
+    <!-- Research Interests Section -->
+    <section class="section" id="interests">
+        <h2 class="section-title">Research Interests</h2>
+        <div class="interests-container">
+            <span class="interest-pill">Applied Statistics</span>
+            <span class="interest-pill">Biostatistics & Epidemiology</span>
+            <span class="interest-pill">Data Science & Machine Learning</span>
+            <span class="interest-pill">Health Data Science</span>
+            <span class="interest-pill">Causal Inference</span>
+            <span class="interest-pill">Population Health</span>
+        </div>
+    </section>
+
+    <!-- Featured Research Section -->
+    <section class="section" id="research">
+        <h2 class="section-title">Featured Research</h2>
+        <div class="card">
+            <span class="card-tag">Under Peer Review</span>
+            <h3>BDHS 2022 Cesarean Delivery Analysis</h3>
+            <div class="card-sub">Undergraduate Researcher | Data Analysis & Machine Learning</div>
+            <p>Socioeconomic and Health-System Correlates of Cesarean Delivery in Bangladesh: Survey-Weighted Analysis and Explainable Machine Learning Using BDHS 2022 data.</p>
+            <br>
+            <a href="https://github.com/MdObaidul-Islam" target="_blank" style="color: #0284c7; text-decoration: none; font-weight: 600; font-size: 0.9rem;">View Code Repository on GitHub →</a>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="card">
+            <h3>Health Data Analytics & Explainable Machine Learning</h3>
+            <p>Applied Support Vector Machines (SVM), Random Forest, XGBoost, and SHAP interpretability frameworks to population health datasets to identify risk determinants and actionable predictors.</p>
+            <br>
+            <a href="https://github.com/MdObaidul-Islam" target="_blank" style="color: #0284c7; text-decoration: none; font-weight: 600; font-size: 0.85rem;">View Project on GitHub →</a>
+        </div>
+        <!-- Note: As you upload genuine projects to GitHub, you can duplicate the 'card' block above to list 3-5 verified projects. -->
+    </section>
+
+    <!-- Education Section -->
+    <section class="section" id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="card">
+            <h3>B.Sc. (Honours) in Statistics</h3>
+            <div class="card-sub">Department of Statistics and Data Science | Pabna University of Science and Technology</div>
+            <p><b>CGPA:</b> 3.15 / 4.00 &nbsp;|&nbsp; <b>Graduated:</b> 2026</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">Coursework: Applied Probability, Biostatistics, Regression Analysis, Demography, Machine Learning, and Statistical Computing.</p>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section class="section" id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-box">
+                <h4>Statistical Tools</h4>
+                <p>R, Python, SPSS, LaTeX</p>
+            </div>
+            <div class="skill-box">
+                <h4>Machine Learning</h4>
+                <p>XGBoost, Random Forest, SVM, SHAP (XAI)</p>
+            </div>
+            <div class="skill-box">
+                <h4>Methodologies</h4>
+                <p>Survey-Weighted Analysis, Biostatistics, Predictive Analytics</p>
+            </div>
+            <div class="skill-box">
+                <h4>Research Management</h4>
+                <p>Zotero, GitHub Version Control</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact" style="background: #ffffff;">
+        <h2 class="section-title">Get In Touch</h2>
+        <p style="color: #64748b; margin-bottom: 1.2rem;">Available for academic research collaborations and graduate study opportunities.</p>
+        <p style="font-size: 0.95rem;"><strong>Email:</strong> <a href="mailto:obaidulislam0325@gmail.com" style="color: #0284c7; text-decoration: none;">obaidulislam0325@gmail.com</a></p>
+        <p style="font-size: 0.95rem; margin-top: 0.5rem;"><strong>GitHub:</strong> <a href="https://github.com/MdObaidul-Islam" target="_blank" style="color: #0284c7; text-decoration: none;">github.com/MdObaidul-Islam</a></p>
+    </section>
+
+    <footer>
+        <p>© 2026 Md. Obaidul Islam. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
