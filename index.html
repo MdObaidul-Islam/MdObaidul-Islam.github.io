@@ -4,78 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Md. Obaidul Islam | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
         html { scroll-behavior: smooth; }
-        body { background-color: #f4f9f9; color: #1e293b; line-height: 1.5; }
+        body { background-color: #f8fafc; color: #0f172a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
         
-        /* Navigation */
-        header { background: #ffffff; position: sticky; top: 0; border-bottom: 1px solid #e2e8f0; padding: 0.8rem 8%; display: flex; justify-content: space-between; align-items: center; z-index: 100; }
-        .logo { font-size: 1.1rem; font-weight: 700; color: #0f172a; }
-        nav a { margin-left: 18px; text-decoration: none; color: #475569; font-weight: 500; font-size: 0.88rem; transition: 0.2s; }
-        nav a:hover { color: #0d9488; }
+        /* Navigation Bar */
+        header { background: #0f172a; position: sticky; top: 0; padding: 1rem 8%; display: flex; justify-content: space-between; align-items: center; z-index: 100; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .logo { font-size: 1.2rem; font-weight: 700; color: #ffffff; letter-spacing: 0.5px; }
+        nav a { margin-left: 20px; text-decoration: none; color: #cbd5e1; font-weight: 600; font-size: 0.9rem; transition: 0.2s; }
+        nav a:hover { color: #14b8a6; }
 
         /* Hero / About Section */
-        .hero { display: flex; align-items: center; justify-content: space-between; padding: 2.2rem 8%; gap: 2.5rem; background: linear-gradient(180deg, #e6f4f1 0%, #f4f9f9 100%); border-bottom: 1px solid #e2e8f0; }
+        .hero { display: flex; align-items: center; justify-content: space-between; padding: 3.5rem 8%; gap: 2.5rem; background: #ffffff; border-bottom: 2px solid #e2e8f0; }
         .hero-text { flex: 1.2; }
-        .hero-text h1 { font-size: 2rem; color: #0f172a; margin-bottom: 0.3rem; font-weight: 700; letter-spacing: -0.02em; }
-        .hero-text h3 { font-size: 1rem; color: #0d9488; margin-bottom: 0.8rem; font-weight: 600; }
-        .hero-text p { font-size: 0.9rem; color: #334155; margin-bottom: 1.2rem; max-width: 650px; text-align: justify; }
+        .hero-text h1 { font-size: 2.3rem; color: #0f172a; margin-bottom: 0.4rem; font-weight: 800; letter-spacing: -0.02em; }
+        .hero-text h3 { font-size: 1.1rem; color: #0d9488; margin-bottom: 1rem; font-weight: 700; }
+        .hero-text p { font-size: 0.95rem; color: #1e293b; margin-bottom: 1.5rem; max-width: 680px; text-align: justify; font-weight: 450; }
         
-        /* Hero Buttons */
-        .hero-btns { display: flex; gap: 0.8rem; flex-wrap: wrap; }
-        .btn-primary { background: #0d9488; color: #ffffff; padding: 8px 18px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: 0.2s; display: inline-flex; align-items: center; gap: 6px; border: none; cursor: pointer; }
-        .btn-primary:hover { background: #0f766e; }
-        .btn-secondary { background: #ffffff; color: #0f766e; border: 1px solid #ccfbf1; padding: 8px 18px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: 0.2s; display: inline-flex; align-items: center; gap: 6px; }
-        .btn-secondary:hover { background: #f0fdfa; border-color: #99f6e4; }
+        /* Buttons */
+        .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .btn-primary { background: #0d9488; color: #ffffff; padding: 10px 22px; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: 0.25s; display: inline-flex; align-items: center; gap: 6px; border: none; cursor: pointer; box-shadow: 0 2px 6px rgba(13, 148, 136, 0.3); }
+        .btn-primary:hover { background: #0f766e; transform: translateY(-1px); }
+        .btn-secondary { background: #f1f5f9; color: #0f172a; border: 1.5px solid #cbd5e1; padding: 10px 22px; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: 0.25s; display: inline-flex; align-items: center; gap: 6px; }
+        .btn-secondary:hover { background: #e2e8f0; color: #0d9488; }
 
         .hero-img { flex: 0.8; display: flex; justify-content: center; }
-        .hero-img img { width: 210px; height: 230px; border-radius: 10px; object-fit: cover; border: 2px solid #ccfbf1; box-shadow: 0 8px 20px rgba(13, 148, 136, 0.08); }
+        .hero-img img { width: 220px; height: 240px; border-radius: 12px; object-fit: cover; border: 3px solid #0d9488; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12); }
 
-        /* Compact Sections */
-        .section { padding: 2rem 8%; border-bottom: 1px solid #e2e8f0; }
-        .section-title { font-size: 1.25rem; color: #0f172a; margin-bottom: 1.2rem; font-weight: 700; position: relative; }
-        .section-title::after { content: ''; display: block; width: 30px; height: 3px; background: #0d9488; margin-top: 4px; border-radius: 2px; }
+        /* Sections */
+        .section { padding: 3rem 8%; border-bottom: 1px solid #e2e8f0; }
+        .section-alt { background: #f1f5f9; } /* Alternating Section Background */
+        
+        .section-title { font-size: 1.4rem; color: #0f172a; margin-bottom: 1.5rem; font-weight: 800; position: relative; }
+        .section-title::after { content: ''; display: block; width: 40px; height: 4px; background: #0d9488; margin-top: 6px; border-radius: 2px; }
 
-        /* Sub-sections inside Research & Expertise */
-        .sub-title { font-size: 1.05rem; color: #0f766e; font-weight: 600; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.4rem; }
-        .sub-title svg { width: 18px; height: 18px; fill: #0d9488; }
-        .expertise-block { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.2rem; margin-bottom: 1rem; }
+        /* Sub-sections */
+        .sub-title { font-size: 1.1rem; color: #0f766e; font-weight: 700; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .sub-title svg { width: 20px; height: 20px; fill: #0d9488; }
+        .expertise-block { background: #ffffff; border: 1px solid #cbd5e1; border-radius: 10px; padding: 1.5rem; margin-bottom: 1.3rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
 
         /* Cards Layout */
-        .card { background: #ffffff; border: 1px solid #e2e8f0; padding: 1.2rem; border-radius: 8px; margin-bottom: 1rem; box-shadow: 0 1px 4px rgba(0,0,0,0.02); }
-        .card h3 { color: #0f172a; margin-bottom: 0.2rem; font-size: 1rem; }
-        .card-sub { color: #0d9488; font-weight: 600; font-size: 0.85rem; margin-bottom: 0.4rem; }
-        .card-tag { display: inline-block; background: #ccfbf1; color: #0f766e; border: 1px solid #99f6e4; font-size: 0.72rem; font-weight: 600; padding: 2px 8px; border-radius: 4px; margin-bottom: 0.5rem; }
-        .card p, .card li { color: #334155; font-size: 0.88rem; }
-        .card ul { margin-left: 1.1rem; margin-top: 0.4rem; }
+        .card { background: #ffffff; border: 1px solid #cbd5e1; padding: 1.4rem; border-radius: 10px; margin-bottom: 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.03); transition: 0.25s ease; }
+        .card:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); border-color: #0d9488; }
+        .card h3 { color: #0f172a; margin-bottom: 0.3rem; font-size: 1.1rem; font-weight: 700; }
+        .card-sub { color: #0d9488; font-weight: 700; font-size: 0.88rem; margin-bottom: 0.5rem; }
+        .card-tag { display: inline-block; background: #ccfbf1; color: #0f766e; border: 1px solid #5eead4; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 4px; margin-bottom: 0.6rem; }
+        .card p, .card li { color: #1e293b; font-size: 0.92rem; font-weight: 450; }
+        .card ul { margin-left: 1.2rem; margin-top: 0.5rem; }
 
         /* Links inside Cards */
-        .card-links { margin-top: 0.8rem; display: flex; gap: 0.8rem; flex-wrap: wrap; }
-        .link-btn { font-size: 0.78rem; font-weight: 600; color: #0d9488; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; border: 1px solid #ccfbf1; background: #f0fdfa; padding: 3px 10px; border-radius: 4px; transition: 0.2s; }
-        .link-btn:hover { background: #ccfbf1; color: #0f766e; }
+        .card-links { margin-top: 1rem; display: flex; gap: 0.8rem; flex-wrap: wrap; }
+        .link-btn { font-size: 0.82rem; font-weight: 700; color: #0f766e; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; border: 1px solid #99f6e4; background: #f0fdfa; padding: 5px 12px; border-radius: 6px; transition: 0.2s; }
+        .link-btn:hover { background: #0d9488; color: #ffffff; border-color: #0d9488; }
 
-        /* Grouped Grids for Interests & Skills */
-        .grouped-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.8rem; margin-top: 0.6rem; }
-        .group-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1rem; }
-        .group-card h4 { font-size: 0.88rem; color: #0f172a; margin-bottom: 0.6rem; font-weight: 600; display: flex; align-items: center; gap: 0.4rem; }
+        /* Grouped Grids */
+        .grouped-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 0.8rem; }
+        .group-card { background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 1.2rem; }
+        .group-card h4 { font-size: 0.92rem; color: #0f172a; margin-bottom: 0.8rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem; }
 
-        .pills-container { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-        .pill { background: #f0fdfa; border: 1px solid #ccfbf1; color: #0f766e; padding: 4px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 500; }
+        .pills-container { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .pill { background: #ffffff; border: 1.5px solid #cbd5e1; color: #0f172a; padding: 5px 12px; border-radius: 16px; font-size: 0.8rem; font-weight: 600; box-shadow: 0 1px 3px rgba(0,0,0,0.02); }
 
         /* Contact Details */
-        .contact-list { list-style: none; font-size: 0.88rem; color: #334155; }
-        .contact-list li { margin-bottom: 0.4rem; }
-        .contact-list a { color: #0d9488; text-decoration: none; font-weight: 500; }
+        .contact-list { list-style: none; font-size: 0.95rem; color: #0f172a; }
+        .contact-list li { margin-bottom: 0.6rem; }
+        .contact-list a { color: #0d9488; text-decoration: none; font-weight: 700; }
         .contact-list a:hover { text-decoration: underline; }
 
-        footer { text-align: center; padding: 1.2rem; background: #ffffff; border-top: 1px solid #e2e8f0; color: #64748b; font-size: 0.78rem; }
+        footer { text-align: center; padding: 1.5rem; background: #0f172a; color: #94a3b8; font-size: 0.85rem; font-weight: 500; }
 
         @media (max-width: 768px) {
             .hero { flex-direction: column-reverse; text-align: left; padding: 2rem 5%; }
-            .hero-img img { width: 180px; height: 200px; }
-            .section { padding: 1.8rem 5%; }
+            .hero-img img { width: 190px; height: 210px; }
+            .section { padding: 2rem 5%; }
         }
     </style>
 </head>
@@ -105,12 +108,12 @@
             </div>
         </div>
         <div class="hero-img">
-            <img src="Profile.png" alt="Md. Obaidul Islam" onerror="this.src='https://via.placeholder.com/210x230?text=Profile.png'">
+            <img src="Profile.png" alt="Md. Obaidul Islam" onerror="this.src='https://via.placeholder.com/220x240?text=Profile.png'">
         </div>
     </section>
 
     <!-- Research & Expertise Section -->
-    <section class="section" id="expertise">
+    <section class="section section-alt" id="expertise">
         <h2 class="section-title">Research & Expertise</h2>
         
         <!-- 1. Research Interests -->
@@ -156,8 +159,8 @@
                 <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
                 2. Research Experience
             </h3>
-            <p><strong>Undergraduate Researcher</strong></p>
-            <ul style="margin-left: 1.2rem; margin-top: 0.5rem; color: #334155; font-size: 0.88rem; line-height: 1.6;">
+            <p style="font-weight: 700; color: #0f172a;">Undergraduate Researcher</p>
+            <ul style="margin-left: 1.2rem; margin-top: 0.5rem; line-height: 1.6;">
                 <li><strong>Statistical Modeling & Research Design:</strong> Applied statistical modeling and quantitative research methods to investigate real-world socioeconomic and population health problems using complex survey data.</li>
                 <li><strong>Data Management & Statistical Analysis:</strong> Conducted data preprocessing, quality assessment, exploratory data analysis, feature engineering, and statistical inference to derive reliable and interpretable research findings.</li>
                 <li><strong>Machine Learning & Predictive Modeling:</strong> Developed and evaluated machine learning models, including Logistic Regression, SVM, Random Forest, XGBoost, and ensemble methods, for predictive analysis of population health outcomes.</li>
@@ -234,7 +237,7 @@
     </section>
 
     <!-- Publications Section -->
-    <section class="section" id="publications">
+    <section class="section section-alt" id="publications">
         <h2 class="section-title">Publications</h2>
         
         <!-- ১. জার্নাল ম্যানুস্ক্রিপ্ট -->
@@ -242,7 +245,7 @@
             <span class="card-tag">Submitted Manuscript</span>
             <h3>Journal Manuscript</h3>
             <p><strong>Title:</strong> Socioeconomic and Health-System Correlates of Cesarean Delivery in Bangladesh: Survey-Weighted Statistical Analysis and Explainable Machine Learning Using BDHS 2022.</p>
-            <p><strong>Journal:</strong> <em>Scientific Reports</em> (Springer Nature).</p>
+            <p style="margin-top: 4px;"><strong>Journal:</strong> <em>Scientific Reports</em> (Springer Nature).</p>
             <div class="card-links">
                 <a href="Research Summary.pdf" target="_blank" class="link-btn">📄 View Research Summary</a>
             </div>
@@ -253,7 +256,7 @@
             <span class="card-tag">Conference Presentation</span>
             <h3>EFAST 2026 Conference</h3>
             <p><strong>Title:</strong> Socioeconomic Determinants of Cesarean Section Delivery in Bangladesh: A Survey-Weighted Statistical and Explainable Machine Learning Analysis.</p>
-            <p><strong>Role:</strong> First Author & Oral Presenter. Abstract published in the official booklet.</p>
+            <p style="margin-top: 4px;"><strong>Role:</strong> First Author & Oral Presenter. Abstract published in the official booklet.</p>
             <div class="card-links">
                 <a href="https://github.com/MdObaidul-Islam/cesarean-delivery-healthcare-bd/blob/main/paper/Conference_Abstruct.pdf" target="_blank" class="link-btn">📄 View Abstract</a>
             </div>
@@ -270,7 +273,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="section" id="contact" style="background: #ffffff;">
+    <section class="section section-alt" id="contact">
         <h2 class="section-title">Contact</h2>
         <ul class="contact-list">
             <li><strong>Location:</strong> Rajshahi, Bangladesh</li>
