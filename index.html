@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        html { scroll-behavior: smooth; }
         body { background-color: #fffafb; color: #2d2627; line-height: 1.6; }
         
         /* Navigation */
@@ -38,10 +39,16 @@
         .card p, .card li { color: #524346; font-size: 0.9rem; }
         .card ul { margin-left: 1.2rem; margin-top: 0.5rem; }
 
-        /* Research Interests Pills */
-        .interests-container { display: flex; flex-wrap: wrap; gap: 0.6rem; }
-        .interest-pill { background: #ffffff; border: 1px solid #e8d5d9; color: #524346; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; }
-        .interest-pill:hover { border-color: #b85b71; color: #b85b71; }
+        /* Research Interests Categorized Grid */
+        .interests-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
+        .interest-card { background: #ffffff; border: 1px solid #f3e8eb; border-radius: 10px; padding: 1.25rem; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+        .interest-card:hover { border-color: #f0c2cb; box-shadow: 0 4px 15px rgba(184, 91, 113, 0.05); }
+        .interest-card-header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid #f8eaed; }
+        .interest-card-header svg { width: 18px; height: 18px; fill: #b85b71; flex-shrink: 0; }
+        .interest-card-header h3 { color: #361e24; font-size: 0.98rem; font-weight: 600; }
+        .interests-container { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .interest-pill { background: #fff5f7; border: 1px solid #f3dbe0; color: #4a2e35; padding: 5px 12px; border-radius: 16px; font-size: 0.82rem; font-weight: 500; transition: all 0.2s ease; }
+        .interest-pill:hover { background: #b85b71; color: #ffffff; border-color: #b85b71; }
 
         /* Skills Grid */
         .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
@@ -61,6 +68,7 @@
             .hero { flex-direction: column-reverse; text-align: left; padding: 2.5rem 5%; }
             .hero-img img { width: 190px; height: 210px; }
             .section { padding: 2.5rem 5%; }
+            .interests-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -87,23 +95,51 @@
             <p>I am a Statistics graduate interested in statistical modeling, data science, machine learning, and health data research. My research experience involves analyzing real-world survey data and applying statistical and machine learning methods to better understand complex problems in population health.</p>
         </div>
         <div class="hero-img">
-            <img src="profile.jpg" alt="Md. Obaidul Islam" onerror="this.src='https://via.placeholder.com/230x250?text=profile.jpg'">
+            <img src="Profile.png" alt="Md. Obaidul Islam" onerror="this.src='https://via.placeholder.com/230x250?text=Profile.png'">
         </div>
     </section>
 
     <!-- Research Interests Section -->
     <section class="section" id="interests">
         <h2 class="section-title">Research Interests</h2>
-        <div class="interests-container">
-            <span class="interest-pill">Applied Statistics</span>
-            <span class="interest-pill">Statistical Modeling</span>
-            <span class="interest-pill">Data Science & Machine Learning</span>
-            <span class="interest-pill">Data Mining</span>
-            <span class="interest-pill">Time Series Analysis</span>
-            <span class="interest-pill">Health Data Science</span>
-            <span class="interest-pill">Biostatistics & Epidemiology</span>
-            <span class="interest-pill">Causal Inference</span>
-            <span class="interest-pill">Population Health</span>
+        <div class="interests-grid">
+            
+            <div class="interest-card">
+                <div class="interest-card-header">
+                    <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14h-2v-4h2v4zm0-6h-2V7h2v4zm4 6h-2V7h2v10z"/></svg>
+                    <h3>Statistical Modeling & Methods</h3>
+                </div>
+                <div class="interests-container">
+                    <span class="interest-pill">Applied Statistics</span>
+                    <span class="interest-pill">Statistical Modeling</span>
+                    <span class="interest-pill">Time Series Analysis</span>
+                    <span class="interest-pill">Causal Inference</span>
+                </div>
+            </div>
+
+            <div class="interest-card">
+                <div class="interest-card-header">
+                    <svg viewBox="0 0 24 24"><path d="M12 3C6.48 3 2 6.58 2 11c0 2.5 1.42 4.74 3.65 6.22l-.82 2.87c-.12.42.27.81.69.69l3.08-.88C9.8 20.61 10.88 21 12 21c5.52 0 10-3.58 10-8s-4.48-8-10-8zm-1 12h-2v-2h2v2zm0-4h-2V7h2v4zm4 4h-2v-2h2v2zm0-4h-2V7h2v4z"/></svg>
+                    <h3>Data Science & Analytics</h3>
+                </div>
+                <div class="interests-container">
+                    <span class="interest-pill">Data Science & Machine Learning</span>
+                    <span class="interest-pill">Data Mining</span>
+                </div>
+            </div>
+
+            <div class="interest-card">
+                <div class="interest-card-header">
+                    <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                    <h3>Health Data & Population</h3>
+                </div>
+                <div class="interests-container">
+                    <span class="interest-pill">Health Data Science</span>
+                    <span class="interest-pill">Biostatistics & Epidemiology</span>
+                    <span class="interest-pill">Population Health</span>
+                </div>
+            </div>
+
         </div>
     </section>
 
