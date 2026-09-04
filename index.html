@@ -21,8 +21,15 @@
         .hero-text { flex: 1.2; }
         .hero-text h1 { font-size: 2rem; color: #0f172a; margin-bottom: 0.3rem; font-weight: 700; letter-spacing: -0.02em; }
         .hero-text h3 { font-size: 1rem; color: #0d9488; margin-bottom: 0.8rem; font-weight: 600; }
-        .hero-text p { font-size: 0.9rem; color: #334155; margin-bottom: 1rem; max-width: 650px; text-align: justify; }
+        .hero-text p { font-size: 0.9rem; color: #334155; margin-bottom: 1.2rem; max-width: 650px; text-align: justify; }
         
+        /* Hero Buttons */
+        .hero-btns { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+        .btn-primary { background: #0d9488; color: #ffffff; padding: 7px 16px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: 0.2s; display: inline-flex; align-items: center; gap: 6px; }
+        .btn-primary:hover { background: #0f766e; }
+        .btn-secondary { background: #ffffff; color: #0f766e; border: 1px solid #ccfbf1; padding: 7px 16px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: 0.2s; }
+        .btn-secondary:hover { background: #f0fdfa; border-color: #99f6e4; }
+
         .hero-img { flex: 0.8; display: flex; justify-content: center; }
         .hero-img img { width: 210px; height: 230px; border-radius: 10px; object-fit: cover; border: 2px solid #ccfbf1; box-shadow: 0 8px 20px rgba(13, 148, 136, 0.08); }
 
@@ -44,10 +51,15 @@
         .card p, .card li { color: #334155; font-size: 0.88rem; }
         .card ul { margin-left: 1.1rem; margin-top: 0.4rem; }
 
+        /* Links inside Cards */
+        .card-links { margin-top: 0.8rem; display: flex; gap: 0.8rem; flex-wrap: wrap; }
+        .link-btn { font-size: 0.78rem; font-weight: 600; color: #0d9488; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; border: 1px solid #ccfbf1; background: #f0fdfa; padding: 3px 10px; border-radius: 4px; transition: 0.2s; }
+        .link-btn:hover { background: #ccfbf1; color: #0f766e; }
+
         /* Grouped Grids for Interests & Skills */
         .grouped-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.8rem; margin-top: 0.6rem; }
         .group-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1rem; }
-        .group-card h4 { font-size: 0.88rem; color: #0f172a; margin-bottom: 0.5rem; font-weight: 600; display: flex; align-items: center; gap: 0.4rem; }
+        .group-card h4 { font-size: 0.88rem; color: #0f172a; margin-bottom: 0.6rem; font-weight: 600; display: flex; align-items: center; gap: 0.4rem; }
         .group-card p { font-size: 0.85rem; color: #475569; line-height: 1.4; }
 
         .pills-container { display: flex; flex-wrap: wrap; gap: 0.4rem; }
@@ -88,6 +100,10 @@
             <h1>Md. Obaidul Islam</h1>
             <h3>Statistical Modeling | Data Science | Health Data Research</h3>
             <p>I am a Statistics graduate interested in statistical modeling, data science, machine learning, and health data research. My research experience involves analyzing real-world survey data and applying statistical and machine learning methods to better understand complex problems in population health.</p>
+            <div class="hero-btns">
+                <a href="#" class="btn-primary">📄 Download CV</a>
+                <a href="#contact" class="btn-secondary">✉️ Get In Touch</a>
+            </div>
         </div>
         <div class="hero-img">
             <img src="Profile.png" alt="Md. Obaidul Islam" onerror="this.src='https://via.placeholder.com/210x230?text=Profile.png'">
@@ -160,7 +176,12 @@
             <div class="grouped-grid">
                 <div class="group-card">
                     <h4>Data Analysis & Tools</h4>
-                    <p>Python, R, SPSS, Excel</p>
+                    <div class="pills-container">
+                        <span class="pill">Python</span>
+                        <span class="pill">R</span>
+                        <span class="pill">SPSS</span>
+                        <span class="pill">Excel</span>
+                    </div>
                 </div>
 
                 <div class="group-card">
@@ -177,7 +198,7 @@
 
     </section>
 
-    <!-- Projects Section (Single-Column Cards) -->
+    <!-- Projects Section -->
     <section class="section" id="projects">
         <h2 class="section-title">Projects</h2>
         
@@ -185,12 +206,19 @@
             <h3>Cesarean Delivery Analysis in Bangladesh</h3>
             <div class="card-sub">Survey-Weighted Analysis & Explainable AI</div>
             <p>Analyzed BDHS 2022 survey data using survey-weighted statistical modeling and ML classification algorithms (SVM, XGBoost, Random Forest) with SHAP interpretation.</p>
+            <div class="card-links">
+                <a href="https://github.com/MdObaidul-Islam" target="_blank" class="link-btn">🔗 GitHub Repo</a>
+                <a href="#" class="link-btn">📌 View Details</a>
+            </div>
         </div>
 
         <div class="card">
             <h3>Statistical Data Visualization & Modeling</h3>
             <div class="card-sub">Python, R & SPSS</div>
             <p>Executed end-to-end data processing, feature engineering, and statistical modeling workflows for population health datasets.</p>
+            <div class="card-links">
+                <a href="https://github.com/MdObaidul-Islam" target="_blank" class="link-btn">🔗 GitHub Repo</a>
+            </div>
         </div>
 
     </section>
@@ -204,6 +232,9 @@
             <h3>Journal Manuscript</h3>
             <p><strong>Title:</strong> Socioeconomic and Health-System Correlates of Cesarean Delivery in Bangladesh: Survey-Weighted Statistical Analysis and Explainable Machine Learning Using BDHS 2022.</p>
             <p><strong>Journal:</strong> <em>Scientific Reports</em> (Springer Nature).</p>
+            <div class="card-links">
+                <a href="#" class="link-btn">📄 Read Preprint / Abstract</a>
+            </div>
         </div>
 
         <div class="card">
