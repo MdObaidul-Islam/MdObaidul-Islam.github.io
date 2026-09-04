@@ -53,10 +53,13 @@
         .group-card:hover { transform: translateY(-4px); background: #ffffff; border-color: #be123c; box-shadow: 0 8px 20px rgba(13, 148, 136, 0.12); }
         .group-card h4 { font-size: 1rem; color: #000000; margin-bottom: 1rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; }
 
-        /* 2-Column Grid for Pills (পাশাপাশি দুটি করে দেখাবে) */
+        /* 2-Column Grid for Pills (পাশাপাশি ২টি করে দেখাবে) */
         .pills-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
         .pill { background: #ffffff; border: 1.5px solid #5eead4; color: #0f766e; padding: 8px 10px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.03); transition: 0.2s ease; display: flex; align-items: center; justify-content: center; }
         .pill:hover { background: #be123c; color: #ffffff; border-color: #be123c; }
+
+        /* Highlight Label for Research Experience */
+        .highlight-label { color: #be123c; font-weight: 800; }
 
         /* Standard Cards & Hover Effect */
         .card { background: #ffffff; border: 1.5px solid #99f6e4; padding: 1.5rem; border-radius: 12px; margin-bottom: 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.03); transition: all 0.3s ease; }
@@ -67,6 +70,7 @@
         .card-tag { display: inline-block; background: #fff0f3; color: #be123c; border: 1px solid #fecdd3; font-size: 0.78rem; font-weight: 800; padding: 3px 12px; border-radius: 20px; margin-bottom: 0.6rem; }
         .card p, .card li { color: #0f172a; font-size: 0.95rem; font-weight: 500; }
         .card ul { margin-left: 1.2rem; margin-top: 0.5rem; }
+        .card ul li { margin-bottom: 0.6rem; }
 
         /* Links inside Cards */
         .card-links { margin-top: 1rem; display: flex; gap: 0.8rem; flex-wrap: wrap; }
@@ -85,7 +89,7 @@
             .hero { flex-direction: column-reverse; text-align: left; padding: 2rem 5%; }
             .hero-img img { width: 190px; height: 210px; }
             .section { padding: 2rem 5%; }
-            .pills-container { grid-template-columns: 1fr; } /* Mobile View Alignment */
+            .pills-container { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -146,6 +150,8 @@
                     <div class="pills-container">
                         <span class="pill">Data Science & Machine Learning</span>
                         <span class="pill">Predictive Modeling</span>
+                        <span class="pill">Data Mining</span>
+                        <span class="pill">Statistical Learning</span>
                     </div>
                 </div>
 
@@ -155,23 +161,24 @@
                         <span class="pill">Health Data Science</span>
                         <span class="pill">Biostatistics & Epidemiology</span>
                         <span class="pill">Population Health</span>
+                        <span class="pill">Public Health Research</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- 2. Research Experience -->
+        <!-- 2. Research Experience (Updated & Highlighted) -->
         <div class="expertise-block">
             <h3 class="sub-title">
                 <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
                 2. Research Experience
             </h3>
-            <p style="font-weight: 800; color: #be123c; font-size: 1rem;">Undergraduate Researcher</p>
-            <ul style="margin-left: 1.2rem; margin-top: 0.5rem; line-height: 1.6;">
-                <li><strong>Statistical Modeling & Research Design:</strong> Applied statistical modeling and quantitative research methods to investigate real-world socioeconomic and population health problems using complex survey data.</li>
-                <li><strong>Data Management & Statistical Analysis:</strong> Conducted data preprocessing, quality assessment, exploratory data analysis, feature engineering, and statistical inference to derive reliable and interpretable research findings.</li>
-                <li><strong>Machine Learning & Predictive Modeling:</strong> Developed and evaluated machine learning models, including Logistic Regression, SVM, Random Forest, XGBoost, and ensemble methods, for predictive analysis of population health outcomes.</li>
-                <li><strong>Explainable & Causal Analysis:</strong> Applied Explainable AI (SHAP) and causal inference techniques to identify important predictors, examine potential relationships, and improve the interpretability of data-driven findings.</li>
+            <p style="font-weight: 800; color: #000000; font-size: 1rem; margin-bottom: 0.5rem;">Undergraduate Researcher</p>
+            <ul style="margin-left: 1.2rem; line-height: 1.6;">
+                <li><span class="highlight-label">Applied Statistics & Statistical Modeling:</span> Applied statistical methods to analyze real-world data and identify meaningful patterns and relationships.</li>
+                <li><span class="highlight-label">Data Analysis:</span> Performed data preprocessing, exploratory analysis, feature engineering, and statistical inference.</li>
+                <li><span class="highlight-label">Data Science & Machine Learning:</span> Applied data science and machine learning for predictive modeling and data-driven research.</li>
+                <li><span class="highlight-label">Explainable & Causal Analysis:</span> Applied Explainable AI and causal inference to improve model interpretability and identify key predictors.</li>
             </ul>
         </div>
 
