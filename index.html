@@ -8,67 +8,68 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
         html { scroll-behavior: smooth; }
-        body { background-color: #fffafb; color: #2d2627; line-height: 1.6; }
+        body { background-color: #f4f9f9; color: #1e293b; line-height: 1.5; }
         
         /* Navigation */
-        header { background: #ffffff; position: sticky; top: 0; border-bottom: 1px solid #f3e8eb; padding: 1rem 8%; display: flex; justify-content: space-between; align-items: center; z-index: 100; }
-        .logo { font-size: 1.15rem; font-weight: 700; color: #4a2e35; }
-        nav a { margin-left: 20px; text-decoration: none; color: #68585c; font-weight: 500; font-size: 0.9rem; transition: 0.2s; }
-        nav a:hover { color: #b85b71; }
+        header { background: #ffffff; position: sticky; top: 0; border-bottom: 1px solid #e2e8f0; padding: 0.8rem 8%; display: flex; justify-content: space-between; align-items: center; z-index: 100; }
+        .logo { font-size: 1.1rem; font-weight: 700; color: #0f172a; }
+        nav a { margin-left: 18px; text-decoration: none; color: #475569; font-weight: 500; font-size: 0.88rem; transition: 0.2s; }
+        nav a:hover { color: #0d9488; }
 
-        /* Bio / About Section */
-        .hero { display: flex; align-items: center; justify-content: space-between; padding: 4rem 8%; gap: 3rem; background: linear-gradient(180deg, #fff5f7 0%, #fffafb 100%); border-bottom: 1px solid #f3e8eb; }
+        /* Hero / About Section */
+        .hero { display: flex; align-items: center; justify-content: space-between; padding: 2.2rem 8%; gap: 2.5rem; background: linear-gradient(180deg, #e6f4f1 0%, #f4f9f9 100%); border-bottom: 1px solid #e2e8f0; }
         .hero-text { flex: 1.2; }
-        .hero-text h1 { font-size: 2.2rem; color: #361e24; margin-bottom: 0.4rem; font-weight: 700; letter-spacing: -0.02em; }
-        .hero-text h3 { font-size: 1.05rem; color: #b85b71; margin-bottom: 1rem; font-weight: 600; }
-        .hero-text p { font-size: 0.95rem; color: #524346; margin-bottom: 1.2rem; max-width: 650px; text-align: justify; }
+        .hero-text h1 { font-size: 2rem; color: #0f172a; margin-bottom: 0.3rem; font-weight: 700; letter-spacing: -0.02em; }
+        .hero-text h3 { font-size: 1rem; color: #0d9488; margin-bottom: 0.8rem; font-weight: 600; }
+        .hero-text p { font-size: 0.9rem; color: #334155; margin-bottom: 1rem; max-width: 650px; text-align: justify; }
         
         .hero-img { flex: 0.8; display: flex; justify-content: center; }
-        .hero-img img { width: 230px; height: 250px; border-radius: 12px; object-fit: cover; border: 2px solid #fce8ec; box-shadow: 0 10px 25px rgba(184, 91, 113, 0.08); }
+        .hero-img img { width: 210px; height: 230px; border-radius: 10px; object-fit: cover; border: 2px solid #ccfbf1; box-shadow: 0 8px 20px rgba(13, 148, 136, 0.08); }
 
-        /* Sections */
-        .section { padding: 3.5rem 8%; border-bottom: 1px solid #f7eeef; }
-        .section-title { font-size: 1.35rem; color: #361e24; margin-bottom: 1.5rem; font-weight: 700; position: relative; }
-        .section-title::after { content: ''; display: block; width: 35px; height: 3px; background: #b85b71; margin-top: 6px; border-radius: 2px; }
+        /* Compact Sections */
+        .section { padding: 2rem 8%; border-bottom: 1px solid #e2e8f0; }
+        .section-title { font-size: 1.25rem; color: #0f172a; margin-bottom: 1.2rem; font-weight: 700; position: relative; }
+        .section-title::after { content: ''; display: block; width: 30px; height: 3px; background: #0d9488; margin-top: 4px; border-radius: 2px; }
+
+        /* Sub-sections inside Research & Expertise */
+        .sub-title { font-size: 1.05rem; color: #0f766e; font-weight: 600; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.4rem; }
+        .sub-title svg { width: 18px; height: 18px; fill: #0d9488; }
+        .expertise-block { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.2rem; margin-bottom: 1rem; }
 
         /* Cards Layout */
-        .card { background: #ffffff; border: 1px solid #f3e8eb; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.25rem; box-shadow: 0 2px 8px rgba(0,0,0,0.01); }
-        .card h3 { color: #361e24; margin-bottom: 0.3rem; font-size: 1.08rem; }
-        .card-sub { color: #b85b71; font-weight: 600; font-size: 0.88rem; margin-bottom: 0.5rem; }
-        .card-tag { display: inline-block; background: #fdf0f3; color: #9c4155; border: 1px solid #f8d7df; font-size: 0.75rem; font-weight: 600; padding: 2px 9px; border-radius: 4px; margin-bottom: 0.6rem; }
-        .card p, .card li { color: #524346; font-size: 0.9rem; }
-        .card ul { margin-left: 1.2rem; margin-top: 0.5rem; }
+        .card { background: #ffffff; border: 1px solid #e2e8f0; padding: 1.2rem; border-radius: 8px; margin-bottom: 1rem; box-shadow: 0 1px 4px rgba(0,0,0,0.02); }
+        .card h3 { color: #0f172a; margin-bottom: 0.2rem; font-size: 1rem; }
+        .card-sub { color: #0d9488; font-weight: 600; font-size: 0.85rem; margin-bottom: 0.4rem; }
+        .card-tag { display: inline-block; background: #ccfbf1; color: #0f766e; border: 1px solid #99f6e4; font-size: 0.72rem; font-weight: 600; padding: 2px 8px; border-radius: 4px; margin-bottom: 0.5rem; }
+        .card p, .card li { color: #334155; font-size: 0.88rem; }
+        .card ul { margin-left: 1.1rem; margin-top: 0.4rem; }
 
-        /* Research Interests Categorized Grid */
-        .interests-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
-        .interest-card { background: #ffffff; border: 1px solid #f3e8eb; border-radius: 10px; padding: 1.25rem; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
-        .interest-card:hover { border-color: #f0c2cb; box-shadow: 0 4px 15px rgba(184, 91, 113, 0.05); }
-        .interest-card-header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid #f8eaed; }
-        .interest-card-header svg { width: 18px; height: 18px; fill: #b85b71; flex-shrink: 0; }
-        .interest-card-header h3 { color: #361e24; font-size: 0.98rem; font-weight: 600; }
-        .interests-container { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-        .interest-pill { background: #fff5f7; border: 1px solid #f3dbe0; color: #4a2e35; padding: 5px 12px; border-radius: 16px; font-size: 0.82rem; font-weight: 500; transition: all 0.2s ease; }
-        .interest-pill:hover { background: #b85b71; color: #ffffff; border-color: #b85b71; }
+        /* Grouped Interests Grid & Pills */
+        .interests-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.8rem; margin-top: 0.6rem; }
+        .interest-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 0.9rem; }
+        .interest-card h4 { font-size: 0.85rem; color: #0f172a; margin-bottom: 0.6rem; font-weight: 600; display: flex; align-items: center; gap: 0.4rem; }
+        
+        .pills-container { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+        .pill { background: #f0fdfa; border: 1px solid #ccfbf1; color: #0f766e; padding: 4px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 500; }
 
-        /* Skills Grid */
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
-        .skill-box { background: #ffffff; border: 1px solid #f3e8eb; padding: 1.2rem; border-radius: 8px; }
-        .skill-box h4 { color: #361e24; font-size: 0.95rem; margin-bottom: 0.4rem; border-bottom: 1px solid #f7eeef; padding-bottom: 0.3rem; }
-        .skill-box p { color: #524346; font-size: 0.85rem; }
+        /* Projects Grid */
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; }
+        .project-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.2rem; transition: transform 0.2s, box-shadow 0.2s; }
+        .project-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
 
         /* Contact Details */
-        .contact-list { list-style: none; font-size: 0.9rem; color: #524346; }
-        .contact-list li { margin-bottom: 0.5rem; }
-        .contact-list a { color: #b85b71; text-decoration: none; font-weight: 500; }
+        .contact-list { list-style: none; font-size: 0.88rem; color: #334155; }
+        .contact-list li { margin-bottom: 0.4rem; }
+        .contact-list a { color: #0d9488; text-decoration: none; font-weight: 500; }
         .contact-list a:hover { text-decoration: underline; }
 
-        footer { text-align: center; padding: 1.5rem; background: #ffffff; border-top: 1px solid #f3e8eb; color: #8c7a7e; font-size: 0.8rem; }
+        footer { text-align: center; padding: 1.2rem; background: #ffffff; border-top: 1px solid #e2e8f0; color: #64748b; font-size: 0.78rem; }
 
         @media (max-width: 768px) {
-            .hero { flex-direction: column-reverse; text-align: left; padding: 2.5rem 5%; }
-            .hero-img img { width: 190px; height: 210px; }
-            .section { padding: 2.5rem 5%; }
-            .interests-grid { grid-template-columns: 1fr; }
+            .hero { flex-direction: column-reverse; text-align: left; padding: 2rem 5%; }
+            .hero-img img { width: 180px; height: 200px; }
+            .section { padding: 1.8rem 5%; }
+            .projects-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -78,16 +79,15 @@
         <div class="logo">Md. Obaidul Islam</div>
         <nav>
             <a href="#about">About</a>
-            <a href="#interests">Interests</a>
+            <a href="#expertise">Research & Expertise</a>
+            <a href="#projects">Projects</a>
             <a href="#publications">Publications</a>
-            <a href="#experience">Experience</a>
             <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <!-- Bio / About Section -->
+    <!-- About Section -->
     <section class="hero" id="about">
         <div class="hero-text">
             <h1>Md. Obaidul Islam</h1>
@@ -95,55 +95,109 @@
             <p>I am a Statistics graduate interested in statistical modeling, data science, machine learning, and health data research. My research experience involves analyzing real-world survey data and applying statistical and machine learning methods to better understand complex problems in population health.</p>
         </div>
         <div class="hero-img">
-            <img src="Profile.png" alt="Md. Obaidul Islam" onerror="this.src='https://via.placeholder.com/230x250?text=Profile.png'">
+            <img src="Profile.png" alt="Md. Obaidul Islam" onerror="this.src='https://via.placeholder.com/210x230?text=Profile.png'">
         </div>
     </section>
 
-    <!-- Research Interests Section -->
-    <section class="section" id="interests">
-        <h2 class="section-title">Research Interests</h2>
-        <div class="interests-grid">
+    <!-- Research & Expertise Section -->
+    <section class="section" id="expertise">
+        <h2 class="section-title">Research & Expertise</h2>
+        
+        <!-- 1. Research Interests (Grouped Cards) -->
+        <div class="expertise-block">
+            <h3 class="sub-title">
+                <svg viewBox="0 0 24 24"><path d="M12 3C6.48 3 2 6.58 2 11c0 2.5 1.42 4.74 3.65 6.22l-.82 2.87c-.12.42.27.81.69.69l3.08-.88C9.8 20.61 10.88 21 12 21c5.52 0 10-3.58 10-8s-4.48-8-10-8zm-1 12h-2v-2h2v2zm0-4h-2V7h2v4z"/></svg>
+                1. Research Interests
+            </h3>
             
-            <div class="interest-card">
-                <div class="interest-card-header">
-                    <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14h-2v-4h2v4zm0-6h-2V7h2v4zm4 6h-2V7h2v10z"/></svg>
-                    <h3>Statistical Modeling & Methods</h3>
+            <div class="interests-grid">
+                <!-- Group 1 -->
+                <div class="interest-card">
+                    <h4><span style="color: #0d9488;">📊</span> Statistical Modeling & Methods</h4>
+                    <div class="pills-container">
+                        <span class="pill">Applied Statistics</span>
+                        <span class="pill">Statistical Modeling</span>
+                        <span class="pill">Time Series Analysis</span>
+                        <span class="pill">Causal Inference</span>
+                    </div>
                 </div>
-                <div class="interests-container">
-                    <span class="interest-pill">Applied Statistics</span>
-                    <span class="interest-pill">Statistical Modeling</span>
-                    <span class="interest-pill">Time Series Analysis</span>
-                    <span class="interest-pill">Causal Inference</span>
+
+                <!-- Group 2 -->
+                <div class="interest-card">
+                    <h4><span style="color: #0d9488;">🤖</span> Data Science & Analytics</h4>
+                    <div class="pills-container">
+                        <span class="pill">Data Science & Machine Learning</span>
+                        <span class="pill">Predictive Modeling</span>
+                    </div>
+                </div>
+
+                <!-- Group 3 -->
+                <div class="interest-card">
+                    <h4><span style="color: #0d9488;">🩺</span> Health Data & Population</h4>
+                    <div class="pills-container">
+                        <span class="pill">Health Data Science</span>
+                        <span class="pill">Biostatistics & Epidemiology</span>
+                        <span class="pill">Population Health</span>
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <div class="interest-card">
-                <div class="interest-card-header">
-                    <svg viewBox="0 0 24 24"><path d="M12 3C6.48 3 2 6.58 2 11c0 2.5 1.42 4.74 3.65 6.22l-.82 2.87c-.12.42.27.81.69.69l3.08-.88C9.8 20.61 10.88 21 12 21c5.52 0 10-3.58 10-8s-4.48-8-10-8zm-1 12h-2v-2h2v2zm0-4h-2V7h2v4zm4 4h-2v-2h2v2zm0-4h-2V7h2v4z"/></svg>
-                    <h3>Data Science & Analytics</h3>
-                </div>
-                <div class="interests-container">
-                    <span class="interest-pill">Data Science & Machine Learning</span>
-                    <span class="interest-pill">Data Mining</span>
-                </div>
+        <!-- 2. Research Experience -->
+        <div class="expertise-block">
+            <h3 class="sub-title">
+                <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+                2. Research Experience
+            </h3>
+            <p><strong>Undergraduate Researcher</strong></p>
+            <ul style="margin-left: 1.2rem; margin-top: 0.5rem; color: #334155; font-size: 0.88rem; line-height: 1.6;">
+                <li><strong>Statistical Modeling & Research Design:</strong> Applied statistical modeling and quantitative research methods to investigate real-world socioeconomic and population health problems using complex survey data.</li>
+                <li><strong>Data Management & Statistical Analysis:</strong> Conducted data preprocessing, quality assessment, exploratory data analysis, feature engineering, and statistical inference to derive reliable and interpretable research findings.</li>
+                <li><strong>Machine Learning & Predictive Modeling:</strong> Developed and evaluated machine learning models, including Logistic Regression, SVM, Random Forest, XGBoost, and ensemble methods, for predictive analysis of population health outcomes.</li>
+                <li><strong>Explainable & Causal Analysis:</strong> Applied Explainable AI (SHAP) and causal inference techniques to identify important predictors, examine potential relationships, and improve the interpretability of data-driven findings.</li>
+            </ul>
+        </div>
+
+        <!-- 3. Technical Skills -->
+        <div class="expertise-block">
+            <h3 class="sub-title">
+                <svg viewBox="0 0 24 24"><path d="M22 7h-9v2h9V7zm0 4h-7v2h7v-2zm0 4h-5v2h5v-2zM2 11h7v8H2v-8zm2 2v4h3v-4H4z"/></svg>
+                3. Technical Skills
+            </h3>
+            <div class="pills-container">
+                <span class="pill">Python</span>
+                <span class="pill">R</span>
+                <span class="pill">SPSS</span>
+                <span class="pill">Excel</span>
+                <span class="pill">Power BI</span>
+                <span class="pill">Data Cleaning & Management</span>
+                <span class="pill">Data Visualization</span>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <h3>Cesarean Delivery Analysis in Bangladesh</h3>
+                <div class="card-sub">Survey-Weighted Analysis & Explainable AI</div>
+                <p>Analyzed BDHS 2022 survey data using survey-weighted statistical modeling and ML classification algorithms (SVM, XGBoost, Random Forest) with SHAP interpretation.</p>
             </div>
 
-            <div class="interest-card">
-                <div class="interest-card-header">
-                    <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                    <h3>Health Data & Population</h3>
-                </div>
-                <div class="interests-container">
-                    <span class="interest-pill">Health Data Science</span>
-                    <span class="interest-pill">Biostatistics & Epidemiology</span>
-                    <span class="interest-pill">Population Health</span>
-                </div>
+            <div class="project-card">
+                <h3>Statistical Data Visualization & Modeling</h3>
+                <div class="card-sub">Python, R & SPSS</div>
+                <p>Executed end-to-end data processing, feature engineering, and statistical modeling workflows for population health datasets.</p>
             </div>
 
         </div>
     </section>
 
-    <!-- Publications & Presentations Section -->
+    <!-- Publications Section -->
     <section class="section" id="publications">
         <h2 class="section-title">Publications & Presentations</h2>
         <div class="card">
@@ -156,21 +210,7 @@
         <div class="card">
             <span class="card-tag">Conference Presentation</span>
             <h3>Oral Presentation</h3>
-            <p>First Author & Oral Presenter at <strong>EFAST 2026</strong>. The research abstract was published in the conference abstract booklet.</p>
-        </div>
-    </section>
-
-    <!-- Research Experience Section -->
-    <section class="section" id="experience">
-        <h2 class="section-title">Research Experience</h2>
-        <div class="card">
-            <h3>Undergraduate Researcher</h3>
-            <div class="card-sub">Data Analysis & Machine Learning</div>
-            <ul>
-                <li><strong>Statistical & Predictive Modeling:</strong> Applied statistical and predictive methods to real-world survey and health datasets as part of undergraduate research.</li>
-                <li><strong>Data Analysis & Preprocessing:</strong> Performed data cleaning, preprocessing, statistical analysis, visualization, and interpretation of research findings.</li>
-                <li><strong>Machine Learning Applications:</strong> Applied classification and predictive modeling methods to research questions in health and population studies.</li>
-            </ul>
+            <p>First Author & Oral Presenter at <strong>EFAST 2026</strong>. Abstract published in the official booklet.</p>
         </div>
     </section>
 
@@ -180,25 +220,6 @@
         <div class="card">
             <h3>B.Sc. (Honours) in Statistics</h3>
             <div class="card-sub">Department of Statistics and Data Science | Pabna University of Science and Technology, Bangladesh</div>
-        </div>
-    </section>
-
-    <!-- Technical Skills Section -->
-    <section class="section" id="skills">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-box">
-                <h4>Data Analysis & Tools</h4>
-                <p>Python, R, SPSS, Excel</p>
-            </div>
-            <div class="skill-box">
-                <h4>Data Management</h4>
-                <p>Data cleaning, preprocessing, validation, and large-scale dataset handling</p>
-            </div>
-            <div class="skill-box">
-                <h4>Visualization & Reporting</h4>
-                <p>Power BI, Excel dashboards, data visualization, technical reporting, and documentation</p>
-            </div>
         </div>
     </section>
 
