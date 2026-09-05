@@ -4,1864 +4,483 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Md. Obaidul Islam | Portfolio</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
     <style>
-        /* =========================
-           GLOBAL
-        ========================= */
-        :root {
-            --navy: #0f172a;
-            --navy-light: #1e293b;
-            --teal: #0d9488;
-            --teal-dark: #0f766e;
-            --teal-light: #ccfbf1;
-            --teal-bg: #f0fdfa;
-
-            --rose: #be123c;
-            --rose-dark: #9f1239;
-            --rose-light: #fff1f2;
-            --rose-border: #fecdd3;
-
-            --text: #0f172a;
-            --text-muted: #475569;
-            --border: #d5f5ef;
-            --white: #ffffff;
-
-            --shadow-sm: 0 3px 12px rgba(15, 23, 42, 0.05);
-            --shadow-md: 0 10px 28px rgba(15, 23, 42, 0.08);
-            --shadow-lg: 0 18px 45px rgba(15, 23, 42, 0.10);
-
-            --radius-sm: 9px;
-            --radius-md: 14px;
-            --radius-lg: 18px;
-
-            --max-width: 1180px;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 85px;
-        }
-
-        body {
-            background: var(--white);
-            color: var(--text);
-            font-family: 'Inter', sans-serif;
-            line-height: 1.65;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        a {
-            color: inherit;
-        }
-
-        /* =========================
-           NAVIGATION
-        ========================= */
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-
-            background: rgba(15, 23, 42, 0.97);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-
-            border-bottom: 2px solid var(--rose);
-            box-shadow: 0 5px 22px rgba(15, 23, 42, 0.16);
-        }
-
-        .nav-container {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0.95rem 2rem;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .logo {
-            color: var(--white);
-            font-size: 1.18rem;
-            font-weight: 800;
-            letter-spacing: 0.3px;
-            white-space: nowrap;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            gap: 1.35rem;
-        }
-
-        nav a {
-            position: relative;
-            text-decoration: none;
-            color: #e2e8f0;
-            font-size: 0.86rem;
-            font-weight: 600;
-            transition: color 0.25s ease;
-            padding: 0.25rem 0;
-        }
-
-        nav a::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -4px;
-            width: 0;
-            height: 2px;
-            background: var(--teal);
-            border-radius: 2px;
-            transition: width 0.25s ease;
-        }
-
-        nav a:hover {
-            color: #5eead4;
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        /* =========================
-           HERO
-        ========================= */
-        .hero {
-            background:
-                radial-gradient(circle at 82% 20%, rgba(13, 148, 136, 0.10), transparent 27%),
-                linear-gradient(180deg, #f0fdfa 0%, #ffffff 100%);
-
-            border-bottom: 1px solid var(--border);
-        }
-
-        .hero-container {
-            max-width: var(--max-width);
-            margin: 0 auto;
-
-            min-height: 490px;
-            padding: 4.8rem 2rem;
-
-            display: grid;
-            grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.6fr);
-            align-items: center;
-            gap: 4rem;
-        }
-
-        .hero-text {
-            max-width: 720px;
-        }
-
-        .hero-text h1 {
-            color: var(--navy);
-            font-size: clamp(2.15rem, 5vw, 3.15rem);
-            line-height: 1.12;
-            font-weight: 800;
-            letter-spacing: -0.04em;
-            margin-bottom: 0.7rem;
-        }
-
-        .fixed-subtitle {
-            display: inline-block;
-
-            color: var(--rose);
-            font-size: 1rem;
-            font-weight: 800;
-            letter-spacing: 0.15px;
-
-            margin-bottom: 1.45rem;
-        }
-
-        .fixed-subtitle::before {
-            content: "";
-            display: inline-block;
-            width: 30px;
-            height: 2px;
-            margin: 0 9px 3px 0;
-            background: var(--rose);
-            border-radius: 2px;
-        }
-
-        .about-dynamic-card {
-            position: relative;
-
-            background: rgba(255, 255, 255, 0.92);
-            border: 1px solid var(--border);
-            border-left: 4px solid var(--teal);
-
-            border-radius: var(--radius-md);
-            padding: 1.35rem 1.45rem;
-
-            max-width: 700px;
-            margin-bottom: 1.6rem;
-
-            box-shadow: var(--shadow-sm);
-            transition: all 0.3s ease;
-        }
-
-        .about-dynamic-card:hover {
-            transform: translateY(-3px);
-            border-left-color: var(--rose);
-            box-shadow: var(--shadow-md);
-        }
-
-        .about-dynamic-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.75;
-            font-weight: 500;
-        }
-
-        /* =========================
-           HERO BUTTONS
-        ========================= */
-        .hero-btns {
-            display: flex;
-            gap: 0.8rem;
-            flex-wrap: wrap;
-        }
-
-        .btn-primary,
-        .btn-secondary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 7px;
-
-            padding: 10px 19px;
-            border-radius: 8px;
-
-            text-decoration: none;
-            font-size: 0.86rem;
-            font-weight: 700;
-
-            transition: all 0.25s ease;
-        }
-
-        .btn-primary {
-            background: var(--teal);
-            color: var(--white);
-            border: 1.5px solid var(--teal);
-            box-shadow: 0 5px 15px rgba(13, 148, 136, 0.20);
-        }
-
-        .btn-primary:hover {
-            background: var(--teal-dark);
-            border-color: var(--teal-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(13, 148, 136, 0.25);
-        }
-
-        .btn-secondary {
-            background: var(--white);
-            color: var(--rose);
-            border: 1.5px solid var(--rose-border);
-        }
-
-        .btn-secondary:hover {
-            background: var(--rose-light);
-            color: var(--rose-dark);
-            border-color: var(--rose);
-            transform: translateY(-2px);
-        }
-
-        /* =========================
-           PROFILE IMAGE
-        ========================= */
-        .hero-img {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-img-frame {
-            position: relative;
-            padding: 10px;
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 22px;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .hero-img-frame::before {
-            content: "";
-            position: absolute;
-            width: 75px;
-            height: 75px;
-            top: -14px;
-            right: -14px;
-            border-top: 3px solid var(--rose);
-            border-right: 3px solid var(--rose);
-            border-radius: 0 15px 0 0;
-            z-index: -1;
-        }
-
-        .hero-img-frame::after {
-            content: "";
-            position: absolute;
-            width: 75px;
-            height: 75px;
-            bottom: -14px;
-            left: -14px;
-            border-bottom: 3px solid var(--teal);
-            border-left: 3px solid var(--teal);
-            border-radius: 0 0 0 15px;
-            z-index: -1;
-        }
-
-        .hero-img img {
-            display: block;
-            width: 245px;
-            height: 265px;
-
-            object-fit: cover;
-            border-radius: 14px;
-
-            border: 2px solid var(--rose);
-            transition: all 0.3s ease;
-        }
-
-        .hero-img img:hover {
-            border-color: var(--teal);
-            transform: scale(1.015);
-        }
-
-        /* =========================
-           SECTIONS
-        ========================= */
-        .section {
-            border-bottom: 1px solid var(--border);
-        }
-
-        .section-alt {
-            background: #f8fffd;
-        }
-
-        .section-container {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        /* =========================
-           SECTION TITLES
-        ========================= */
-        .section-title-wrap {
-            margin-bottom: 2rem;
-        }
-
-        .section-title {
-            display: flex;
-            align-items: center;
-            gap: 0.65rem;
-
-            color: var(--navy);
-            font-size: 1.5rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-        }
-
-        .section-title svg {
-            width: 25px;
-            height: 25px;
-            fill: var(--teal);
-            flex-shrink: 0;
-        }
-
-        .title-line {
-            width: 48px;
-            height: 3px;
-
-            margin-top: 9px;
-
-            background: linear-gradient(
-                90deg,
-                var(--rose),
-                var(--teal)
-            );
-
-            border-radius: 4px;
-        }
-
-        /* =========================
-           EXPERTISE
-        ========================= */
-        .expertise-block {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-
-            padding: 1.7rem;
-            margin-bottom: 1.4rem;
-
-            box-shadow: var(--shadow-sm);
-        }
-
-        .expertise-block:last-child {
-            margin-bottom: 0;
-        }
-
-        .sub-title {
-            display: flex;
-            align-items: center;
-            gap: 0.55rem;
-
-            color: var(--navy);
-            font-size: 1.05rem;
-            font-weight: 800;
-
-            margin-bottom: 1.3rem;
-        }
-
-        .sub-title svg {
-            width: 21px;
-            height: 21px;
-            fill: var(--teal);
-        }
-
-        /* =========================
-           GROUPED CARDS
-        ========================= */
-        .grouped-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-        }
-
-        .group-card {
-            position: relative;
-
-            background: #f6fffd;
-            border: 1px solid var(--border);
-            border-radius: var(--radius-md);
-
-            padding: 1.25rem;
-
-            transition: all 0.3s ease;
-        }
-
-        .group-card:hover {
-            background: var(--white);
-            border-color: #99f6e4;
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .group-card h4 {
-            color: var(--navy);
-            font-size: 0.91rem;
-            line-height: 1.4;
-            font-weight: 800;
-
-            margin-bottom: 1rem;
-        }
-
-        /* =========================
-           PILLS
-        ========================= */
-        .pills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.45rem;
-        }
-
-        .pill {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-
-            background: var(--white);
-            color: var(--teal-dark);
-
-            border: 1px solid #a7f3d0;
-            border-radius: 20px;
-
-            padding: 5px 10px;
-
-            font-size: 0.73rem;
-            line-height: 1.2;
-            font-weight: 700;
-
-            transition: all 0.2s ease;
-        }
-
-        .pill:hover {
-            background: var(--teal);
-            color: var(--white);
-            border-color: var(--teal);
-        }
-
-        /* =========================
-           RESEARCH EXPERIENCE
-        ========================= */
-        .role-pill {
-            display: inline-flex;
-            align-items: center;
-
-            background: var(--rose-light);
-            color: var(--rose);
-
-            border: 1px solid var(--rose-border);
-            border-radius: 20px;
-
-            padding: 5px 13px;
-            margin-bottom: 1rem;
-
-            font-size: 0.78rem;
-            font-weight: 800;
-        }
-
-        .experience-list {
-            list-style: none;
-            display: grid;
-            gap: 0.7rem;
-        }
-
-        .experience-list li {
-            position: relative;
-            padding-left: 1.15rem;
-
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            line-height: 1.65;
-        }
-
-        .experience-list li::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0.72em;
-
-            width: 6px;
-            height: 6px;
-
-            background: var(--teal);
-            border-radius: 50%;
-        }
-
-        .highlight-label {
-            color: var(--navy);
-            font-weight: 800;
-        }
-
-        /* =========================
-           GENERAL CARDS
-        ========================= */
-        .card {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-
-            padding: 1.55rem;
-            margin-bottom: 1.1rem;
-
-            box-shadow: var(--shadow-sm);
-            transition: all 0.3s ease;
-        }
-
-        .card:last-child {
-            margin-bottom: 0;
-        }
-
-        .card:hover {
-            transform: translateY(-3px);
-            border-color: #99f6e4;
-            box-shadow: var(--shadow-md);
-        }
-
-        .card h3 {
-            color: var(--navy);
-            font-size: 1.08rem;
-            font-weight: 800;
-            line-height: 1.4;
-            margin-bottom: 0.35rem;
-        }
-
-        .card-sub {
-            color: var(--rose);
-            font-size: 0.87rem;
-            font-weight: 700;
-            line-height: 1.5;
-            margin-bottom: 0.55rem;
-        }
-
-        .card-tag {
-            display: inline-flex;
-            align-items: center;
-
-            background: var(--rose-light);
-            color: var(--rose);
-
-            border: 1px solid var(--rose-border);
-            border-radius: 20px;
-
-            padding: 4px 11px;
-            margin-bottom: 0.65rem;
-
-            font-size: 0.72rem;
-            font-weight: 800;
-        }
-
-        /* =========================
-           PROJECT CARDS
-        ========================= */
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-
-            gap: 1rem;
-            margin-bottom: 0.65rem;
-        }
-
-        .project-title {
-            flex: 1;
-
-            color: var(--navy);
-            font-size: 1.05rem;
-            font-weight: 800;
-            line-height: 1.45;
-        }
-
-        .status-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-
-            padding: 4px 10px;
-            border-radius: 20px;
-
-            font-size: 0.7rem;
-            font-weight: 800;
-            white-space: nowrap;
-        }
-
-        .status-completed {
-            background: #ecfdf5;
-            color: #15803d;
-            border: 1px solid #bbf7d0;
-        }
-
-        .status-progress {
-            background: #fffbeb;
-            color: #a16207;
-            border: 1px solid #fde68a;
-        }
-
-        .status-classwork {
-            background: #eff6ff;
-            color: #1d4ed8;
-            border: 1px solid #bfdbfe;
-        }
-
-        .project-desc {
-            color: var(--text-muted);
-            font-size: 0.88rem;
-            line-height: 1.7;
-            font-weight: 500;
-
-            margin-bottom: 0.85rem;
-        }
-
-        .data-source {
-            display: inline-block;
-
-            background: #f0fdfa;
-            color: var(--navy);
-
-            border-left: 3px solid var(--teal);
-            border-radius: 6px;
-
-            padding: 6px 10px;
-            margin-bottom: 0.8rem;
-
-            font-size: 0.78rem;
-            line-height: 1.4;
-            font-weight: 700;
-        }
-
-        /* =========================
-           TOOLS
-        ========================= */
-        .tools-wrapper {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 0.4rem;
-
-            margin-bottom: 1rem;
-        }
-
-        .tools-label {
-            color: var(--rose);
-            font-size: 0.77rem;
-            font-weight: 800;
-            margin-right: 2px;
-        }
-
-        .tech-pill {
-            background: #f0fdfa;
-            color: var(--teal-dark);
-
-            border: 1px solid #a7f3d0;
-            border-radius: 14px;
-
-            padding: 3px 9px;
-
-            font-size: 0.7rem;
-            font-weight: 700;
-        }
-
-        /* =========================
-           LINKS
-        ========================= */
-        .card-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.55rem;
-        }
-
-        .link-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-
-            background: var(--rose-light);
-            color: var(--rose);
-
-            border: 1px solid var(--rose-border);
-            border-radius: 7px;
-
-            padding: 6px 11px;
-
-            text-decoration: none;
-            font-size: 0.76rem;
-            font-weight: 700;
-
-            transition: all 0.25s ease;
-        }
-
-        .link-btn:hover {
-            background: var(--rose);
-            color: var(--white);
-            border-color: var(--rose);
-            transform: translateY(-1px);
-        }
-
-        /* =========================
-           PUBLICATION TEXT
-        ========================= */
-        .publication-text {
-            color: var(--text-muted);
-            font-size: 0.88rem;
-            line-height: 1.7;
-        }
-
-        .publication-text strong {
-            color: var(--navy);
-        }
-
-        /* =========================
-           EDUCATION
-        ========================= */
-        .education-card {
-            display: flex;
-            align-items: center;
-            gap: 1.2rem;
-        }
-
-        .education-icon {
-            width: 50px;
-            height: 50px;
-
-            flex-shrink: 0;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            background: var(--teal-light);
-            color: var(--teal-dark);
-
-            border: 1px solid #99f6e4;
-            border-radius: 12px;
-
-            font-size: 1.35rem;
-        }
-
-        /* =========================
-           CONTACT
-        ========================= */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-        }
-
-        .contact-box {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-md);
-
-            padding: 1.35rem 1rem;
-            text-align: center;
-
-            transition: all 0.3s ease;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .contact-box:hover {
-            transform: translateY(-3px);
-            border-color: #99f6e4;
-            box-shadow: var(--shadow-md);
-        }
-
-        .contact-box svg {
-            width: 28px;
-            height: 28px;
-
-            fill: var(--teal);
-            margin-bottom: 0.55rem;
-        }
-
-        .contact-box h4 {
-            color: var(--navy);
-            font-size: 0.9rem;
-            font-weight: 800;
-            margin-bottom: 0.25rem;
-        }
-
-        .contact-box a,
-        .contact-box p {
-            color: var(--rose);
-            font-size: 0.78rem;
-            line-height: 1.5;
-            font-weight: 700;
-            text-decoration: none;
-            word-break: break-word;
-        }
-
-        .contact-box a:hover {
-            color: var(--teal);
-            text-decoration: underline;
-        }
-
-        /* =========================
-           FOOTER
-        ========================= */
-        footer {
-            background: var(--navy);
-            color: #cbd5e1;
-
-            text-align: center;
-
-            padding: 1.35rem 1rem;
-
-            border-top: 2px solid var(--rose);
-
-            font-size: 0.76rem;
-            font-weight: 600;
-        }
-
-        /* =========================
-           RESPONSIVE
-        ========================= */
-        @media (max-width: 1000px) {
-
-            .nav-container {
-                padding-left: 1.5rem;
-                padding-right: 1.5rem;
-            }
-
-            nav {
-                gap: 0.9rem;
-            }
-
-            .hero-container {
-                grid-template-columns: minmax(0, 1.2fr) minmax(230px, 0.8fr);
-                gap: 2.5rem;
-            }
-
-            .grouped-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { background-color: #f0fdfa; color: #000000; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        
+        /* Navigation Bar */
+        header { background: #0f172a; position: sticky; top: 0; padding: 1rem 8%; display: flex; justify-content: space-between; align-items: center; z-index: 100; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.15); border-bottom: 3px solid #be123c; }
+        .logo { font-size: 1.25rem; font-weight: 800; color: #ffffff; letter-spacing: 0.5px; }
+        nav a { margin-left: 20px; text-decoration: none; color: #f1f5f9; font-weight: 700; font-size: 0.92rem; transition: 0.25s ease; }
+        nav a:hover { color: #2dd4bf; }
+
+        /* Hero / About Section */
+        .hero { display: flex; align-items: center; justify-content: space-between; padding: 3.5rem 8%; gap: 2.5rem; background: #f0fdfa; border-bottom: 2px solid #99f6e4; }
+        .hero-text { flex: 1.2; }
+        .hero-text h1 { font-size: 2.4rem; color: #000000; margin-bottom: 0.3rem; font-weight: 800; letter-spacing: -0.02em; }
+        
+        /* Fixed Subtitle */
+        .fixed-subtitle { font-size: 1.05rem; color: #be123c; margin-bottom: 1.2rem; font-weight: 800; letter-spacing: 0.2px; }
+
+        /* Dynamic Interactive About Card (Matched with Project Cards) */
+        .about-dynamic-card { 
+            background: #ffffff; 
+            border: 1.5px solid #99f6e4; 
+            border-radius: 12px; 
+            padding: 1.5rem; 
+            margin-bottom: 1.5rem; 
+            max-width: 700px; 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); 
+            transition: all 0.3s ease; 
+        }
+        .about-dynamic-card:hover { 
+            transform: translateY(-4px); 
+            box-shadow: 0 12px 24px rgba(13, 148, 136, 0.12); 
+            border-color: #be123c; 
+        }
+        .about-dynamic-card p { 
+            font-size: 0.98rem; 
+            color: #0f172a; 
+            text-align: justify; 
+            font-weight: 500; 
+            line-height: 1.65; 
+            margin: 0; 
+        }
+
+        /* Buttons */
+        .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .btn-primary { background: #0d9488; color: #ffffff; padding: 10px 22px; border-radius: 8px; text-decoration: none; font-size: 0.92rem; font-weight: 700; transition: 0.3s ease; display: inline-flex; align-items: center; gap: 6px; border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3); }
+        .btn-primary:hover { background: #0f766e; transform: translateY(-2px); }
+        .btn-secondary { background: #ffffff; color: #be123c; border: 2px solid #be123c; padding: 10px 22px; border-radius: 8px; text-decoration: none; font-size: 0.92rem; font-weight: 700; transition: 0.3s ease; display: inline-flex; align-items: center; gap: 6px; }
+        .btn-secondary:hover { background: #fff0f3; color: #9f1239; transform: translateY(-2px); }
+
+        /* Profile Image Frame */
+        .hero-img { flex: 0.8; display: flex; justify-content: center; }
+        .hero-img img { width: 260px; height: 280px; border-radius: 16px; object-fit: cover; border: 3.5px solid #be123c; box-shadow: 0 12px 28px rgba(13, 148, 136, 0.2); transition: 0.3s ease; }
+        .hero-img img:hover { transform: scale(1.02); border-color: #0d9488; }
+
+        /* Sections */
+        .section { padding: 3rem 8%; border-bottom: 1px solid #99f6e4; }
+        .section-alt { background: #f0fdfa; }
+        
+        /* Section Title with Icons */
+        .section-title { font-size: 1.5rem; color: #be123c; margin-bottom: 1.5rem; font-weight: 800; position: relative; display: flex; align-items: center; gap: 0.6rem; }
+        .section-title svg { width: 28px; height: 28px; fill: #be123c; }
+        .section-title-wrap { width: 100%; margin-bottom: 1.5rem; }
+        .title-line { width: 50px; height: 4px; background: linear-gradient(90deg, #be123c, #0d9488); border-radius: 2px; margin-top: 4px; }
+
+        /* Expertise Block Frame */
+        .expertise-block { background: #ffffff; border: 1.5px solid #99f6e4; border-radius: 12px; padding: 1.8rem; margin-bottom: 1.5rem; box-shadow: 0 4px 16px rgba(13, 148, 136, 0.06); }
+
+        .sub-title { font-size: 1.2rem; color: #be123c; font-weight: 800; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.5rem; }
+        .sub-title svg { width: 22px; height: 22px; fill: #be123c; }
+
+        /* Grouped Grid Layout */
+        .grouped-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
+        .group-card { background: #e6fffa; border: 1.5px solid #99f6e4; border-radius: 10px; padding: 1.4rem; transition: 0.3s ease; }
+        .group-card:hover { transform: translateY(-4px); background: #ffffff; border-color: #be123c; box-shadow: 0 8px 20px rgba(13, 148, 136, 0.12); }
+        .group-card h4 { font-size: 1rem; color: #000000; margin-bottom: 1rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; }
+
+        /* Pills Container */
+        .pills-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
+        .pill { background: #ffffff; border: 1.5px solid #5eead4; color: #0f766e; padding: 8px 6px; border-radius: 16px; font-size: 0.78rem; font-weight: 700; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.03); transition: 0.2s ease; display: flex; align-items: center; justify-content: center; line-height: 1.2; }
+        .pill:hover { background: #be123c; color: #ffffff; border-color: #be123c; }
+
+        .role-pill { display: inline-block; background: #ffffff; border: 1.5px solid #5eead4; color: #0f766e; padding: 6px 16px; border-radius: 20px; font-weight: 800; font-size: 0.88rem; margin-bottom: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.03); }
+        .highlight-label { color: #0d9488; font-weight: 800; }
+
+        /* Cards & Hover Effect */
+        .card { background: #ffffff; border: 1.5px solid #99f6e4; padding: 1.5rem; border-radius: 12px; margin-bottom: 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.03); transition: all 0.3s ease; }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(13, 148, 136, 0.12); border-color: #be123c; }
+        .card h3 { color: #000000; margin-bottom: 0.3rem; font-size: 1.15rem; font-weight: 800; }
+        .card-sub { color: #be123c; font-weight: 700; font-size: 0.9rem; margin-bottom: 0.5rem; }
+        .card-tag { display: inline-block; background: #fff0f3; color: #be123c; border: 1px solid #fecdd3; font-size: 0.78rem; font-weight: 800; padding: 3px 12px; border-radius: 20px; margin-bottom: 0.6rem; }
+
+        /* Project Cards Structure */
+        .project-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+        .project-title { font-size: 1.2rem; font-weight: 800; color: #000000; flex: 1; }
+        
+        .status-badge { display: inline-flex; align-items: center; gap: 5px; padding: 4px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 800; white-space: nowrap; }
+        .status-completed { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
+        .status-progress { background: #fef9c3; color: #a16207; border: 1px solid #fde047; }
+        .status-classwork { background: #dbeafe; color: #1e40af; border: 1px solid #93c5fd; }
+
+        .project-desc { font-size: 0.95rem; color: #334155; margin-bottom: 0.8rem; font-weight: 500; text-align: justify; }
+        .data-source { font-size: 0.88rem; color: #0f172a; font-weight: 700; margin-bottom: 0.8rem; background: #f0fdfa; padding: 6px 12px; border-radius: 6px; display: inline-block; border-left: 3px solid #0d9488; }
+        
+        .tools-wrapper { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.2rem; align-items: center; }
+        .tools-label { font-size: 0.85rem; font-weight: 800; color: #be123c; margin-right: 4px; }
+        .tech-pill { background: #e6fffa; border: 1px solid #5eead4; color: #0f766e; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 700; }
+
+        /* Buttons in Cards */
+        .card-links { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+        .link-btn { font-size: 0.85rem; font-weight: 700; color: #be123c; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; border: 1.5px solid #fecdd3; background: #fff0f3; padding: 6px 14px; border-radius: 6px; transition: 0.25s ease; }
+        .link-btn:hover { background: #be123c; color: #ffffff; border-color: #be123c; transform: translateY(-1px); }
+
+        /* Contact Section Grid */
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
+        .contact-box { background: #ffffff; border: 1.5px solid #99f6e4; padding: 1.2rem; border-radius: 10px; text-align: center; transition: 0.3s ease; }
+        .contact-box:hover { border-color: #be123c; transform: translateY(-3px); box-shadow: 0 6px 16px rgba(13, 148, 136, 0.1); }
+        .contact-box svg { width: 32px; height: 32px; fill: #0d9488; margin-bottom: 0.5rem; }
+        .contact-box h4 { font-size: 1rem; color: #000000; margin-bottom: 0.2rem; font-weight: 800; }
+        .contact-box a, .contact-box p { font-size: 0.92rem; color: #be123c; text-decoration: none; font-weight: 700; word-break: break-word; }
+        .contact-box a:hover { color: #0d9488; text-decoration: underline; }
+
+        footer { text-align: center; padding: 1.5rem; background: #0f172a; color: #ffffff; font-size: 0.88rem; font-weight: 600; border-top: 3px solid #be123c; }
 
         @media (max-width: 768px) {
-
-            header {
-                position: relative;
-            }
-
-            .nav-container {
-                flex-direction: column;
-                gap: 0.8rem;
-                padding: 1rem 1.2rem;
-            }
-
-            nav {
-                width: 100%;
-                justify-content: center;
-                gap: 0.7rem 1rem;
-            }
-
-            nav a {
-                font-size: 0.76rem;
-            }
-
-            .hero-container {
-                min-height: auto;
-
-                grid-template-columns: 1fr;
-                text-align: center;
-
-                padding: 3.5rem 1.2rem 3rem;
-                gap: 2rem;
-            }
-
-            .hero-text {
-                max-width: 100%;
-            }
-
-            .hero-text h1 {
-                font-size: 2.2rem;
-            }
-
-            .fixed-subtitle {
-                font-size: 0.88rem;
-            }
-
-            .fixed-subtitle::before {
-                display: none;
-            }
-
-            .about-dynamic-card {
-                text-align: left;
-            }
-
-            .hero-btns {
-                justify-content: center;
-            }
-
-            .hero-img {
-                grid-row: 1;
-            }
-
-            .hero-img img {
-                width: 210px;
-                height: 230px;
-            }
-
-            .section-container {
-                padding: 3rem 1.2rem;
-            }
-
-            .section-title {
-                font-size: 1.3rem;
-            }
-
-            .expertise-block {
-                padding: 1.25rem;
-            }
-
-            .grouped-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .project-header {
-                flex-direction: column;
-                gap: 0.45rem;
-            }
-
-            .status-badge {
-                align-self: flex-start;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .education-card {
-                align-items: flex-start;
-            }
-        }
-
-        @media (max-width: 480px) {
-
-            .logo {
-                font-size: 1rem;
-            }
-
-            nav {
-                gap: 0.55rem 0.8rem;
-            }
-
-            nav a {
-                font-size: 0.7rem;
-            }
-
-            .hero-text h1 {
-                font-size: 1.95rem;
-            }
-
-            .fixed-subtitle {
-                font-size: 0.8rem;
-            }
-
-            .about-dynamic-card {
-                padding: 1.1rem;
-            }
-
-            .about-dynamic-card p {
-                font-size: 0.86rem;
-            }
-
-            .btn-primary,
-            .btn-secondary {
-                width: 100%;
-            }
-
-            .hero-btns {
-                width: 100%;
-            }
-
-            .hero-img img {
-                width: 190px;
-                height: 210px;
-            }
-
-            .section-container {
-                padding: 2.5rem 1rem;
-            }
-
-            .card {
-                padding: 1.2rem;
-            }
-
-            .pills-container {
-                gap: 0.4rem;
-            }
-
-            .pill {
-                font-size: 0.68rem;
-            }
+            .hero { flex-direction: column-reverse; text-align: left; padding: 2rem 5%; }
+            .hero-img img { width: 220px; height: 240px; }
+            .section { padding: 2rem 5%; }
+            .pills-container { grid-template-columns: 1fr; }
+            .project-header { flex-direction: column; gap: 0.4rem; }
         }
     </style>
 </head>
-
 <body>
 
-    <!-- =========================
-         NAVIGATION
-    ========================= -->
     <header>
-        <div class="nav-container">
-
-            <div class="logo">
-                Md. Obaidul Islam
-            </div>
-
-            <nav>
-                <a href="#about">About</a>
-                <a href="#expertise">Research & Expertise</a>
-                <a href="#projects">Projects</a>
-                <a href="#publications">Publications</a>
-                <a href="#education">Education</a>
-                <a href="#contact">Contact</a>
-            </nav>
-
-        </div>
+        <div class="logo">Md. Obaidul Islam</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#expertise">Research & Expertise</a>
+            <a href="#projects">Projects</a>
+            <a href="#publications">Publications</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-
-    <!-- =========================
-         ABOUT / HERO
-    ========================= -->
+    <!-- About Section -->
     <section class="hero" id="about">
-
-        <div class="hero-container">
-
-            <div class="hero-text">
-
-                <h1>Md. Obaidul Islam</h1>
-
-                <div class="fixed-subtitle">
-                    Statistical Modeling | Data Science | Health Data Research
-                </div>
-
-                <div class="about-dynamic-card">
-                    <p>
-                        I am a Statistics graduate interested in statistical modeling,
-                        data science, machine learning, and health data research.
-                        My research experience involves analyzing real-world survey data
-                        and applying statistical and machine learning methods to better
-                        understand complex problems in population health.
-                    </p>
-                </div>
-
-                <div class="hero-btns">
-                    <a href="CV.pdf"
-                       download="Md_Obaidul_Islam_CV.pdf"
-                       class="btn-primary">
-                        📄 Download CV
-                    </a>
-
-                    <a href="#contact"
-                       class="btn-secondary">
-                        ✉️ Get In Touch
-                    </a>
-                </div>
-
+        <div class="hero-text">
+            <h1>Md. Obaidul Islam</h1>
+            
+            <!-- Fixed Subtitle -->
+            <div class="fixed-subtitle">
+                Statistical Modeling | Data Science | Health Data Research
+            </div>
+            
+            <!-- Dynamic Interactive About Card -->
+            <div class="about-dynamic-card">
+                <p>I am a Statistics graduate interested in statistical modeling, data science, machine learning, and health data research. My research experience involves analyzing real-world survey data and applying statistical and machine learning methods to better understand complex problems in population health.</p>
             </div>
 
-
-            <div class="hero-img">
-
-                <div class="hero-img-frame">
-                    <img src="Profile.png"
-                         alt="Md. Obaidul Islam"
-                         onerror="this.src='https://via.placeholder.com/260x280?text=Profile.png'">
-                </div>
-
+            <div class="hero-btns">
+                <a href="CV.pdf" download="Md_Obaidul_Islam_CV.pdf" class="btn-primary">📄 Download CV</a>
+                <a href="#contact" class="btn-secondary">✉️ Get In Touch</a>
             </div>
-
         </div>
-
+        <div class="hero-img">
+            <img src="Profile.png" alt="Md. Obaidul Islam" onerror="this.src='https://via.placeholder.com/260x280?text=Profile.png'">
+        </div>
     </section>
 
-
-    <!-- =========================
-         RESEARCH & EXPERTISE
-    ========================= -->
+    <!-- Research & Expertise Section -->
     <section class="section section-alt" id="expertise">
-
-        <div class="section-container">
-
-            <div class="section-title-wrap">
-
-                <h2 class="section-title">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
-                    </svg>
-
-                    Research & Expertise
-                </h2>
-
-                <div class="title-line"></div>
-
-            </div>
-
-
-            <!-- 1. Research Interests -->
-            <div class="expertise-block">
-
-                <h3 class="sub-title">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12 3L1 9l11 6l9-4.91V17h2V9L12 3zM3.82 9L12 4.54L20.18 9L12 13.46L3.82 9z"/>
-                    </svg>
-
-                    1. Research Interests
-                </h3>
-
-
-                <div class="grouped-grid">
-
-                    <div class="group-card">
-
-                        <h4>📊 Statistical Modeling & Methods</h4>
-
-                        <div class="pills-container">
-                            <span class="pill">Applied Statistics</span>
-                            <span class="pill">Statistical Modeling</span>
-                            <span class="pill">Time Series Analysis</span>
-                            <span class="pill">Causal Inference</span>
-                        </div>
-
+        <div class="section-title-wrap">
+            <h2 class="section-title">
+                <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+                Research & Expertise
+            </h2>
+            <div class="title-line"></div>
+        </div>
+        
+        <!-- 1. Research Interests -->
+        <div class="expertise-block">
+            <h3 class="sub-title">
+                <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6l9-4.91V17h2V9L12 3zM3.82 9L12 4.54L20.18 9L12 13.46L3.82 9z"/></svg>
+                1. Research Interests
+            </h3>
+            
+            <div class="grouped-grid">
+                <div class="group-card">
+                    <h4>📊 Statistical Modeling & Methods</h4>
+                    <div class="pills-container">
+                        <span class="pill">Applied Statistics</span>
+                        <span class="pill">Statistical Modeling</span>
+                        <span class="pill">Time Series Analysis</span>
+                        <span class="pill">Causal Inference</span>
                     </div>
-
-
-                    <div class="group-card">
-
-                        <h4>🤖 Data Science & Analytics</h4>
-
-                        <div class="pills-container">
-                            <span class="pill">Data Science & Machine Learning</span>
-                            <span class="pill">Predictive Modeling</span>
-                            <span class="pill">Data Mining</span>
-                            <span class="pill">Statistical Learning</span>
-                        </div>
-
-                    </div>
-
-
-                    <div class="group-card">
-
-                        <h4>🩺 Health Data & Population</h4>
-
-                        <div class="pills-container">
-                            <span class="pill">Health Data Science</span>
-                            <span class="pill">Biostatistics & Epidemiology</span>
-                            <span class="pill">Population Health</span>
-                            <span class="pill">Public Health Research</span>
-                        </div>
-
-                    </div>
-
                 </div>
 
-            </div>
-
-
-            <!-- 2. Research Experience -->
-            <div class="expertise-block">
-
-                <h3 class="sub-title">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.1 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.1 0 2-.89 2-2V8c0-1.11.89-2-2-2zm-6 0h-4V4h4v2z"/>
-                    </svg>
-
-                    2. Research Experience
-                </h3>
-
-                <span class="role-pill">
-                    Undergraduate Researcher
-                </span>
-
-                <ul class="experience-list">
-
-                    <li>
-                        <span class="highlight-label">
-                            Statistical Modeling:
-                        </span>
-                        Applied statistical methods to analyze real-world data and identify meaningful patterns and relationships.
-                    </li>
-
-                    <li>
-                        <span class="highlight-label">
-                            Data Analysis:
-                        </span>
-                        Performed data preprocessing, exploratory analysis, feature engineering, and statistical inference.
-                    </li>
-
-                    <li>
-                        <span class="highlight-label">
-                            Data Science & Machine Learning:
-                        </span>
-                        Applied data science and machine learning for predictive modeling and data-driven research.
-                    </li>
-
-                    <li>
-                        <span class="highlight-label">
-                            Explainable & Causal Analysis:
-                        </span>
-                        Applied Explainable AI and causal inference for interpretable and data-driven research.
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-            <!-- 3. Skills -->
-            <div class="expertise-block">
-
-                <h3 class="sub-title">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M22 7h-9v2h9V7zm0 4h-7v2h7v-2zm0 4h-5v2h5v-2zM2 11h7v8H2v-8zm2 2v4h3v-4H4z"/>
-                    </svg>
-
-                    3. Skills
-                </h3>
-
-
-                <div class="grouped-grid">
-
-                    <div class="group-card">
-
-                        <h4>Data Analysis & Tools</h4>
-
-                        <div class="pills-container">
-                            <span class="pill">Python</span>
-                            <span class="pill">R</span>
-                            <span class="pill">SPSS</span>
-                            <span class="pill">Excel</span>
-                        </div>
-
+                <div class="group-card">
+                    <h4>🤖 Data Science & Analytics</h4>
+                    <div class="pills-container">
+                        <span class="pill">Data Science & Machine Learning</span>
+                        <span class="pill">Predictive Modeling</span>
+                        <span class="pill">Data Mining</span>
+                        <span class="pill">Statistical Learning</span>
                     </div>
-
-
-                    <div class="group-card">
-
-                        <h4>Data Management</h4>
-
-                        <div class="pills-container">
-                            <span class="pill">Data Cleaning</span>
-                            <span class="pill">Preprocessing</span>
-                            <span class="pill">Data Validation</span>
-                            <span class="pill">Large Dataset Handling</span>
-                        </div>
-
-                    </div>
-
-
-                    <div class="group-card">
-
-                        <h4>Visualization & Reporting</h4>
-
-                        <div class="pills-container">
-                            <span class="pill">Power BI</span>
-                            <span class="pill">Excel Dashboards</span>
-                            <span class="pill">Data Visualization</span>
-                            <span class="pill">Technical Reporting</span>
-                        </div>
-
-                    </div>
-
                 </div>
 
+                <div class="group-card">
+                    <h4>🩺 Health Data & Population</h4>
+                    <div class="pills-container">
+                        <span class="pill">Health Data Science</span>
+                        <span class="pill">Biostatistics & Epidemiology</span>
+                        <span class="pill">Population Health</span>
+                        <span class="pill">Public Health Research</span>
+                    </div>
+                </div>
             </div>
+        </div>
 
+        <!-- 2. Research Experience -->
+        <div class="expertise-block">
+            <h3 class="sub-title">
+                <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+                2. Research Experience
+            </h3>
+            <span class="role-pill">Undergraduate Researcher</span>
+            <ul style="margin-left: 1.2rem; line-height: 1.6;">
+                <li><span class="highlight-label">Statistical Modeling:</span> Applied statistical methods to analyze real-world data and identify meaningful patterns and relationships.</li>
+                <li><span class="highlight-label">Data Analysis:</span> Performed data preprocessing, exploratory analysis, feature engineering, and statistical inference.</li>
+                <li><span class="highlight-label">Data Science & Machine Learning:</span> Applied data science and machine learning for predictive modeling and data-driven research.</li>
+                <li><span class="highlight-label">Explainable & Causal Analysis:</span> Applied Explainable AI and causal inference for interpretable and data-driven research.</li>
+            </ul>
+        </div>
+
+        <!-- 3. Skills -->
+        <div class="expertise-block">
+            <h3 class="sub-title">
+                <svg viewBox="0 0 24 24"><path d="M22 7h-9v2h9V7zm0 4h-7v2h7v-2zm0 4h-5v2h5v-2zM2 11h7v8H2v-8zm2 2v4h3v-4H4z"/></svg>
+                3. Skills
+            </h3>
+            
+            <div class="grouped-grid">
+                <div class="group-card">
+                    <h4>Data Analysis & Tools</h4>
+                    <div class="pills-container">
+                        <span class="pill">Python</span>
+                        <span class="pill">R</span>
+                        <span class="pill">SPSS</span>
+                        <span class="pill">Excel</span>
+                    </div>
+                </div>
+
+                <div class="group-card">
+                    <h4>Data Management</h4>
+                    <div class="pills-container">
+                        <span class="pill">Data Cleaning</span>
+                        <span class="pill">Preprocessing</span>
+                        <span class="pill">Data Validation</span>
+                        <span class="pill">Large Dataset Handling</span>
+                    </div>
+                </div>
+
+                <div class="group-card">
+                    <h4>Visualization & Reporting</h4>
+                    <div class="pills-container">
+                        <span class="pill">Power BI</span>
+                        <span class="pill">Excel Dashboards</span>
+                        <span class="pill">Data Visualization</span>
+                        <span class="pill">Technical Reporting</span>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </section>
 
-
-    <!-- =========================
-         PROJECTS
-    ========================= -->
+    <!-- Projects Section -->
     <section class="section" id="projects">
-
-        <div class="section-container">
-
-            <div class="section-title-wrap">
-
-                <h2 class="section-title">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/>
-                    </svg>
-
-                    Projects
-                </h2>
-
-                <div class="title-line"></div>
-
+        <div class="section-title-wrap">
+            <h2 class="section-title">
+                <svg viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+                Projects
+            </h2>
+            <div class="title-line"></div>
+        </div>
+        
+        <!-- Project 1 -->
+        <div class="card">
+            <div class="project-header">
+                <div class="project-title">📄 Project 1: Journal Manuscript Research</div>
+                <span class="status-badge status-completed">🟢 Completed</span>
             </div>
-
-
-            <!-- Project 1 -->
-            <div class="card">
-
-                <div class="project-header">
-
-                    <div class="project-title">
-                        📄 Project 1: Journal Manuscript Research
-                    </div>
-
-                    <span class="status-badge status-completed">
-                        🟢 Completed
-                    </span>
-
-                </div>
-
-                <div class="card-sub">
-                    Project Title: Socioeconomic and Health-System Correlates of Cesarean Delivery in Bangladesh
-                </div>
-
-                <p class="project-desc">
-                    A comprehensive study using 5,052 nationally representative birth records.
-                    Integrated survey-weighted generalized estimating equations (GEE) with an
-                    explainable Stacking Ensemble (Test ROC-AUC: 0.941) and SHAP values to
-                    evaluate how healthcare-system structures and socioeconomic inequalities
-                    drive the 44.7% cesarean prevalence.
-                </p>
-
-                <div class="data-source">
-                    📌 Data Source: BDHS 2022 (Bangladesh Demographic and Health Survey)
-                </div>
-
-                <div class="tools-wrapper">
-                    <span class="tools-label">Tools Used:</span>
-                    <span class="tech-pill">R</span>
-                    <span class="tech-pill">RStudio</span>
-                    <span class="tech-pill">GEE</span>
-                    <span class="tech-pill">SHAP</span>
-                </div>
-
-                <div class="card-links">
-
-                    <a href="https://github.com/MdObaidul-Islam"
-                       target="_blank"
-                       class="link-btn">
-                        💻 View Code (GitHub)
-                    </a>
-
-                    <a href="Research%20Summary.pdf"
-                       target="_blank"
-                       class="link-btn">
-                        📄 Manuscript Summary
-                    </a>
-
-                </div>
-
+            <div class="card-sub">Project Title: Socioeconomic and Health-System Correlates of Cesarean Delivery in Bangladesh</div>
+            <p class="project-desc">A comprehensive study using 5,052 nationally representative birth records. Integrated survey-weighted generalized estimating equations (GEE) with an explainable Stacking Ensemble (Test ROC-AUC: 0.941) and SHAP values to evaluate how healthcare-system structures and socioeconomic inequalities drive the 44.7% cesarean prevalence.</p>
+            <div class="data-source">📌 Data Source: BDHS 2022 (Bangladesh Demographic and Health Survey)</div>
+            <div class="tools-wrapper">
+                <span class="tools-label">Tools Used:</span>
+                <span class="tech-pill">R</span>
+                <span class="tech-pill">RStudio</span>
+                <span class="tech-pill">GEE</span>
+                <span class="tech-pill">SHAP</span>
             </div>
-
-
-            <!-- Project 2 -->
-            <div class="card">
-
-                <div class="project-header">
-
-                    <div class="project-title">
-                        📄 Project 2: Conference Presentation
-                    </div>
-
-                    <span class="status-badge status-completed">
-                        🟢 Completed
-                    </span>
-
-                </div>
-
-                <div class="card-sub">
-                    Project Title: Socioeconomic Determinants of Cesarean Section Delivery: An EFAST 2026 Conference Paper
-                </div>
-
-                <p class="project-desc">
-                    Presented at the International Conference on Emerging Frontiers in Advanced
-                    Sciences and Technologies (EFAST 2026). Developed a 3-stage analytical
-                    framework evaluating 6 ML classifiers to predict delivery context risk,
-                    proving private health facility usage as the strongest predictor
-                    (Cramér's V = 0.763) alongside intensive antenatal care.
-                </p>
-
-                <div class="data-source">
-                    📌 Data Source: BDHS 2022 (Bangladesh Demographic and Health Survey)
-                </div>
-
-                <div class="tools-wrapper">
-                    <span class="tools-label">Tools Used:</span>
-                    <span class="tech-pill">Python</span>
-                    <span class="tech-pill">Scikit-Learn</span>
-                    <span class="tech-pill">Jupyter Notebook</span>
-                    <span class="tech-pill">Youden's J-Index</span>
-                </div>
-
-                <div class="card-links">
-
-                    <a href="#"
-                       class="link-btn">
-                        📊 View Presentation Slides
-                    </a>
-
-                    <a href="https://github.com/MdObaidul-Islam/cesarean-delivery-healthcare-bd/blob/main/paper/Conference_Abstruct.pdf"
-                       target="_blank"
-                       class="link-btn">
-                        📄 View Abstract
-                    </a>
-
-                </div>
-
+            <div class="card-links">
+                <a href="https://github.com/MdObaidul-Islam" target="_blank" class="link-btn">💻 View Code (GitHub)</a>
+                <a href="Research%20Summary.pdf" target="_blank" class="link-btn">📄 Manuscript Summary</a>
             </div>
+        </div>
 
-
-            <!-- Project 3 -->
-            <div class="card">
-
-                <div class="project-header">
-
-                    <div class="project-title">
-                        📄 Project 3: Data Mining Coursework
-                    </div>
-
-                    <span class="status-badge status-classwork">
-                        🔵 Class Work
-                    </span>
-
-                </div>
-
-                <div class="card-sub">
-                    Project Title: Customer Segmentation and Market Basket Analysis using Data Mining Techniques
-                </div>
-
-                <p class="project-desc">
-                    Conducted a university data mining project focused on discovering hidden
-                    patterns in transactional datasets. Applied K-Means Clustering for demographic
-                    segmentation and the Apriori Algorithm to extract strong association rules
-                    for optimized product placement.
-                </p>
-
-                <div class="data-source">
-                    📌 Data Source: Kaggle E-commerce Dataset
-                </div>
-
-                <div class="tools-wrapper">
-                    <span class="tools-label">Tools Used:</span>
-                    <span class="tech-pill">Python</span>
-                    <span class="tech-pill">SPSS</span>
-                    <span class="tech-pill">Excel</span>
-                    <span class="tech-pill">K-Means</span>
-                    <span class="tech-pill">Apriori Algorithm</span>
-                </div>
-
-                <div class="card-links">
-
-                    <a href="#"
-                       class="link-btn">
-                        📑 View Assignment
-                    </a>
-
-                </div>
-
+        <!-- Project 2 -->
+        <div class="card">
+            <div class="project-header">
+                <div class="project-title">📄 Project 2: Conference Presentation</div>
+                <span class="status-badge status-completed">🟢 Completed</span>
             </div>
-
-
-            <!-- Project 4 -->
-            <div class="card">
-
-                <div class="project-header">
-
-                    <div class="project-title">
-                        📄 Project 4: Time Series Analysis
-                    </div>
-
-                    <span class="status-badge status-progress">
-                        🟡 In Progress
-                    </span>
-
-                </div>
-
-                <div class="card-sub">
-                    Project Title: Forecasting Agricultural Commodity Prices and Inflation Trends in Bangladesh
-                </div>
-
-                <p class="project-desc">
-                    Currently developing an automated statistical forecasting pipeline to analyze
-                    decade-long macro-economic and food price indices. Building and comparing
-                    classical statistical models against neural networks to map seasonal volatility
-                    and price shocks.
-                </p>
-
-                <div class="data-source">
-                    📌 Data Source: Bangladesh Bureau of Statistics (BBS) / Open Data
-                </div>
-
-                <div class="tools-wrapper">
-                    <span class="tools-label">Tools Used:</span>
-                    <span class="tech-pill">R</span>
-                    <span class="tech-pill">ARIMA / SARIMAX</span>
-                    <span class="tech-pill">LSTM Networks</span>
-                    <span class="tech-pill">Excel</span>
-                </div>
-
-                <div class="card-links">
-
-                    <a href="https://github.com/MdObaidul-Islam"
-                       target="_blank"
-                       class="link-btn">
-                        ⚙️ GitHub Repo (WIP)
-                    </a>
-
-                </div>
-
+            <div class="card-sub">Project Title: Socioeconomic Determinants of Cesarean Section Delivery: An EFAST 2026 Conference Paper</div>
+            <p class="project-desc">Presented at the International Conference on Emerging Frontiers in Advanced Sciences and Technologies (EFAST 2026). Developed a 3-stage analytical framework evaluating 6 ML classifiers to predict delivery context risk, proving private health facility usage as the strongest predictor (Cramér's V = 0.763) alongside intensive antenatal care.</p>
+            <div class="data-source">📌 Data Source: BDHS 2022 (Bangladesh Demographic and Health Survey)</div>
+            <div class="tools-wrapper">
+                <span class="tools-label">Tools Used:</span>
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">Scikit-Learn</span>
+                <span class="tech-pill">Jupyter Notebook</span>
+                <span class="tech-pill">Youden's J-Index</span>
             </div>
-
-
-            <!-- Project 5 -->
-            <div class="card">
-
-                <div class="project-header">
-
-                    <div class="project-title">
-                        📄 Project 5: Biostatistics & Epidemiology Research
-                    </div>
-
-                    <span class="status-badge status-progress">
-                        🟡 In Progress
-                    </span>
-
-                </div>
-
-                <div class="card-sub">
-                    Project Title: Risk Factor Mapping and Survival Analysis of Non-Communicable Diseases (NCDs)
-                </div>
-
-                <p class="project-desc">
-                    Ongoing biostatistical research focused on evaluating the hazards and
-                    epidemiological patterns of chronic illnesses in regional cohorts.
-                    Implementing survival analysis workflows to estimate survival curves
-                    and adjusted hazard ratios over varying exposure timelines.
-                </p>
-
-                <div class="data-source">
-                    📌 Data Source: Regional Hospital Records / Public Health Registry
-                </div>
-
-                <div class="tools-wrapper">
-                    <span class="tools-label">Tools Used:</span>
-                    <span class="tech-pill">R</span>
-                    <span class="tech-pill">SPSS</span>
-                    <span class="tech-pill">Kaplan-Meier Curves</span>
-                    <span class="tech-pill">Cox Proportional Hazards</span>
-                </div>
-
-                <div class="card-links">
-
-                    <a href="https://github.com/MdObaidul-Islam"
-                       target="_blank"
-                       class="link-btn">
-                        ⚙️ GitHub Repo (WIP)
-                    </a>
-
-                </div>
-
+            <div class="card-links">
+                <a href="#" class="link-btn">📊 View Presentation Slides</a>
+                <a href="https://github.com/MdObaidul-Islam/cesarean-delivery-healthcare-bd/blob/main/paper/Conference_Abstruct.pdf" target="_blank" class="link-btn">📄 View Abstract</a>
             </div>
+        </div>
 
+        <!-- Project 3 -->
+        <div class="card">
+            <div class="project-header">
+                <div class="project-title">📄 Project 3: Data Mining Coursework</div>
+                <span class="status-badge status-classwork">🔵 Class Work</span>
+            </div>
+            <div class="card-sub">Project Title: Customer Segmentation and Market Basket Analysis using Data Mining Techniques</div>
+            <p class="project-desc">Conducted a university data mining project focused on discovering hidden patterns in transactional datasets. Applied K-Means Clustering for demographic segmentation and the Apriori Algorithm to extract strong association rules for optimized product placement.</p>
+            <div class="data-source">📌 Data Source: Kaggle E-commerce Dataset</div>
+            <div class="tools-wrapper">
+                <span class="tools-label">Tools Used:</span>
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">SPSS</span>
+                <span class="tech-pill">Excel</span>
+                <span class="tech-pill">K-Means</span>
+                <span class="tech-pill">Apriori Algorithm</span>
+            </div>
+            <div class="card-links">
+                <a href="#" class="link-btn">📑 View Assignment</a>
+            </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="card">
+            <div class="project-header">
+                <div class="project-title">📄 Project 4: Time Series Analysis</div>
+                <span class="status-badge status-progress">🟡 In Progress</span>
+            </div>
+            <div class="card-sub">Project Title: Forecasting Agricultural Commodity Prices and Inflation Trends in Bangladesh</div>
+            <p class="project-desc">Currently developing an automated statistical forecasting pipeline to analyze decade-long macro-economic and food price indices. Building and comparing classical statistical models against neural networks to map seasonal volatility and price shocks.</p>
+            <div class="data-source">📌 Data Source: Bangladesh Bureau of Statistics (BBS) / Open Data</div>
+            <div class="tools-wrapper">
+                <span class="tools-label">Tools Used:</span>
+                <span class="tech-pill">R</span>
+                <span class="tech-pill">ARIMA / SARIMAX</span>
+                <span class="tech-pill">LSTM Networks</span>
+                <span class="tech-pill">Excel</span>
+            </div>
+            <div class="card-links">
+                <a href="https://github.com/MdObaidul-Islam" target="_blank" class="link-btn">⚙️ GitHub Repo (WIP)</a>
+            </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="card">
+            <div class="project-header">
+                <div class="project-title">📄 Project 5: Biostatistics & Epidemiology Research</div>
+                <span class="status-badge status-progress">🟡 In Progress</span>
+            </div>
+            <div class="card-sub">Project Title: Risk Factor Mapping and Survival Analysis of Non-Communicable Diseases (NCDs)</div>
+            <p class="project-desc">Ongoing biostatistical research focused on evaluating the hazards and epidemiological patterns of chronic illnesses in regional cohorts. Implementing survival analysis workflows to estimate survival curves and adjusted hazard ratios over varying exposure timelines.</p>
+            <div class="data-source">📌 Data Source: Regional Hospital Records / Public Health Registry</div>
+            <div class="tools-wrapper">
+                <span class="tools-label">Tools Used:</span>
+                <span class="tech-pill">R</span>
+                <span class="tech-pill">SPSS</span>
+                <span class="tech-pill">Kaplan-Meier Curves</span>
+                <span class="tech-pill">Cox Proportional Hazards</span>
+            </div>
+            <div class="card-links">
+                <a href="https://github.com/MdObaidul-Islam" target="_blank" class="link-btn">⚙️ GitHub Repo (WIP)</a>
+            </div>
         </div>
 
     </section>
 
-
-    <!-- =========================
-         PUBLICATIONS
-    ========================= -->
+    <!-- Publications Section -->
     <section class="section section-alt" id="publications">
-
-        <div class="section-container">
-
-            <div class="section-title-wrap">
-
-                <h2 class="section-title">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
-                    </svg>
-
-                    Publications
-                </h2>
-
-                <div class="title-line"></div>
-
+        <div class="section-title-wrap">
+            <h2 class="section-title">
+                <svg viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg>
+                Publications
+            </h2>
+            <div class="title-line"></div>
+        </div>
+        
+        <div class="card">
+            <span class="card-tag">Submitted Manuscript</span>
+            <h3>Journal Manuscript</h3>
+            <p><strong>Title:</strong> Socioeconomic and Health-System Correlates of Cesarean Delivery in Bangladesh: Survey-Weighted Statistical Analysis and Explainable Machine Learning Using BDHS 2022.</p>
+            <p style="margin-top: 4px;"><strong>Journal:</strong> <em>Scientific Reports</em> (Springer Nature).</p>
+            <div class="card-links" style="margin-top: 10px;">
+                <a href="Research Summary.pdf" target="_blank" class="link-btn">📄 View Research Summary</a>
             </div>
-
-
-            <div class="card">
-
-                <span class="card-tag">
-                    Submitted Manuscript
-                </span>
-
-                <h3>
-                    Journal Manuscript
-                </h3>
-
-                <p class="publication-text">
-                    <strong>Title:</strong>
-                    Socioeconomic and Health-System Correlates of Cesarean Delivery in Bangladesh:
-                    Survey-Weighted Statistical Analysis and Explainable Machine Learning Using BDHS 2022.
-                </p>
-
-                <p class="publication-text" style="margin-top: 6px;">
-                    <strong>Journal:</strong>
-                    <em>Scientific Reports</em> (Springer Nature).
-                </p>
-
-                <div class="card-links" style="margin-top: 12px;">
-
-                    <a href="Research%20Summary.pdf"
-                       target="_blank"
-                       class="link-btn">
-                        📄 View Research Summary
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="card">
-
-                <span class="card-tag">
-                    Conference Presentation
-                </span>
-
-                <h3>
-                    EFAST 2026 Conference
-                </h3>
-
-                <p class="publication-text">
-                    <strong>Title:</strong>
-                    Socioeconomic Determinants of Cesarean Section Delivery in Bangladesh:
-                    A Survey-Weighted Statistical and Explainable Machine Learning Analysis.
-                </p>
-
-                <p class="publication-text" style="margin-top: 6px;">
-                    <strong>Role:</strong>
-                    First Author & Oral Presenter. Abstract published in the official booklet.
-                </p>
-
-                <div class="card-links" style="margin-top: 12px;">
-
-                    <a href="https://github.com/MdObaidul-Islam/cesarean-delivery-healthcare-bd/blob/main/paper/Conference_Abstruct.pdf"
-                       target="_blank"
-                       class="link-btn">
-                        📄 View Abstract
-                    </a>
-
-                </div>
-
-            </div>
-
         </div>
 
+        <div class="card">
+            <span class="card-tag">Conference Presentation</span>
+            <h3>EFAST 2026 Conference</h3>
+            <p><strong>Title:</strong> Socioeconomic Determinants of Cesarean Section Delivery in Bangladesh: A Survey-Weighted Statistical and Explainable Machine Learning Analysis.</p>
+            <p style="margin-top: 4px;"><strong>Role:</strong> First Author & Oral Presenter. Abstract published in the official booklet.</p>
+            <div class="card-links" style="margin-top: 10px;">
+                <a href="https://github.com/MdObaidul-Islam/cesarean-delivery-healthcare-bd/blob/main/paper/Conference_Abstruct.pdf" target="_blank" class="link-btn">📄 View Abstract</a>
+            </div>
+        </div>
     </section>
-
-
-    <!-- =========================
-         EDUCATION
-    ========================= -->
+        
+    <!-- Education Section -->
     <section class="section" id="education">
-
-        <div class="section-container">
-
-            <div class="section-title-wrap">
-
-                <h2 class="section-title">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6l9-4.91V17h2V9L12 3z"/>
-                    </svg>
-
-                    Education
-                </h2>
-
-                <div class="title-line"></div>
-
-            </div>
-
-
-            <div class="card education-card">
-
-                <div class="education-icon">
-                    🎓
-                </div>
-
-                <div>
-
-                    <h3>
-                        B.Sc. (Honours) in Statistics
-                    </h3>
-
-                    <div class="card-sub">
-                        Department of Statistics and Data Science |
-                        Pabna University of Science and Technology, Bangladesh
-                    </div>
-
-                </div>
-
-            </div>
-
+        <div class="section-title-wrap">
+            <h2 class="section-title">
+                <svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6l9-4.91V17h2V9L12 3z"/></svg>
+                Education
+            </h2>
+            <div class="title-line"></div>
         </div>
-
+        <div class="card">
+            <h3>B.Sc. (Honours) in Statistics</h3>
+            <div class="card-sub">Department of Statistics and Data Science | Pabna University of Science and Technology, Bangladesh</div>
+        </div>
     </section>
 
-
-    <!-- =========================
-         CONTACT
-    ========================= -->
+    <!-- Contact Section -->
     <section class="section section-alt" id="contact">
-
-        <div class="section-container">
-
-            <div class="section-title-wrap">
-
-                <h2 class="section-title">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5l-8-5V6l8 5l8-5v2z"/>
-                    </svg>
-
-                    Contact
-                </h2>
-
-                <div class="title-line"></div>
-
-            </div>
-
-
-            <div class="contact-grid">
-
-                <!-- Location -->
-                <div class="contact-box">
-
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                    </svg>
-
-                    <h4>Location</h4>
-
-                    <p>
-                        Rajshahi, Bangladesh
-                    </p>
-
-                </div>
-
-
-                <!-- Email -->
-                <div class="contact-box">
-
-                    <svg viewBox="0 0 24 24">
-                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 1.99 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5l-8-5V6l8 5l8-5v2z"/>
-                    </svg>
-
-                    <h4>Email</h4>
-
-                    <a href="mailto:obaidulislam0325@gmail.com">
-                        obaidulislam0325@gmail.com
-                    </a>
-
-                </div>
-
-
-                <!-- GitHub -->
-                <div class="contact-box">
-
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-                    </svg>
-
-                    <h4>GitHub</h4>
-
-                    <a href="https://github.com/MdObaidul-Islam"
-                       target="_blank">
-                        github.com/MdObaidul-Islam
-                    </a>
-
-                </div>
-
-            </div>
-
+        <div class="section-title-wrap">
+            <h2 class="section-title">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5l-8-5V6l8 5l8-5v2z"/></svg>
+                Contact
+            </h2>
+            <div class="title-line"></div>
         </div>
-
+        <div class="contact-grid">
+            <div class="contact-box">
+                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5-2.5z"/></svg>
+                <h4>Location</h4>
+                <p>Rajshahi, Bangladesh</p>
+            </div>
+            <div class="contact-box">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5l-8-5V6l8 5l8-5v2z"/></svg>
+                <h4>Email</h4>
+                <a href="mailto:obaidulislam0325@gmail.com">obaidulislam0325@gmail.com</a>
+            </div>
+            <div class="contact-box">
+                <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <h4>GitHub</h4>
+                <a href="https://github.com/MdObaidul-Islam" target="_blank">github.com/MdObaidul-Islam</a>
+            </div>
+        </div>
     </section>
 
-
-    <!-- =========================
-         FOOTER
-    ========================= -->
     <footer>
-        <p>
-            © 2026 Md. Obaidul Islam. All Rights Reserved.
-        </p>
+        <p>© 2026 Md. Obaidul Islam. All Rights Reserved.</p>
     </footer>
 
 </body>
