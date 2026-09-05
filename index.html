@@ -17,11 +17,22 @@
         nav a:hover { color: #2dd4bf; }
 
         /* Hero / About Section */
-        .hero { display: flex; align-items: center; justify-content: space-between; padding: 3.5rem 8%; gap: 2.5rem; background: #ccfbf1; border-bottom: 2px solid #99f6e4; }
+        .hero { display: flex; align-items: center; justify-content: space-between; padding: 3.5rem 8%; gap: 2.5rem; background: #f0fdfa; border-bottom: 2px solid #99f6e4; }
         .hero-text { flex: 1.2; }
         .hero-text h1 { font-size: 2.4rem; color: #000000; margin-bottom: 0.4rem; font-weight: 800; letter-spacing: -0.02em; }
-        .hero-text h3 { font-size: 1.15rem; color: #be123c; margin-bottom: 1rem; font-weight: 800; }
-        .hero-text p { font-size: 0.98rem; color: #0f172a; margin-bottom: 1.5rem; max-width: 680px; text-align: justify; font-weight: 500; }
+        .hero-text h3 { font-size: 1.15rem; color: #be123c; margin-bottom: 1.2rem; font-weight: 800; }
+        
+        /* About Text Card Box Style */
+        .about-card-box { 
+            background: #ffffff; 
+            border: 1.5px solid #99f6e4; 
+            border-radius: 12px; 
+            padding: 1.2rem 1.4rem; 
+            margin-bottom: 1.5rem; 
+            max-width: 680px; 
+            box-shadow: 0 4px 12px rgba(13, 148, 136, 0.05); 
+        }
+        .about-card-box p { font-size: 0.98rem; color: #0f172a; text-align: justify; font-weight: 500; line-height: 1.65; margin: 0; }
         
         /* Buttons */
         .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
@@ -30,8 +41,9 @@
         .btn-secondary { background: #ffffff; color: #be123c; border: 2px solid #be123c; padding: 10px 22px; border-radius: 8px; text-decoration: none; font-size: 0.92rem; font-weight: 700; transition: 0.3s ease; display: inline-flex; align-items: center; gap: 6px; }
         .btn-secondary:hover { background: #fff0f3; color: #9f1239; transform: translateY(-2px); }
 
+        /* Profile Image Frame */
         .hero-img { flex: 0.8; display: flex; justify-content: center; }
-        .hero-img img { width: 220px; height: 240px; border-radius: 14px; object-fit: cover; border: 3px solid #be123c; box-shadow: 0 12px 28px rgba(13, 148, 136, 0.2); transition: 0.3s ease; }
+        .hero-img img { width: 260px; height: 280px; border-radius: 16px; object-fit: cover; border: 3.5px solid #be123c; box-shadow: 0 12px 28px rgba(13, 148, 136, 0.2); transition: 0.3s ease; }
         .hero-img img:hover { transform: scale(1.02); border-color: #0d9488; }
 
         /* Sections */
@@ -47,13 +59,13 @@
         .sub-title { font-size: 1.2rem; color: #be123c; font-weight: 800; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.5rem; }
         .sub-title svg { width: 22px; height: 22px; fill: #be123c; }
 
-        /* 3-Column Grouped Grid Layout */
+        /* Grouped Grid Layout */
         .grouped-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
         .group-card { background: #e6fffa; border: 1.5px solid #99f6e4; border-radius: 10px; padding: 1.4rem; transition: 0.3s ease; }
         .group-card:hover { transform: translateY(-4px); background: #ffffff; border-color: #be123c; box-shadow: 0 8px 20px rgba(13, 148, 136, 0.12); }
         .group-card h4 { font-size: 1rem; color: #000000; margin-bottom: 1rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; }
 
-        /* 2-Column Grid for Pills */
+        /* Pills Container */
         .pills-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
         .pill { background: #ffffff; border: 1.5px solid #5eead4; color: #0f766e; padding: 8px 6px; border-radius: 16px; font-size: 0.78rem; font-weight: 700; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.03); transition: 0.2s ease; display: flex; align-items: center; justify-content: center; line-height: 1.2; }
         .pill:hover { background: #be123c; color: #ffffff; border-color: #be123c; }
@@ -61,25 +73,35 @@
         /* Box Pill Style for Undergraduate Researcher */
         .role-pill { display: inline-block; background: #ffffff; border: 1.5px solid #5eead4; color: #0f766e; padding: 6px 16px; border-radius: 20px; font-weight: 800; font-size: 0.88rem; margin-bottom: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.03); }
 
-        /* Highlight Label for Research Experience (Paste / Teal Color) */
-        .highlight-label { 
-            color: #0d9488; 
-            font-weight: 800; 
-        }
+        /* Highlight Label */
+        .highlight-label { color: #0d9488; font-weight: 800; }
 
         /* Standard Cards & Hover Effect */
         .card { background: #ffffff; border: 1.5px solid #99f6e4; padding: 1.5rem; border-radius: 12px; margin-bottom: 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.03); transition: all 0.3s ease; }
         .card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(13, 148, 136, 0.12); border-color: #be123c; }
         .card h3 { color: #000000; margin-bottom: 0.3rem; font-size: 1.15rem; font-weight: 800; }
         .card-sub { color: #be123c; font-weight: 700; font-size: 0.9rem; margin-bottom: 0.5rem; }
-        
         .card-tag { display: inline-block; background: #fff0f3; color: #be123c; border: 1px solid #fecdd3; font-size: 0.78rem; font-weight: 800; padding: 3px 12px; border-radius: 20px; margin-bottom: 0.6rem; }
-        .card p, .card li { color: #0f172a; font-size: 0.95rem; font-weight: 500; }
-        .card ul { margin-left: 1.2rem; margin-top: 0.5rem; }
-        .card ul li { margin-bottom: 0.6rem; }
+
+        /* Project Card Custom Extensions */
+        .project-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+        .project-title { font-size: 1.2rem; font-weight: 800; color: #000000; flex: 1; }
+        
+        /* Status Tags */
+        .status-badge { display: inline-flex; align-items: center; gap: 5px; padding: 4px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 800; white-space: nowrap; }
+        .status-completed { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
+        .status-progress { background: #fef9c3; color: #a16207; border: 1px solid #fde047; }
+        .status-classwork { background: #dbeafe; color: #1e40af; border: 1px solid #93c5fd; }
+
+        .project-desc { font-size: 0.95rem; color: #334155; margin-bottom: 0.8rem; font-weight: 500; text-align: justify; }
+        .data-source { font-size: 0.88rem; color: #0f172a; font-weight: 700; margin-bottom: 0.8rem; background: #f0fdfa; padding: 6px 12px; border-radius: 6px; display: inline-block; border-left: 3px solid #0d9488; }
+        
+        .tools-wrapper { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.2rem; align-items: center; }
+        .tools-label { font-size: 0.85rem; font-weight: 800; color: #be123c; margin-right: 4px; }
+        .tech-pill { background: #e6fffa; border: 1px solid #5eead4; color: #0f766e; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 700; }
 
         /* Links inside Cards */
-        .card-links { margin-top: 1rem; display: flex; gap: 0.8rem; flex-wrap: wrap; }
+        .card-links { display: flex; gap: 0.8rem; flex-wrap: wrap; }
         .link-btn { font-size: 0.85rem; font-weight: 700; color: #be123c; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; border: 1.5px solid #fecdd3; background: #fff0f3; padding: 6px 14px; border-radius: 6px; transition: 0.25s ease; }
         .link-btn:hover { background: #be123c; color: #ffffff; border-color: #be123c; transform: translateY(-1px); }
 
@@ -93,9 +115,10 @@
 
         @media (max-width: 768px) {
             .hero { flex-direction: column-reverse; text-align: left; padding: 2rem 5%; }
-            .hero-img img { width: 190px; height: 210px; }
+            .hero-img img { width: 220px; height: 240px; }
             .section { padding: 2rem 5%; }
             .pills-container { grid-template-columns: 1fr; }
+            .project-header { flex-direction: column; gap: 0.4rem; }
         }
     </style>
 </head>
@@ -118,14 +141,18 @@
         <div class="hero-text">
             <h1>Md. Obaidul Islam</h1>
             <h3>Statistical Modeling | Data Science | Health Data Research</h3>
-            <p>I am a Statistics graduate interested in statistical modeling, data science, machine learning, and health data research. My research experience involves analyzing real-world survey data and applying statistical and machine learning methods to better understand complex problems in population health.</p>
+            
+            <div class="about-card-box">
+                <p>I am a Statistics graduate interested in statistical modeling, data science, machine learning, and health data research. My research experience involves analyzing real-world survey data and applying statistical and machine learning methods to better understand complex problems in population health.</p>
+            </div>
+
             <div class="hero-btns">
                 <a href="CV.pdf" download="Md_Obaidul_Islam_CV.pdf" class="btn-primary">📄 Download CV</a>
                 <a href="#contact" class="btn-secondary">✉️ Get In Touch</a>
             </div>
         </div>
         <div class="hero-img">
-            <img src="Profile.png" alt="Md. Obaidul Islam" onerror="this.src='https://via.placeholder.com/220x240?text=Profile.png'">
+            <img src="Profile.png" alt="Md. Obaidul Islam" onerror="this.src='https://via.placeholder.com/260x280?text=Profile.png'">
         </div>
     </section>
 
@@ -173,7 +200,7 @@
             </div>
         </div>
 
-        <!-- 2. Research Experience (Paste/Teal Headings & Boxed Role) -->
+        <!-- 2. Research Experience -->
         <div class="expertise-block">
             <h3 class="sub-title">
                 <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
@@ -184,7 +211,7 @@
                 <li><span class="highlight-label">Statistical Modeling:</span> Applied statistical methods to analyze real-world data and identify meaningful patterns and relationships.</li>
                 <li><span class="highlight-label">Data Analysis:</span> Performed data preprocessing, exploratory analysis, feature engineering, and statistical inference.</li>
                 <li><span class="highlight-label">Data Science & Machine Learning:</span> Applied data science and machine learning for predictive modeling and data-driven research.</li>
-                <li><span class="highlight-label">Explainable & Causal Analysis:</span> Applied Explainable AI and causal inference for interpretable and data-driven research.</li>
+                <li><span class="highlight-label">Explainable & Causal Analysis:</span> Applied Explainable AI and causal inference to improve model interpretability and identify key predictors.</li>
             </ul>
         </div>
 
@@ -230,26 +257,115 @@
 
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects Section (Redesigned as per Guidelines) -->
     <section class="section" id="projects">
         <h2 class="section-title">Projects</h2>
         
+        <!-- Project 1 -->
         <div class="card">
-            <h3>Cesarean Delivery Analysis in Bangladesh</h3>
-            <div class="card-sub">Survey-Weighted Analysis & Explainable AI</div>
-            <p>Analyzed BDHS 2022 survey data using survey-weighted statistical modeling and ML classification algorithms (SVM, XGBoost, Random Forest) with SHAP interpretation.</p>
+            <div class="project-header">
+                <div class="project-title">📄 Project 1: Journal Manuscript Research</div>
+                <span class="status-badge status-completed">🟢 Completed</span>
+            </div>
+            <div class="card-sub">Project Title: Socioeconomic and Health-System Correlates of Cesarean Delivery in Bangladesh</div>
+            <p class="project-desc">A comprehensive study using 5,052 nationally representative birth records. Integrated survey-weighted generalized estimating equations (GEE) with an explainable Stacking Ensemble (Test ROC-AUC: 0.941) and SHAP values to evaluate how healthcare-system structures and socioeconomic inequalities drive the 44.7% cesarean prevalence.</p>
+            <div class="data-source">📌 Data Source: BDHS 2022 (Bangladesh Demographic and Health Survey)</div>
+            <div class="tools-wrapper">
+                <span class="tools-label">Tools Used:</span>
+                <span class="tech-pill">R</span>
+                <span class="tech-pill">RStudio</span>
+                <span class="tech-pill">GEE</span>
+                <span class="tech-pill">SHAP</span>
+            </div>
             <div class="card-links">
-                <a href="https://github.com/MdObaidul-Islam" target="_blank" class="link-btn">🔗 GitHub Repo</a>
-                <a href="#" class="link-btn">📌 View Details</a>
+                <a href="https://github.com/MdObaidul-Islam" target="_blank" class="link-btn">💻 View Code (GitHub)</a>
+                <a href="Research Summary.pdf" target="_blank" class="link-btn">📄 Manuscript Summary</a>
             </div>
         </div>
 
+        <!-- Project 2 -->
         <div class="card">
-            <h3>Statistical Data Visualization & Modeling</h3>
-            <div class="card-sub">Python, R & SPSS</div>
-            <p>Executed end-to-end data processing, feature engineering, and statistical modeling workflows for population health datasets.</p>
+            <div class="project-header">
+                <div class="project-title">📄 Project 2: Conference Presentation</div>
+                <span class="status-badge status-completed">🟢 Completed</span>
+            </div>
+            <div class="card-sub">Project Title: Socioeconomic Determinants of Cesarean Section Delivery: An EFAST 2026 Conference Paper</div>
+            <p class="project-desc">Presented at the International Conference on Emerging Frontiers in Advanced Sciences and Technologies (EFAST 2026). Developed a 3-stage analytical framework evaluating 6 ML classifiers to predict delivery context risk, proving private health facility usage as the strongest predictor (Cramér's V = 0.763) alongside intensive antenatal care.</p>
+            <div class="data-source">📌 Data Source: BDHS 2022 (Bangladesh Demographic and Health Survey)</div>
+            <div class="tools-wrapper">
+                <span class="tools-label">Tools Used:</span>
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">Scikit-Learn</span>
+                <span class="tech-pill">Jupyter Notebook</span>
+                <span class="tech-pill">Youden's J-Index</span>
+            </div>
             <div class="card-links">
-                <a href="https://github.com/MdObaidul-Islam" target="_blank" class="link-btn">🔗 GitHub Repo</a>
+                <a href="#" class="link-btn">📊 View Presentation Slides</a>
+                <a href="https://github.com/MdObaidul-Islam/cesarean-delivery-healthcare-bd/blob/main/paper/Conference_Abstruct.pdf" target="_blank" class="link-btn">📄 View Abstract</a>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="card">
+            <div class="project-header">
+                <div class="project-title">📄 Project 3: Data Mining Coursework</div>
+                <span class="status-badge status-classwork">🔵 Class Work</span>
+            </div>
+            <div class="card-sub">Project Title: Customer Segmentation and Market Basket Analysis using Data Mining Techniques</div>
+            <p class="project-desc">Conducted a university data mining project focused on discovering hidden patterns in transactional datasets. Applied K-Means Clustering for demographic segmentation and the Apriori Algorithm to extract strong association rules for optimized product placement.</p>
+            <div class="data-source">📌 Data Source: Kaggle E-commerce Dataset</div>
+            <div class="tools-wrapper">
+                <span class="tools-label">Tools Used:</span>
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">SPSS</span>
+                <span class="tech-pill">Excel</span>
+                <span class="tech-pill">K-Means</span>
+                <span class="tech-pill">Apriori Algorithm</span>
+            </div>
+            <div class="card-links">
+                <a href="#" class="link-btn">📑 View Assignment</a>
+            </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="card">
+            <div class="project-header">
+                <div class="project-title">📄 Project 4: Time Series Analysis</div>
+                <span class="status-badge status-progress">🟡 In Progress</span>
+            </div>
+            <div class="card-sub">Project Title: Forecasting Agricultural Commodity Prices and Inflation Trends in Bangladesh</div>
+            <p class="project-desc">Currently developing an automated statistical forecasting pipeline to analyze decade-long macro-economic and food price indices. Building and comparing classical statistical models against neural networks to map seasonal volatility and price shocks.</p>
+            <div class="data-source">📌 Data Source: Bangladesh Bureau of Statistics (BBS) / Open Data</div>
+            <div class="tools-wrapper">
+                <span class="tools-label">Tools Used:</span>
+                <span class="tech-pill">R</span>
+                <span class="tech-pill">ARIMA / SARIMAX</span>
+                <span class="tech-pill">LSTM Networks</span>
+                <span class="tech-pill">Excel</span>
+            </div>
+            <div class="card-links">
+                <a href="https://github.com/MdObaidul-Islam" target="_blank" class="link-btn">⚙️ GitHub Repo (WIP)</a>
+            </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="card">
+            <div class="project-header">
+                <div class="project-title">📄 Project 5: Biostatistics & Epidemiology Research</div>
+                <span class="status-badge status-progress">🟡 In Progress</span>
+            </div>
+            <div class="card-sub">Project Title: Risk Factor Mapping and Survival Analysis of Non-Communicable Diseases (NCDs)</div>
+            <p class="project-desc">Ongoing biostatistical research focused on evaluating the hazards and epidemiological patterns of chronic illnesses in regional cohorts. Implementing survival analysis workflows to estimate survival curves and adjusted hazard ratios over varying exposure timelines.</p>
+            <div class="data-source">📌 Data Source: Regional Hospital Records / Public Health Registry</div>
+            <div class="tools-wrapper">
+                <span class="tools-label">Tools Used:</span>
+                <span class="tech-pill">R</span>
+                <span class="tech-pill">SPSS</span>
+                <span class="tech-pill">Kaplan-Meier Curves</span>
+                <span class="tech-pill">Cox Proportional Hazards</span>
+            </div>
+            <div class="card-links">
+                <a href="https://github.com/MdObaidul-Islam" target="_blank" class="link-btn">⚙️ GitHub Repo (WIP)</a>
             </div>
         </div>
 
