@@ -148,7 +148,12 @@
         .link-btn:hover { background: #be123c; color: #ffffff; border-color: #be123c; transform: translateY(-1px); }
 
         /* Contact Section Grid */
-        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
+        .contact-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 1.2rem; 
+            margin-top: 1.5rem;
+        }
         .contact-box { background: #ffffff; border: 1.5px solid #99f6e4; padding: 1.2rem; border-radius: 10px; text-align: center; transition: 0.3s ease; }
         .contact-box:hover { border-color: #be123c; transform: translateY(-3px); box-shadow: 0 6px 16px rgba(13, 148, 136, 0.1); }
         .contact-box svg { width: 32px; height: 32px; fill: #0d9488; margin-bottom: 0.5rem; }
@@ -157,7 +162,6 @@
         .contact-box a:hover { color: #0d9488; text-decoration: underline; }
 
         footer { text-align: center; padding: 1.5rem; background: #0f172a; color: #ffffff; font-size: 0.88rem; font-weight: 600; border-top: 3px solid #be123c; }
-
         @media (max-width: 768px) {
             .hero { flex-direction: column-reverse; text-align: left; padding: 2.5rem 5%; }
             .img-wrapper img { width: 210px; height: 230px; }
@@ -363,7 +367,6 @@
                 <span class="tech-pill">Scikit-Learn</span>
                 <span class="tech-pill">Jupyter Notebook</span>
                 <span class="tech-pill">Machine Learning</span>
-                <span class="tech-pill">Youden's J-Index</span>
                 <span class="tech-pill">Stratified Cross-Validation</span>
                 <span class="tech-pill">Explainable AI (XAI)</span>
             </div>
@@ -376,40 +379,51 @@
         <!-- Project 3 -->
         <div class="card">
             <div class="project-header">
-                <div class="project-title">📄 Project 3: Data Mining Coursework</div>
+                <div class="project-title">📄 Project 3: Integrated Retail Analytics: Association Mining, Demand Forecasting & Customer Segmentation</div>
                 <span class="status-badge status-classwork">🔵 Class Work</span>
             </div>
-            <div class="card-sub">Project Title: Customer Segmentation and Market Basket Analysis using Data Mining Techniques</div>
-            <p class="project-desc">Conducted a university data mining project focused on discovering hidden patterns in transactional datasets. Applied K-Means Clustering for demographic segmentation and the Apriori Algorithm to extract strong association rules for optimized product placement.</p>
+            <div class="card-sub">Integrated Retail Analytics</div>
+            <p class="project-desc">Developed an end-to-end retail analytics pipeline combining Apriori, FP-Growth and ECLAT benchmarking, association rule mining, ARIMA-based demand forecasting, and RFM-K-Means customer segmentation.</p>
             <div class="data-source">📌 Data Source: Kaggle E-commerce Dataset</div>
             <div class="tools-wrapper">
-                <span class="tools-label">🛠️Tools & Techniques:</span>
+                <span class="tools-label">🛠️ Tools & Techniques:</span>
                 <span class="tech-pill">Python</span>
-                <span class="tech-pill">SPSS</span>
-                <span class="tech-pill">Excel</span>
-                <span class="tech-pill">K-Means</span>
-                <span class="tech-pill">Apriori Algorithm</span>
+                <span class="tech-pill">MLxtend</span>
+                <span class="tech-pill">Statsmodels</span>
+                <span class="tech-pill">Apriori</span>
+                <span class="tech-pill">FP-Growth</span>
+                <span class="tech-pill">ECLAT</span>
+                <span class="tech-pill">Association Rule Mining</span>
+                <span class="tech-pill">ARIMA</span>
+                <span class="tech-pill">RFM Analysis</span>
+                <span class="tech-pill">Clustering</span>
             </div>
             <div class="card-links">
-                <a href="#" class="link-btn">📑 View Assignment</a>
+                <!-- ১. Retail_Analytic.pdf ফাইলের সরাসরি লিঙ্ক -->
+                <a href="https://github.com/MdObaidul-Islam/Integrated-Retail-Analytics/blob/main/Retail_Analytic.pdf" target="_blank" class="link-btn">📄 View Assignment (PDF)</a>
+                
+                <!-- ২. Retail_Analytics.ipynb কোড ফাইলের সরাসরি লিঙ্ক -->
+                <a href="https://github.com/MdObaidul-Islam/Integrated-Retail-Analytics/blob/main/Retail_Analytics.ipynb" target="_blank" class="link-btn">💻 View Code</a>
             </div>
         </div>
 
         <!-- Project 4 -->
         <div class="card">
             <div class="project-header">
-                <div class="project-title">📄 Project 4: Time Series Analysis</div>
+                <div class="project-title">📄 Project 4: Applied Time Series & Forecasting Research</div>
                 <span class="status-badge status-progress">🟡 In Progress</span>
             </div>
             <div class="card-sub">Project Title: Forecasting Agricultural Commodity Prices and Inflation Trends in Bangladesh</div>
-            <p class="project-desc">Currently developing an automated statistical forecasting pipeline to analyze decade-long macro-economic and food price indices. Building and comparing classical statistical models against neural networks to map seasonal volatility and price shocks.</p>
+            <p class="project-desc">Currently developing an automated statistical forecasting pipeline to analyze decade-long macroeconomic and food price indices, comparing classical statistical models and neural networks to identify seasonal patterns, volatility, and price shocks.</p>
             <div class="data-source">📌 Data Source: Bangladesh Bureau of Statistics (BBS) / Open Data</div>
             <div class="tools-wrapper">
                 <span class="tools-label">🛠️Tools & Techniques:</span>
                 <span class="tech-pill">R</span>
                 <span class="tech-pill">ARIMA / SARIMAX</span>
-                <span class="tech-pill">LSTM Networks</span>
                 <span class="tech-pill">Excel</span>
+                <span class="tech-pill">SPSS</span>
+                <span class="tech-pill">Statistical Forecasting</span>
+                <span class="tech-pill">LSTM Networks</span>
             </div>
             <div class="card-links">
                 <a href="https://github.com/MdObaidul-Islam" target="_blank" class="link-btn">⚙️ GitHub Repo (WIP)</a>
@@ -419,17 +433,19 @@
         <!-- Project 5 -->
         <div class="card">
             <div class="project-header">
-                <div class="project-title">📄 Project 5: Biostatistics & Epidemiology Research</div>
+                <div class="project-title">📄 Project 5: Applied Biostatistics & Survival Analysis Research</div>
                 <span class="status-badge status-progress">🟡 In Progress</span>
             </div>
             <div class="card-sub">Project Title: Risk Factor Mapping and Survival Analysis of Non-Communicable Diseases (NCDs)</div>
-            <p class="project-desc">Ongoing biostatistical research focused on evaluating the hazards and epidemiological patterns of chronic illnesses in regional cohorts. Implementing survival analysis workflows to estimate survival curves and adjusted hazard ratios over varying exposure timelines.</p>
+            <p class="project-desc">Ongoing biostatistical research focused on evaluating risk factors and survival patterns of chronic diseases, using survival analysis to estimate survival probabilities and adjusted hazard ratios across different exposure groups.</p>
             <div class="data-source">📌 Data Source: Regional Hospital Records / Public Health Registry</div>
             <div class="tools-wrapper">
                 <span class="tools-label">🛠️Tools & Techniques:</span>
                 <span class="tech-pill">R</span>
                 <span class="tech-pill">SPSS</span>
-                <span class="tech-pill">Kaplan-Meier Curves</span>
+                <span class="tech-pill">Excel</span>
+                <span class="tech-pill">Hazard Ratios</span>
+                <span class="tech-pill">Kaplan–Meier Survival Analysis</span>
                 <span class="tech-pill">Cox Proportional Hazards</span>
             </div>
             <div class="card-links">
@@ -499,7 +515,7 @@
             </div>
         </section>
 
-    <!-- Contact Section -->
+  <!-- Contact Section -->
     <section class="section section-alt" id="contact">
         <div class="section-title-wrap">
             <h2 class="section-title">
@@ -509,24 +525,37 @@
             <div class="title-line"></div>
         </div>
         <div class="contact-grid">
+            <!-- Box 1: Location -->
             <div class="contact-box">
                 <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5-2.5z"/></svg>
                 <h4>Location</h4>
                 <p>Rajshahi, Bangladesh</p>
             </div>
+
+            <!-- Box 2: Email -->
             <div class="contact-box">
                 <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5l-8-5V6l8 5l8-5v2z"/></svg>
                 <h4>Email</h4>
                 <a href="mailto:obaidulislam0325@gmail.com">obaidulislam0325@gmail.com</a>
             </div>
+
+            <!-- Box 3: GitHub -->
             <div class="contact-box">
                 <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
                 <h4>GitHub</h4>
                 <a href="https://github.com/MdObaidul-Islam" target="_blank">github.com/MdObaidul-Islam</a>
             </div>
+
+            <!-- Box 4: WhatsApp -->
+            <div class="contact-box">
+                <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.84 9.84 0 0 0 12.04 2zm.01 16.59c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.32a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.24-8.22 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.66.81-.81.98-.15.17-.31.19-.56.06-.25-.12-1.05-.39-2.01-1.24-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.43s-.56-1.35-.77-1.85c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.77 2.7 4.28 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.11-.23-.17-.48-.29z"/></svg>
+                <h4>WhatsApp</h4>
+                <a href="https://wa.me/8801644560325" target="_blank">+880 1644-560325</a>
+            </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>© 2026 Md. Obaidul Islam. All Rights Reserved.</p>
     </footer>
