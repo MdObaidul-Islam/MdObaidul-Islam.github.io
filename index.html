@@ -16,33 +16,38 @@
         nav a { margin-left: 20px; text-decoration: none; color: #f1f5f9; font-weight: 700; font-size: 0.92rem; transition: 0.25s ease; }
         nav a:hover { color: #2dd4bf; }
 
-        /* Dynamic Hero / About Section */
+        /* Hero / About Section */
         .hero { display: flex; align-items: center; justify-content: space-between; padding: 3.5rem 8%; gap: 2.5rem; background: #f0fdfa; border-bottom: 2px solid #99f6e4; }
         .hero-text { flex: 1.2; }
-        .hero-text h1 { font-size: 2.4rem; color: #000000; margin-bottom: 0.4rem; font-weight: 800; letter-spacing: -0.02em; }
+        .hero-text h1 { font-size: 2.4rem; color: #000000; margin-bottom: 0.3rem; font-weight: 800; letter-spacing: -0.02em; }
         
-        /* Typing Effect Container */
-        .typing-container { font-size: 1.15rem; color: #be123c; margin-bottom: 1.2rem; font-weight: 800; min-height: 1.6em; }
-        .typed-text { border-right: 3px solid #be123c; padding-right: 4px; animation: blink 0.75s step-end infinite; }
-        @keyframes blink { 50% { border-color: transparent; } }
+        /* Fixed Subtitle */
+        .fixed-subtitle { font-size: 1.05rem; color: #be123c; margin-bottom: 1.2rem; font-weight: 800; letter-spacing: 0.2px; }
 
-        /* About Text Card Box Style */
-        .about-card-box { 
+        /* Dynamic Interactive About Card (Matched with Project Cards) */
+        .about-dynamic-card { 
             background: #ffffff; 
             border: 1.5px solid #99f6e4; 
             border-radius: 12px; 
-            padding: 1.2rem 1.4rem; 
-            margin-bottom: 1.2rem; 
-            max-width: 680px; 
-            box-shadow: 0 4px 12px rgba(13, 148, 136, 0.05); 
+            padding: 1.5rem; 
+            margin-bottom: 1.5rem; 
+            max-width: 700px; 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); 
+            transition: all 0.3s ease; 
         }
-        .about-card-box p { font-size: 0.98rem; color: #0f172a; text-align: justify; font-weight: 500; line-height: 1.65; margin: 0; }
-        
-        /* Dynamic Quick Stats Grid */
-        .stats-grid { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
-        .stat-card { background: #ffffff; border: 1.5px solid #5eead4; border-radius: 10px; padding: 0.8rem 1.2rem; flex: 1; min-width: 140px; box-shadow: 0 2px 8px rgba(13, 148, 136, 0.08); text-align: center; }
-        .stat-card strong { display: block; font-size: 1.2rem; color: #be123c; font-weight: 800; }
-        .stat-card span { font-size: 0.8rem; color: #0f766e; font-weight: 700; }
+        .about-dynamic-card:hover { 
+            transform: translateY(-4px); 
+            box-shadow: 0 12px 24px rgba(13, 148, 136, 0.12); 
+            border-color: #be123c; 
+        }
+        .about-dynamic-card p { 
+            font-size: 0.98rem; 
+            color: #0f172a; 
+            text-align: justify; 
+            font-weight: 500; 
+            line-height: 1.65; 
+            margin: 0; 
+        }
 
         /* Buttons */
         .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
@@ -148,34 +153,19 @@
         </nav>
     </header>
 
-    <!-- Dynamic About Section -->
+    <!-- About Section -->
     <section class="hero" id="about">
         <div class="hero-text">
             <h1>Md. Obaidul Islam</h1>
             
-            <!-- Dynamic Typing Subtitle -->
-            <div class="typing-container">
-                <span class="typed-text" id="typewriter"></span>
+            <!-- Fixed Subtitle -->
+            <div class="fixed-subtitle">
+                Statistical Modeling | Data Science | Health Data Research
             </div>
             
-            <div class="about-card-box">
+            <!-- Dynamic Interactive About Card -->
+            <div class="about-dynamic-card">
                 <p>I am a Statistics graduate interested in statistical modeling, data science, machine learning, and health data research. My research experience involves analyzing real-world survey data and applying statistical and machine learning methods to better understand complex problems in population health.</p>
-            </div>
-
-            <!-- Dynamic Quick Stats -->
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <strong>5,000+</strong>
-                    <span>Records Analyzed</span>
-                </div>
-                <div class="stat-card">
-                    <strong>0.941</strong>
-                    <span>Test ROC-AUC</span>
-                </div>
-                <div class="stat-card">
-                    <strong>EFAST '26</strong>
-                    <span>Conference Paper</span>
-                </div>
             </div>
 
             <div class="hero-btns">
@@ -253,7 +243,7 @@
             </ul>
         </div>
 
-        <!-- 3. Skills (Renamed from Technical Skills) -->
+        <!-- 3. Skills -->
         <div class="expertise-block">
             <h3 class="sub-title">
                 <svg viewBox="0 0 24 24"><path d="M22 7h-9v2h9V7zm0 4h-7v2h7v-2zm0 4h-5v2h5v-2zM2 11h7v8H2v-8zm2 2v4h3v-4H4z"/></svg>
@@ -472,7 +462,7 @@
         </div>
         <div class="contact-grid">
             <div class="contact-box">
-                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5-2.5z"/></svg>
                 <h4>Location</h4>
                 <p>Rajshahi, Bangladesh</p>
             </div>
@@ -493,47 +483,5 @@
         <p>© 2026 Md. Obaidul Islam. All Rights Reserved.</p>
     </footer>
 
-    <!-- Typewriter Script for Dynamic Header -->
-    <script>
-        const words = ["Statistical Modeling", "Data Science & ML", "Health Data Research", "Biostatistics"];
-        let i = 0;
-        let timer;
-
-        function typingEffect() {
-            let word = words[i].split("");
-            var loopTyping = function() {
-                if (word.length > 0) {
-                    document.getElementById('typewriter').innerHTML += word.shift();
-                } else {
-                    setTimeout(deletingEffect, 2000);
-                    return false;
-                }
-                timer = setTimeout(loopTyping, 100);
-            };
-            loopTyping();
-        }
-
-        function deletingEffect() {
-            let word = words[i].split("");
-            var loopDeleting = function() {
-                if (word.length > 0) {
-                    word.pop();
-                    document.getElementById('typewriter').innerHTML = word.join("");
-                } else {
-                    if (words.length > (i + 1)) {
-                        i++;
-                    } else {
-                        i = 0;
-                    }
-                    setTimeout(typingEffect, 500);
-                    return false;
-                }
-                timer = setTimeout(loopDeleting, 50);
-            };
-            loopDeleting();
-        }
-
-        typingEffect();
-    </script>
 </body>
 </html>
