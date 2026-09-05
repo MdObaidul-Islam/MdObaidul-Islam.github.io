@@ -16,24 +16,34 @@
         nav a { margin-left: 20px; text-decoration: none; color: #f1f5f9; font-weight: 700; font-size: 0.92rem; transition: 0.25s ease; }
         nav a:hover { color: #2dd4bf; }
 
-        /* Hero / About Section */
+        /* Dynamic Hero / About Section */
         .hero { display: flex; align-items: center; justify-content: space-between; padding: 3.5rem 8%; gap: 2.5rem; background: #f0fdfa; border-bottom: 2px solid #99f6e4; }
         .hero-text { flex: 1.2; }
         .hero-text h1 { font-size: 2.4rem; color: #000000; margin-bottom: 0.4rem; font-weight: 800; letter-spacing: -0.02em; }
-        .hero-text h3 { font-size: 1.15rem; color: #be123c; margin-bottom: 1.2rem; font-weight: 800; }
         
+        /* Typing Effect Container */
+        .typing-container { font-size: 1.15rem; color: #be123c; margin-bottom: 1.2rem; font-weight: 800; min-height: 1.6em; }
+        .typed-text { border-right: 3px solid #be123c; padding-right: 4px; animation: blink 0.75s step-end infinite; }
+        @keyframes blink { 50% { border-color: transparent; } }
+
         /* About Text Card Box Style */
         .about-card-box { 
             background: #ffffff; 
             border: 1.5px solid #99f6e4; 
             border-radius: 12px; 
             padding: 1.2rem 1.4rem; 
-            margin-bottom: 1.5rem; 
+            margin-bottom: 1.2rem; 
             max-width: 680px; 
             box-shadow: 0 4px 12px rgba(13, 148, 136, 0.05); 
         }
         .about-card-box p { font-size: 0.98rem; color: #0f172a; text-align: justify; font-weight: 500; line-height: 1.65; margin: 0; }
         
+        /* Dynamic Quick Stats Grid */
+        .stats-grid { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .stat-card { background: #ffffff; border: 1.5px solid #5eead4; border-radius: 10px; padding: 0.8rem 1.2rem; flex: 1; min-width: 140px; box-shadow: 0 2px 8px rgba(13, 148, 136, 0.08); text-align: center; }
+        .stat-card strong { display: block; font-size: 1.2rem; color: #be123c; font-weight: 800; }
+        .stat-card span { font-size: 0.8rem; color: #0f766e; font-weight: 700; }
+
         /* Buttons */
         .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
         .btn-primary { background: #0d9488; color: #ffffff; padding: 10px 22px; border-radius: 8px; text-decoration: none; font-size: 0.92rem; font-weight: 700; transition: 0.3s ease; display: inline-flex; align-items: center; gap: 6px; border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3); }
@@ -50,10 +60,13 @@
         .section { padding: 3rem 8%; border-bottom: 1px solid #99f6e4; }
         .section-alt { background: #f0fdfa; }
         
-        .section-title { font-size: 1.5rem; color: #be123c; margin-bottom: 1.5rem; font-weight: 800; position: relative; }
-        .section-title::after { content: ''; display: block; width: 45px; height: 4px; background: linear-gradient(90deg, #be123c, #0d9488); margin-top: 6px; border-radius: 2px; }
+        /* Section Title with Icons */
+        .section-title { font-size: 1.5rem; color: #be123c; margin-bottom: 1.5rem; font-weight: 800; position: relative; display: flex; align-items: center; gap: 0.6rem; }
+        .section-title svg { width: 28px; height: 28px; fill: #be123c; }
+        .section-title-wrap { width: 100%; margin-bottom: 1.5rem; }
+        .title-line { width: 50px; height: 4px; background: linear-gradient(90deg, #be123c, #0d9488); border-radius: 2px; margin-top: 4px; }
 
-        /* Expertise Main Card Frame */
+        /* Expertise Block Frame */
         .expertise-block { background: #ffffff; border: 1.5px solid #99f6e4; border-radius: 12px; padding: 1.8rem; margin-bottom: 1.5rem; box-shadow: 0 4px 16px rgba(13, 148, 136, 0.06); }
 
         .sub-title { font-size: 1.2rem; color: #be123c; font-weight: 800; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.5rem; }
@@ -70,24 +83,20 @@
         .pill { background: #ffffff; border: 1.5px solid #5eead4; color: #0f766e; padding: 8px 6px; border-radius: 16px; font-size: 0.78rem; font-weight: 700; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.03); transition: 0.2s ease; display: flex; align-items: center; justify-content: center; line-height: 1.2; }
         .pill:hover { background: #be123c; color: #ffffff; border-color: #be123c; }
 
-        /* Box Pill Style for Undergraduate Researcher */
         .role-pill { display: inline-block; background: #ffffff; border: 1.5px solid #5eead4; color: #0f766e; padding: 6px 16px; border-radius: 20px; font-weight: 800; font-size: 0.88rem; margin-bottom: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.03); }
-
-        /* Highlight Label */
         .highlight-label { color: #0d9488; font-weight: 800; }
 
-        /* Standard Cards & Hover Effect */
+        /* Cards & Hover Effect */
         .card { background: #ffffff; border: 1.5px solid #99f6e4; padding: 1.5rem; border-radius: 12px; margin-bottom: 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.03); transition: all 0.3s ease; }
         .card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(13, 148, 136, 0.12); border-color: #be123c; }
         .card h3 { color: #000000; margin-bottom: 0.3rem; font-size: 1.15rem; font-weight: 800; }
         .card-sub { color: #be123c; font-weight: 700; font-size: 0.9rem; margin-bottom: 0.5rem; }
         .card-tag { display: inline-block; background: #fff0f3; color: #be123c; border: 1px solid #fecdd3; font-size: 0.78rem; font-weight: 800; padding: 3px 12px; border-radius: 20px; margin-bottom: 0.6rem; }
 
-        /* Project Card Custom Extensions */
+        /* Project Cards Structure */
         .project-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
         .project-title { font-size: 1.2rem; font-weight: 800; color: #000000; flex: 1; }
         
-        /* Status Tags */
         .status-badge { display: inline-flex; align-items: center; gap: 5px; padding: 4px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 800; white-space: nowrap; }
         .status-completed { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
         .status-progress { background: #fef9c3; color: #a16207; border: 1px solid #fde047; }
@@ -100,16 +109,19 @@
         .tools-label { font-size: 0.85rem; font-weight: 800; color: #be123c; margin-right: 4px; }
         .tech-pill { background: #e6fffa; border: 1px solid #5eead4; color: #0f766e; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 700; }
 
-        /* Links inside Cards */
+        /* Buttons in Cards */
         .card-links { display: flex; gap: 0.8rem; flex-wrap: wrap; }
         .link-btn { font-size: 0.85rem; font-weight: 700; color: #be123c; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; border: 1.5px solid #fecdd3; background: #fff0f3; padding: 6px 14px; border-radius: 6px; transition: 0.25s ease; }
         .link-btn:hover { background: #be123c; color: #ffffff; border-color: #be123c; transform: translateY(-1px); }
 
-        /* Contact Details */
-        .contact-list { list-style: none; font-size: 1rem; color: #000000; font-weight: 600; }
-        .contact-list li { margin-bottom: 0.6rem; }
-        .contact-list a { color: #be123c; text-decoration: none; font-weight: 800; transition: 0.2s; }
-        .contact-list a:hover { color: #0d9488; text-decoration: underline; }
+        /* Contact Section Grid */
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
+        .contact-box { background: #ffffff; border: 1.5px solid #99f6e4; padding: 1.2rem; border-radius: 10px; text-align: center; transition: 0.3s ease; }
+        .contact-box:hover { border-color: #be123c; transform: translateY(-3px); box-shadow: 0 6px 16px rgba(13, 148, 136, 0.1); }
+        .contact-box svg { width: 32px; height: 32px; fill: #0d9488; margin-bottom: 0.5rem; }
+        .contact-box h4 { font-size: 1rem; color: #000000; margin-bottom: 0.2rem; font-weight: 800; }
+        .contact-box a, .contact-box p { font-size: 0.92rem; color: #be123c; text-decoration: none; font-weight: 700; word-break: break-word; }
+        .contact-box a:hover { color: #0d9488; text-decoration: underline; }
 
         footer { text-align: center; padding: 1.5rem; background: #0f172a; color: #ffffff; font-size: 0.88rem; font-weight: 600; border-top: 3px solid #be123c; }
 
@@ -136,14 +148,34 @@
         </nav>
     </header>
 
-    <!-- About Section -->
+    <!-- Dynamic About Section -->
     <section class="hero" id="about">
         <div class="hero-text">
             <h1>Md. Obaidul Islam</h1>
-            <h3>Statistical Modeling | Data Science | Health Data Research</h3>
+            
+            <!-- Dynamic Typing Subtitle -->
+            <div class="typing-container">
+                <span class="typed-text" id="typewriter"></span>
+            </div>
             
             <div class="about-card-box">
                 <p>I am a Statistics graduate interested in statistical modeling, data science, machine learning, and health data research. My research experience involves analyzing real-world survey data and applying statistical and machine learning methods to better understand complex problems in population health.</p>
+            </div>
+
+            <!-- Dynamic Quick Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <strong>5,000+</strong>
+                    <span>Records Analyzed</span>
+                </div>
+                <div class="stat-card">
+                    <strong>0.941</strong>
+                    <span>Test ROC-AUC</span>
+                </div>
+                <div class="stat-card">
+                    <strong>EFAST '26</strong>
+                    <span>Conference Paper</span>
+                </div>
             </div>
 
             <div class="hero-btns">
@@ -158,12 +190,18 @@
 
     <!-- Research & Expertise Section -->
     <section class="section section-alt" id="expertise">
-        <h2 class="section-title">Research & Expertise</h2>
+        <div class="section-title-wrap">
+            <h2 class="section-title">
+                <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+                Research & Expertise
+            </h2>
+            <div class="title-line"></div>
+        </div>
         
         <!-- 1. Research Interests -->
         <div class="expertise-block">
             <h3 class="sub-title">
-                <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6l9-4.91V17h2V9L12 3zM3.82 9L12 4.54L20.18 9L12 13.46L3.82 9z"/></svg>
                 1. Research Interests
             </h3>
             
@@ -211,15 +249,15 @@
                 <li><span class="highlight-label">Statistical Modeling:</span> Applied statistical methods to analyze real-world data and identify meaningful patterns and relationships.</li>
                 <li><span class="highlight-label">Data Analysis:</span> Performed data preprocessing, exploratory analysis, feature engineering, and statistical inference.</li>
                 <li><span class="highlight-label">Data Science & Machine Learning:</span> Applied data science and machine learning for predictive modeling and data-driven research.</li>
-                <li><span class="highlight-label">Explainable & Causal Analysis:</span> Applied Explainable AI and causal inference to improve model interpretability and identify key predictors.</li>
+                <li><span class="highlight-label">Explainable & Causal Analysis:</span> Applied Explainable AI and causal inference for interpretable and data-driven research.</li>
             </ul>
         </div>
 
-        <!-- 3. Technical Skills -->
+        <!-- 3. Skills (Renamed from Technical Skills) -->
         <div class="expertise-block">
             <h3 class="sub-title">
                 <svg viewBox="0 0 24 24"><path d="M22 7h-9v2h9V7zm0 4h-7v2h7v-2zm0 4h-5v2h5v-2zM2 11h7v8H2v-8zm2 2v4h3v-4H4z"/></svg>
-                3. Technical Skills
+                3. Skills
             </h3>
             
             <div class="grouped-grid">
@@ -257,9 +295,15 @@
 
     </section>
 
-    <!-- Projects Section (Redesigned as per Guidelines) -->
+    <!-- Projects Section -->
     <section class="section" id="projects">
-        <h2 class="section-title">Projects</h2>
+        <div class="section-title-wrap">
+            <h2 class="section-title">
+                <svg viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+                Projects
+            </h2>
+            <div class="title-line"></div>
+        </div>
         
         <!-- Project 1 -->
         <div class="card">
@@ -373,14 +417,20 @@
 
     <!-- Publications Section -->
     <section class="section section-alt" id="publications">
-        <h2 class="section-title">Publications</h2>
+        <div class="section-title-wrap">
+            <h2 class="section-title">
+                <svg viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg>
+                Publications
+            </h2>
+            <div class="title-line"></div>
+        </div>
         
         <div class="card">
             <span class="card-tag">Submitted Manuscript</span>
             <h3>Journal Manuscript</h3>
             <p><strong>Title:</strong> Socioeconomic and Health-System Correlates of Cesarean Delivery in Bangladesh: Survey-Weighted Statistical Analysis and Explainable Machine Learning Using BDHS 2022.</p>
             <p style="margin-top: 4px;"><strong>Journal:</strong> <em>Scientific Reports</em> (Springer Nature).</p>
-            <div class="card-links">
+            <div class="card-links" style="margin-top: 10px;">
                 <a href="Research Summary.pdf" target="_blank" class="link-btn">📄 View Research Summary</a>
             </div>
         </div>
@@ -390,7 +440,7 @@
             <h3>EFAST 2026 Conference</h3>
             <p><strong>Title:</strong> Socioeconomic Determinants of Cesarean Section Delivery in Bangladesh: A Survey-Weighted Statistical and Explainable Machine Learning Analysis.</p>
             <p style="margin-top: 4px;"><strong>Role:</strong> First Author & Oral Presenter. Abstract published in the official booklet.</p>
-            <div class="card-links">
+            <div class="card-links" style="margin-top: 10px;">
                 <a href="https://github.com/MdObaidul-Islam/cesarean-delivery-healthcare-bd/blob/main/paper/Conference_Abstruct.pdf" target="_blank" class="link-btn">📄 View Abstract</a>
             </div>
         </div>
@@ -398,7 +448,13 @@
         
     <!-- Education Section -->
     <section class="section" id="education">
-        <h2 class="section-title">Education</h2>
+        <div class="section-title-wrap">
+            <h2 class="section-title">
+                <svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6l9-4.91V17h2V9L12 3z"/></svg>
+                Education
+            </h2>
+            <div class="title-line"></div>
+        </div>
         <div class="card">
             <h3>B.Sc. (Honours) in Statistics</h3>
             <div class="card-sub">Department of Statistics and Data Science | Pabna University of Science and Technology, Bangladesh</div>
@@ -407,17 +463,77 @@
 
     <!-- Contact Section -->
     <section class="section section-alt" id="contact">
-        <h2 class="section-title">Contact</h2>
-        <ul class="contact-list">
-            <li><strong>Location:</strong> Rajshahi, Bangladesh</li>
-            <li><strong>Email:</strong> <a href="mailto:obaidulislam0325@gmail.com">obaidulislam0325@gmail.com</a></li>
-            <li><strong>GitHub:</strong> <a href="https://github.com/MdObaidul-Islam" target="_blank">github.com/MdObaidul-Islam</a></li>
-        </ul>
+        <div class="section-title-wrap">
+            <h2 class="section-title">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5l-8-5V6l8 5l8-5v2z"/></svg>
+                Contact
+            </h2>
+            <div class="title-line"></div>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-box">
+                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <h4>Location</h4>
+                <p>Rajshahi, Bangladesh</p>
+            </div>
+            <div class="contact-box">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5l-8-5V6l8 5l8-5v2z"/></svg>
+                <h4>Email</h4>
+                <a href="mailto:obaidulislam0325@gmail.com">obaidulislam0325@gmail.com</a>
+            </div>
+            <div class="contact-box">
+                <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <h4>GitHub</h4>
+                <a href="https://github.com/MdObaidul-Islam" target="_blank">github.com/MdObaidul-Islam</a>
+            </div>
+        </div>
     </section>
 
     <footer>
         <p>© 2026 Md. Obaidul Islam. All Rights Reserved.</p>
     </footer>
 
+    <!-- Typewriter Script for Dynamic Header -->
+    <script>
+        const words = ["Statistical Modeling", "Data Science & ML", "Health Data Research", "Biostatistics"];
+        let i = 0;
+        let timer;
+
+        function typingEffect() {
+            let word = words[i].split("");
+            var loopTyping = function() {
+                if (word.length > 0) {
+                    document.getElementById('typewriter').innerHTML += word.shift();
+                } else {
+                    setTimeout(deletingEffect, 2000);
+                    return false;
+                }
+                timer = setTimeout(loopTyping, 100);
+            };
+            loopTyping();
+        }
+
+        function deletingEffect() {
+            let word = words[i].split("");
+            var loopDeleting = function() {
+                if (word.length > 0) {
+                    word.pop();
+                    document.getElementById('typewriter').innerHTML = word.join("");
+                } else {
+                    if (words.length > (i + 1)) {
+                        i++;
+                    } else {
+                        i = 0;
+                    }
+                    setTimeout(typingEffect, 500);
+                    return false;
+                }
+                timer = setTimeout(loopDeleting, 50);
+            };
+            loopDeleting();
+        }
+
+        typingEffect();
+    </script>
 </body>
 </html>
