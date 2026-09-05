@@ -19,69 +19,53 @@
         /* Hero / About Section */
         .hero { display: flex; align-items: center; justify-content: space-between; padding: 4rem 8%; gap: 3rem; background: linear-gradient(135deg, #f0fdfa 0%, #f8fafc 50%, #fff1f2 100%); border-bottom: 1px solid #e2e8f0; position: relative; overflow: hidden; }
         .hero-text { flex: 1.2; z-index: 2; }
-        .hero-text h1 { font-size: 2.6rem; color: #0f172a; margin-bottom: 0.4rem; font-weight: 800; letter-spacing: -0.02em; }
+        .hero-text h1 { font-size: 2.8rem; color: #0f172a; margin-bottom: 0.5rem; font-weight: 800; letter-spacing: -0.02em; }
         
         /* Subtitle Styling */
-        .fixed-subtitle { font-size: 1.1rem; background: linear-gradient(90deg, #e11d48, #0d9488); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1.5rem; font-weight: 800; letter-spacing: 0.3px; }
+        .fixed-subtitle { font-size: 1.1rem; color: #be123c; margin-bottom: 1.8rem; font-weight: 700; letter-spacing: 0.2px; }
+        .fixed-subtitle span { color: #0f766e; }
 
-        /* Modern Modernized About Section (No Plain Box) */
+        /* Clean Accent-Bordered About Box (Matching Image Exactly) */
         .about-modern-quote {
             position: relative;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
+            background: #ffffff;
             border-left: 5px solid #0d9488;
-            border-top: 1px solid rgba(226, 232, 240, 0.8);
-            border-right: 1px solid rgba(226, 232, 240, 0.8);
-            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
             border-radius: 4px 16px 16px 4px;
-            padding: 1.5rem 1.8rem;
+            padding: 1.8rem 2rem;
             margin-bottom: 2rem;
-            max-width: 720px;
-            box-shadow: 0 10px 25px -5px rgba(13, 148, 136, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
-            transition: all 0.3s ease;
-        }
-        .about-modern-quote:hover {
-            border-left-color: #e11d48;
-            transform: translateY(-2px);
-            box-shadow: 0 15px 30px -5px rgba(225, 29, 72, 0.12);
+            max-width: 680px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
         }
         .about-modern-quote p {
-            font-size: 1rem;
+            font-size: 1.05rem;
             color: #334155;
             text-align: justify;
             font-weight: 500;
-            line-height: 1.7;
+            line-height: 1.75;
             margin: 0;
         }
 
         /* Buttons */
         .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-        .btn-primary { background: linear-gradient(135deg, #0d9488, #0f766e); color: #ffffff; padding: 11px 24px; border-radius: 8px; text-decoration: none; font-size: 0.92rem; font-weight: 700; transition: 0.3s ease; display: inline-flex; align-items: center; gap: 8px; border: none; cursor: pointer; box-shadow: 0 4px 14px rgba(13, 148, 136, 0.3); }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(13, 148, 136, 0.4); }
-        .btn-secondary { background: #ffffff; color: #e11d48; border: 2px solid #fda4af; padding: 11px 24px; border-radius: 8px; text-decoration: none; font-size: 0.92rem; font-weight: 700; transition: 0.3s ease; display: inline-flex; align-items: center; gap: 8px; }
-        .btn-secondary:hover { background: #fff1f2; border-color: #e11d48; transform: translateY(-2px); }
+        .btn-primary { background: #0d9488; color: #ffffff; padding: 12px 26px; border-radius: 8px; text-decoration: none; font-size: 0.95rem; font-weight: 700; transition: 0.3s ease; display: inline-flex; align-items: center; gap: 8px; border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2); }
+        .btn-primary:hover { background: #0f766e; transform: translateY(-2px); }
+        .btn-secondary { background: #ffffff; color: #be123c; border: 1.5px solid #fda4af; padding: 12px 26px; border-radius: 8px; text-decoration: none; font-size: 0.95rem; font-weight: 700; transition: 0.3s ease; display: inline-flex; align-items: center; gap: 8px; }
+        .btn-secondary:hover { background: #fff1f2; border-color: #be123c; transform: translateY(-2px); }
 
-        /* 3D Glass Profile Image Frame */
-        .hero-img { flex: 0.8; display: flex; justify-content: center; perspective: 1000px; z-index: 2; }
+        /* Clean Profile Image Frame (Matching Image Exactly) */
+        .hero-img { flex: 0.8; display: flex; justify-content: center; z-index: 2; }
         .img-wrapper {
             position: relative;
-            padding: 12px;
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(15px);
-            border-radius: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.8);
-            box-shadow: 0 20px 40px -15px rgba(13, 148, 136, 0.25), 0 0 0 1px rgba(13, 148, 136, 0.1);
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            transform-style: preserve-3d;
-        }
-        .img-wrapper:hover {
-            transform: rotateY(-8deg) rotateX(6deg) translateY(-6px);
-            box-shadow: -15px 25px 45px -10px rgba(225, 29, 72, 0.25), 0 0 0 2px rgba(225, 29, 72, 0.2);
+            padding: 10px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+            border: 1px solid #f1f5f9;
         }
         .img-wrapper img { 
-            width: 250px; 
-            height: 270px; 
-            border-radius: 16px; 
+            width: 270px; 
+            height: 310px; 
+            border-radius: 12px; 
             object-fit: cover; 
             display: block;
         }
@@ -155,7 +139,7 @@
 
         @media (max-width: 768px) {
             .hero { flex-direction: column-reverse; text-align: left; padding: 2.5rem 5%; }
-            .img-wrapper img { width: 210px; height: 230px; }
+            .img-wrapper img { width: 220px; height: 250px; }
             .section { padding: 2.5rem 5%; }
             .pills-container { grid-template-columns: 1fr; }
             .project-header { flex-direction: column; gap: 0.4rem; }
@@ -182,10 +166,10 @@
             <h1>Md. Obaidul Islam</h1>
             
             <div class="fixed-subtitle">
-                Statistical Modeling | Data Science | Health Data Research
+                Statistical Modeling <span>|</span> Data Science <span>|</span> Health Data Research
             </div>
             
-            <!-- Modern Accent-Bordered About Box -->
+            <!-- Exact Match Box Design from Image -->
             <div class="about-modern-quote">
                 <p>I am a Statistics graduate interested in statistical modeling, data science, machine learning, and health data research. My research experience involves analyzing real-world survey data and applying statistical and machine learning methods to better understand complex problems in population health.</p>
             </div>
@@ -196,10 +180,10 @@
             </div>
         </div>
 
-        <!-- 3D Glass Profile Frame -->
+        <!-- Clean Picture Frame matching the uploaded image -->
         <div class="hero-img">
             <div class="img-wrapper">
-                <img src="Profile.png" alt="Md. Obaidul Islam" onerror="this.src='https://via.placeholder.com/250x270?text=Profile.png'">
+                <img src="Profile.png" alt="Md. Obaidul Islam" onerror="this.src='https://via.placeholder.com/270x310?text=Profile.png'">
             </div>
         </div>
     </section>
