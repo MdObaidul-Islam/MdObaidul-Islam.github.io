@@ -160,6 +160,50 @@
         .contact-box h4 { font-size: 1rem; color: #000000; margin-bottom: 0.2rem; font-weight: 800; }
         .contact-box a, .contact-box p { font-size: 0.92rem; color: #be123c; text-decoration: none; font-weight: 700; word-break: break-word; }
         .contact-box a:hover { color: #0d9488; text-decoration: underline; }
+        /* Professional Education Section Styling */
+        .edu-card {
+            background: #ffffff;
+            border: 1.5px solid #99f6e4;
+            border-left: 4px solid #0d9488;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.2rem;
+            box-shadow: 0 4px 14px rgba(13, 148, 136, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .edu-card:hover {
+            transform: translateY(-3px);
+            border-left-color: #be123c;
+            box-shadow: 0 10px 22px rgba(13, 148, 136, 0.12);
+        }
+
+        .edu-dept {
+            font-size: 0.95rem;
+            color: #334155;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .edu-inst {
+            font-size: 0.9rem;
+            color: #0f766e;
+            font-weight: 700;
+            margin-top: 0.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .edu-dept svg, .edu-inst svg {
+            width: 16px;
+            height: 16px;
+            fill: #0d9488;
+            flex-shrink: 0;
+        }
 
         footer { text-align: center; padding: 1.5rem; background: #0f172a; color: #ffffff; font-size: 0.88rem; font-weight: 600; border-top: 3px solid #be123c; }
         @media (max-width: 768px) {
@@ -489,39 +533,47 @@
     </section>
         
 <!-- Education Section -->
-        <section class="section" id="education">
-            <div class="section-title-wrap">
-                <h2 class="section-title">
-                    <svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6l9-4.91V17h2V9L12 3z"/></svg>
-                    Education
-                </h2>
-                <div class="title-line"></div>
-            </div>
-    
-            <!-- M.Sc. Degree -->
-            <div class="card">
-                <div class="project-header">
-                    <div class="project-title">🎓 M.Sc. in Statistics and Data Science</div>
-                    <span class="status-badge status-progress">2026 – Present</span>
-                </div>
-                <div class="card-sub" style="color: #0d9488; font-weight: 700; line-height: 1.6;">
-                    Department of Statistics and Data Science <br>
-                    Pabna University of Science and Technology, Bangladesh
-                </div>
-            </div>
-    
-            <!-- B.Sc. Degree -->
-            <div class="card">
-                <div class="project-header">
-                    <div class="project-title">🎓 B.Sc. (Honours) in Statistics</div>
-                    <span class="status-badge status-completed">Graduated: 2026</span>
-                </div>
-                <div class="card-sub" style="color: #0d9488; font-weight: 700; line-height: 1.6;">
-                    Department of Statistics and Data Science <br>
-                    Pabna University of Science and Technology, Bangladesh
-                </div>
-            </div>
-        </section>
+<section class="section" id="education">
+    <div class="section-title-wrap">
+        <h2 class="section-title">
+            <svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6l9-4.91V17h2V9L12 3z"/></svg>
+            Education
+        </h2>
+        <div class="title-line"></div>
+    </div>
+
+    <!-- M.Sc. Degree -->
+    <div class="edu-card">
+        <div class="project-header">
+            <div class="project-title">🎓 Master of Science (M.Sc.) in Statistics and Data Science</div>
+            <span class="status-badge status-progress">2026 – Present</span>
+        </div>
+        <div class="edu-dept">
+            <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6l9-4.91V17h2V9L12 3z"/></svg>
+            Department of Statistics and Data Science
+        </div>
+        <div class="edu-inst">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5-2.5z"/></svg>
+            Pabna University of Science and Technology, Bangladesh
+        </div>
+    </div>
+
+    <!-- B.Sc. Degree -->
+    <div class="edu-card">
+        <div class="project-header">
+            <div class="project-title">🎓 Bachelor of Science (B.Sc. Honours) in Statistics</div>
+            <span class="status-badge status-completed">Graduated: 2026</span>
+        </div>
+        <div class="edu-dept">
+            <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6l9-4.91V17h2V9L12 3z"/></svg>
+            Department of Statistics and Data Science
+        </div>
+        <div class="edu-inst">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5-2.5z"/></svg>
+            Pabna University of Science and Technology, Bangladesh
+        </div>
+    </div>
+</section>
     
   <!-- Contact Section -->
     <section class="section section-alt" id="contact">
