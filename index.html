@@ -135,36 +135,73 @@
         .link-btn { font-size: 0.85rem; font-weight: 700; color: #be123c; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; border: 1.5px solid #fecdd3; background: #fff0f3; padding: 6px 14px; border-radius: 6px; transition: 0.25s ease; }
         .link-btn:hover { background: #be123c; color: #ffffff; border-color: #be123c; transform: translateY(-1px); }
 
-        /* Education Cards */
-        .edu-card { background: #ffffff; border: 1.5px solid #99f6e4; padding: 1.5rem; border-radius: 12px; margin-bottom: 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.03); transition: all 0.3s ease; }
-        .edu-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(13, 148, 136, 0.12); border-color: #be123c; }
-        .edu-dept, .edu-inst { font-size: 0.92rem; color: #334155; font-weight: 600; display: flex; align-items: center; gap: 8px; margin-top: 0.4rem; }
-        .edu-dept svg, .edu-inst svg { width: 18px; height: 18px; fill: #0d9488; flex-shrink: 0; }
+/* Contact Section Grid */
+        .contact-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 1.2rem; 
+            margin-top: 1.5rem;
+        }
+        .contact-box { background: #ffffff; border: 1.5px solid #99f6e4; padding: 1.2rem; border-radius: 10px; text-align: center; transition: 0.3s ease; }
+        .contact-box:hover { border-color: #be123c; transform: translateY(-3px); box-shadow: 0 6px 16px rgba(13, 148, 136, 0.1); }
+        .contact-box svg { width: 32px; height: 32px; fill: #0d9488; margin-bottom: 0.5rem; }
+        .contact-box h4 { font-size: 1rem; color: #000000; margin-bottom: 0.2rem; font-weight: 800; }
+        .contact-box a, .contact-box p { font-size: 0.92rem; color: #be123c; text-decoration: none; font-weight: 700; word-break: break-word; }
+        .contact-box a:hover { color: #0d9488; text-decoration: underline; }
 
-        /* Contact Section */
-        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; margin-top: 1rem; }
-        .contact-box { background: #ffffff; border: 1.5px solid #99f6e4; border-radius: 12px; padding: 1.5rem; text-align: center; transition: 0.3s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
-        .contact-box:hover { transform: translateY(-4px); border-color: #be123c; box-shadow: 0 8px 20px rgba(225, 29, 72, 0.1); }
-        .contact-box svg { width: 32px; height: 32px; fill: #be123c; margin-bottom: 0.6rem; }
-        .contact-box h4 { font-size: 1rem; font-weight: 800; color: #0f172a; margin-bottom: 0.4rem; }
-        .contact-box p, .contact-box a { font-size: 0.9rem; font-weight: 600; color: #0d9488; text-decoration: none; word-break: break-all; }
-        .contact-box a:hover { color: #be123c; text-decoration: underline; }
+        /* Professional Education Section Styling */
+        .edu-card {
+            background: #ffffff;
+            border: 1.5px solid #99f6e4;
+            border-left: 4px solid #0d9488;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.2rem;
+            box-shadow: 0 4px 14px rgba(13, 148, 136, 0.05);
+            transition: all 0.3s ease;
+        }
+        .edu-card:hover {
+            transform: translateY(-3px);
+            border-left-color: #be123c;
+            box-shadow: 0 10px 22px rgba(13, 148, 136, 0.12);
+        }
+        .edu-dept {
+            font-size: 0.95rem;
+            color: #334155;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .edu-inst {
+            font-size: 0.9rem;
+            color: #0f766e;
+            font-weight: 700;
+            margin-top: 0.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .edu-dept svg, .edu-inst svg {
+            width: 16px;
+            height: 16px;
+            fill: #0d9488;
+            flex-shrink: 0;
+        }
 
         footer { text-align: center; padding: 1.5rem; background: #0f172a; color: #ffffff; font-size: 0.88rem; font-weight: 600; border-top: 3px solid #be123c; }
-
         @media (max-width: 768px) {
             .hero { flex-direction: column-reverse; text-align: left; padding: 2.5rem 5%; }
             .img-wrapper img { width: 210px; height: 230px; }
             .section { padding: 2rem 5%; }
             .pills-container { grid-template-columns: 1fr; }
             .project-header { flex-direction: column; gap: 0.4rem; }
-            nav a { margin-left: 10px; margin-top: 5px; }
-            .contact-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-
+    
 <header>
     <div class="logo">Md. Obaidul Islam</div>
     <nav>
@@ -201,11 +238,11 @@
             <h1>Hi, I'm Obaidul</h1>
             
             <div class="fixed-subtitle">
-                An Aspiring Data Scientist Exploring Statistical Modeling & Health Data Research
+                An Aspiring Data Scientist Focused on Statistical Modeling & Health Data Research
             </div>
             
             <div class="about-modern-quote">
-                <p>I am a Statistics graduate interested in statistical methods, data science, machine learning, and health data research. My research experience involves analyzing real-world survey data and applying statistical and machine learning methods to better understand complex problems in population health.</p>
+                <p>I am a Statistics graduate with interests in data science, machine learning, and applied statistical research. My research experience involves analyzing real-world survey data and applying statistical and machine learning methods to better understand complex problems in population health.</p>
             </div>
 
             <div class="hero-btns">
