@@ -13,20 +13,17 @@
         /* Navigation Bar */
         header { background: #0f172a; position: sticky; top: 0; padding: 1rem 8%; display: flex; justify-content: space-between; align-items: center; z-index: 100; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.15); border-bottom: 3px solid #be123c; }
         .logo { font-size: 1.25rem; font-weight: 800; color: #ffffff; letter-spacing: 0.5px; }
-        nav a { margin-left: 20px; text-decoration: none; color: #f1f5f9; font-weight: 700; font-size: 0.92rem; transition: 0.25s ease; }
+        nav { display: flex; align-items: center; flex-wrap: wrap; }
+        nav a { margin-left: 20px; text-decoration: none; color: #f1f5f9; font-weight: 700; font-size: 0.92rem; transition: 0.25s ease; display: inline-flex; align-items: center; gap: 6px; }
         nav a:hover { color: #2dd4bf; }
 
-        /* =========================================================
-           Hero / About Section (EXACTLY FROM FIRST CODE)
-           ========================================================= */
+        /* Hero / About Section */
         .hero { display: flex; align-items: center; justify-content: space-between; padding: 4rem 8%; gap: 3rem; background: linear-gradient(135deg, #f0fdfa 0%, #f8fafc 50%, #fff1f2 100%); border-bottom: 1px solid #e2e8f0; position: relative; overflow: hidden; }
         .hero-text { flex: 1.2; z-index: 2; }
         .hero-text h1 { font-size: 2.6rem; color: #0f172a; margin-bottom: 0.4rem; font-weight: 800; letter-spacing: -0.02em; }
         
-        /* Subtitle Styling */
         .fixed-subtitle { font-size: 1.1rem; background: linear-gradient(90deg, #e11d48, #0d9488); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1.5rem; font-weight: 800; letter-spacing: 0.3px; }
 
-        /* Modern Accent Bordered About Box */
         .about-modern-quote {
             position: relative;
             background: rgba(255, 255, 255, 0.85);
@@ -56,14 +53,12 @@
             margin: 0;
         }
 
-        /* Buttons in Hero */
         .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
         .btn-primary { background: linear-gradient(135deg, #0d9488, #0f766e); color: #ffffff; padding: 11px 24px; border-radius: 8px; text-decoration: none; font-size: 0.92rem; font-weight: 700; transition: 0.3s ease; display: inline-flex; align-items: center; gap: 8px; border: none; cursor: pointer; box-shadow: 0 4px 14px rgba(13, 148, 136, 0.3); }
         .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(13, 148, 136, 0.4); }
-        .btn-secondary { background: #ffffff; color: #e11d48; border: 2px solid #fda4af; padding: 11px 24px; border-radius: 8px; text-decoration: none; font-size: 0.92rem; font-weight: 700; transition: 0.3s ease; display: inline-flex; align-items: center; gap: 8px; }
-        .btn-secondary:hover { background: #fff1f2; border-color: #e11d48; transform: translateY(-2px); }
+        .btn-secondary { background: #ffffff; color: #0f172a; border: 2px solid #0d9488; padding: 11px 24px; border-radius: 8px; text-decoration: none; font-size: 0.92rem; font-weight: 700; transition: 0.3s ease; display: inline-flex; align-items: center; gap: 8px; }
+        .btn-secondary:hover { background: #f0fdfa; border-color: #be123c; color: #be123c; transform: translateY(-2px); }
 
-        /* 3D Glass Profile Image Frame */
         .hero-img { flex: 0.8; display: flex; justify-content: center; perspective: 1000px; z-index: 2; }
         .img-wrapper {
             position: relative;
@@ -80,53 +75,47 @@
             transform: rotateY(-8deg) rotateX(6deg) translateY(-6px);
             box-shadow: -15px 25px 45px -10px rgba(225, 29, 72, 0.25), 0 0 0 2px rgba(225, 29, 72, 0.2);
         }
-        .img-wrapper img { 
-            width: 250px; 
-            height: 270px; 
-            border-radius: 16px; 
-            object-fit: cover; 
-            display: block;
-        }
+        .img-wrapper img { width: 250px; height: 270px; border-radius: 16px; object-fit: cover; display: block; }
 
-        /* =========================================================
-           Subsequent Sections (FOLLOWING SECOND CODE'S DESIGN)
-           ========================================================= */
+        /* Sections General */
         .section { padding: 3rem 8%; border-bottom: 1px solid #99f6e4; }
         .section-alt { background: #f0fdfa; }
         
-        /* Section Title Structure */
         .section-title-wrap { width: 100%; margin-bottom: 1.5rem; }
         .section-title { font-size: 1.5rem; color: #be123c; margin-bottom: 0.5rem; font-weight: 800; display: flex; align-items: center; gap: 0.6rem; }
         .section-title svg { width: 28px; height: 28px; fill: #be123c; }
         .title-line { width: 50px; height: 4px; background: linear-gradient(90deg, #be123c, #0d9488); border-radius: 2px; margin-top: 4px; }
 
-        /* Expertise Block Frame */
+        /* Expertise Section */
         .expertise-block { background: #ffffff; border: 1.5px solid #99f6e4; border-radius: 12px; padding: 1.8rem; margin-bottom: 1.5rem; box-shadow: 0 4px 16px rgba(13, 148, 136, 0.06); }
         .sub-title { font-size: 1.2rem; color: #be123c; font-weight: 800; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.5rem; }
         .sub-title svg { width: 22px; height: 22px; fill: #be123c; }
 
-        /* Grouped Grid Layout */
         .grouped-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
         .group-card { background: #e6fffa; border: 1.5px solid #99f6e4; border-radius: 10px; padding: 1.4rem; transition: 0.3s ease; }
         .group-card:hover { transform: translateY(-4px); background: #ffffff; border-color: #be123c; box-shadow: 0 8px 20px rgba(13, 148, 136, 0.12); }
         .group-card h4 { font-size: 1rem; color: #000000; margin-bottom: 1rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; }
 
-        /* Pills Container */
+        .res-grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; margin-top: 1rem; }
+        .res-item-card { background: #ffffff; border: 1.5px solid #99f6e4; border-top: 4px solid #0d9488; border-radius: 10px; padding: 1.2rem; box-shadow: 0 4px 12px rgba(13, 148, 136, 0.05); transition: all 0.3s ease; }
+        .res-item-card:hover { transform: translateY(-3px); border-top-color: #be123c; box-shadow: 0 8px 20px rgba(13, 148, 136, 0.12); }
+        .res-item-title { font-size: 0.98rem; font-weight: 800; color: #be123c; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+        .res-item-desc { font-size: 0.88rem; color: #334155; line-height: 1.5; font-weight: 500; text-align: justify; }
+
         .pills-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
         .pill { background: #ffffff; border: 1.5px solid #5eead4; color: #0f766e; padding: 8px 6px; border-radius: 16px; font-size: 0.78rem; font-weight: 700; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.03); transition: 0.2s ease; display: flex; align-items: center; justify-content: center; line-height: 1.2; }
         .pill:hover { background: #be123c; color: #ffffff; border-color: #be123c; }
 
         .role-pill { display: inline-block; background: #ffffff; border: 1.5px solid #5eead4; color: #0f766e; padding: 6px 16px; border-radius: 20px; font-weight: 800; font-size: 0.88rem; margin-bottom: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.03); }
-        .highlight-label { color: #0d9488; font-weight: 800; }
 
-        /* Cards & Hover Effect */
-        .card { background: #ffffff; border: 1.5px solid #99f6e4; padding: 1.5rem; border-radius: 12px; margin-bottom: 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.03); transition: all 0.3s ease; }
+        /* Cards & Projects */
+        .card { background: #ffffff; border: 1.5px solid #99f6e4; padding: 1.5rem; border-radius: 12px; margin-bottom: 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.03); transition: all 0.3s ease; position: relative; }
         .card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(13, 148, 136, 0.12); border-color: #be123c; }
         .card h3 { color: #000000; margin-bottom: 0.3rem; font-size: 1.15rem; font-weight: 800; }
         .card-sub { color: #be123c; font-weight: 700; font-size: 0.9rem; margin-bottom: 0.5rem; }
-        .card-tag { display: inline-block; background: #fff0f3; color: #be123c; border: 1px solid #fecdd3; font-size: 0.78rem; font-weight: 800; padding: 3px 12px; border-radius: 20px; margin-bottom: 0.6rem; }
 
-        /* Project Cards Structure */
+        .card-tag { display: inline-block; background: #ffe4e6; color: #be123c; font-size: 0.78rem; font-weight: 800; padding: 3px 10px; border-radius: 12px; margin-bottom: 0.6rem; border: 1px solid #fecdd3; }
+
         .project-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
         .project-title { font-size: 1.2rem; font-weight: 800; color: #000000; flex: 1; }
         
@@ -142,114 +131,94 @@
         .tools-label { font-size: 0.85rem; font-weight: 800; color: #be123c; margin-right: 4px; }
         .tech-pill { background: #e6fffa; border: 1px solid #5eead4; color: #0f766e; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 700; }
 
-        /* Buttons in Cards */
         .card-links { display: flex; gap: 0.8rem; flex-wrap: wrap; }
         .link-btn { font-size: 0.85rem; font-weight: 700; color: #be123c; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; border: 1.5px solid #fecdd3; background: #fff0f3; padding: 6px 14px; border-radius: 6px; transition: 0.25s ease; }
         .link-btn:hover { background: #be123c; color: #ffffff; border-color: #be123c; transform: translateY(-1px); }
 
-        /* Contact Section Grid */
-        .contact-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-            gap: 1.2rem; 
-            margin-top: 1.5rem;
-        }
-        .contact-box { background: #ffffff; border: 1.5px solid #99f6e4; padding: 1.2rem; border-radius: 10px; text-align: center; transition: 0.3s ease; }
-        .contact-box:hover { border-color: #be123c; transform: translateY(-3px); box-shadow: 0 6px 16px rgba(13, 148, 136, 0.1); }
-        .contact-box svg { width: 32px; height: 32px; fill: #0d9488; margin-bottom: 0.5rem; }
-        .contact-box h4 { font-size: 1rem; color: #000000; margin-bottom: 0.2rem; font-weight: 800; }
-        .contact-box a, .contact-box p { font-size: 0.92rem; color: #be123c; text-decoration: none; font-weight: 700; word-break: break-word; }
-        .contact-box a:hover { color: #0d9488; text-decoration: underline; }
-        /* Professional Education Section Styling */
-        .edu-card {
-            background: #ffffff;
-            border: 1.5px solid #99f6e4;
-            border-left: 4px solid #0d9488;
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1.2rem;
-            box-shadow: 0 4px 14px rgba(13, 148, 136, 0.05);
-            transition: all 0.3s ease;
-        }
+        /* Education Cards */
+        .edu-card { background: #ffffff; border: 1.5px solid #99f6e4; padding: 1.5rem; border-radius: 12px; margin-bottom: 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.03); transition: all 0.3s ease; }
+        .edu-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(13, 148, 136, 0.12); border-color: #be123c; }
+        .edu-dept, .edu-inst { font-size: 0.92rem; color: #334155; font-weight: 600; display: flex; align-items: center; gap: 8px; margin-top: 0.4rem; }
+        .edu-dept svg, .edu-inst svg { width: 18px; height: 18px; fill: #0d9488; flex-shrink: 0; }
 
-        .edu-card:hover {
-            transform: translateY(-3px);
-            border-left-color: #be123c;
-            box-shadow: 0 10px 22px rgba(13, 148, 136, 0.12);
-        }
-
-        .edu-dept {
-            font-size: 0.95rem;
-            color: #334155;
-            font-weight: 600;
-            margin-top: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .edu-inst {
-            font-size: 0.9rem;
-            color: #0f766e;
-            font-weight: 700;
-            margin-top: 0.25rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .edu-dept svg, .edu-inst svg {
-            width: 16px;
-            height: 16px;
-            fill: #0d9488;
-            flex-shrink: 0;
-        }
+        /* Contact Section */
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; margin-top: 1rem; }
+        .contact-box { background: #ffffff; border: 1.5px solid #99f6e4; border-radius: 12px; padding: 1.5rem; text-align: center; transition: 0.3s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+        .contact-box:hover { transform: translateY(-4px); border-color: #be123c; box-shadow: 0 8px 20px rgba(225, 29, 72, 0.1); }
+        .contact-box svg { width: 32px; height: 32px; fill: #be123c; margin-bottom: 0.6rem; }
+        .contact-box h4 { font-size: 1rem; font-weight: 800; color: #0f172a; margin-bottom: 0.4rem; }
+        .contact-box p, .contact-box a { font-size: 0.9rem; font-weight: 600; color: #0d9488; text-decoration: none; word-break: break-all; }
+        .contact-box a:hover { color: #be123c; text-decoration: underline; }
 
         footer { text-align: center; padding: 1.5rem; background: #0f172a; color: #ffffff; font-size: 0.88rem; font-weight: 600; border-top: 3px solid #be123c; }
+
         @media (max-width: 768px) {
             .hero { flex-direction: column-reverse; text-align: left; padding: 2.5rem 5%; }
             .img-wrapper img { width: 210px; height: 230px; }
             .section { padding: 2rem 5%; }
             .pills-container { grid-template-columns: 1fr; }
             .project-header { flex-direction: column; gap: 0.4rem; }
+            nav a { margin-left: 10px; margin-top: 5px; }
+            .contact-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">Md. Obaidul Islam</div>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#expertise">Research & Expertise</a>
-            <a href="#projects">Projects</a>
-            <a href="#publications">Publications</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<header>
+    <div class="logo">Md. Obaidul Islam</div>
+    <nav>
+        <a href="#about">
+            <svg style="width:16px; height:16px; fill:currentColor;" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            About Me
+        </a>
+        <a href="#expertise">
+            <svg style="width:16px; height:16px; fill:currentColor;" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+            Expertise
+        </a>
+        <a href="#projects">
+            <svg style="width:16px; height:16px; fill:currentColor;" viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+            Projects
+        </a>
+        <a href="#publications">
+            <svg style="width:16px; height:16px; fill:currentColor;" viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg>
+            Publications
+        </a>
+        <a href="#education">
+            <svg style="width:16px; height:16px; fill:currentColor;" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6l9-4.91V17h2V9L12 3z"/></svg>
+            Education
+        </a>
+        <a href="#contact">
+            <svg style="width:16px; height:16px; fill:currentColor;" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5l-8-5V6l8 5l8-5v2z"/></svg>
+            Contact Me
+        </a>
+    </nav>
+</header>
 
-    <!-- Hero / About Section (FIRST CODE STYLE) -->
+    <!-- Hero / About Section -->
     <section class="hero" id="about">
         <div class="hero-text">
-            <h1>Md. Obaidul Islam</h1>
+            <h1>Hi, I'M Obaidul</h1>
             
             <div class="fixed-subtitle">
-                Statistical Modeling | Data Science | Health Data Research
+                An Aspiring Data Scientist Exploring Statistical Modeling & Health Data Research
             </div>
             
-            <!-- Modern Accent-Bordered Box -->
             <div class="about-modern-quote">
-                <p>I am a Statistics graduate interested in statistical modeling, data science, machine learning, and health data research. My research experience involves analyzing real-world survey data and applying statistical and machine learning methods to better understand complex problems in population health.</p>
+                <p>I am a Statistics graduate interested in statistical methods, data science, machine learning, and health data research. My research experience involves analyzing real-world survey data and applying statistical and machine learning methods to better understand complex problems in population health.</p>
             </div>
 
             <div class="hero-btns">
-                <a href="CV.pdf" download="Md_Obaidul_Islam_CV.pdf" class="btn-primary">📄 Download CV</a>
-                <a href="#contact" class="btn-secondary">✉️ Get In Touch</a>
+                <a href="CV.pdf" download="Md_Obaidul_Islam_CV.pdf" class="btn-primary">📄 View My CV</a>
+                <a href="https://github.com/MdObaidul-Islam" target="_blank" class="btn-secondary">
+                    <svg style="width: 18px; height: 18px; fill: currentColor;" viewBox="0 0 24 24">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    GitHub Profile
+                </a>
             </div>
         </div>
 
-        <!-- 3D Glass Profile Frame -->
         <div class="hero-img">
             <div class="img-wrapper">
                 <img src="Profile.png" alt="Md. Obaidul Islam" onerror="this.src='https://via.placeholder.com/250x270?text=Profile.png'">
@@ -257,12 +226,12 @@
         </div>
     </section>
 
-    <!-- Research & Expertise Section (SECOND CODE STYLE) -->
+    <!-- Research & Expertise Section -->
     <section class="section section-alt" id="expertise">
         <div class="section-title-wrap">
             <h2 class="section-title">
                 <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
-                Research & Expertise
+                Expertise
             </h2>
             <div class="title-line"></div>
         </div>
@@ -313,13 +282,26 @@
                 <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
                 2. Research Experience
             </h3>
-            <span class="role-pill">Undergraduate Researcher</span>
-            <ul style="margin-left: 1.2rem; line-height: 1.6;">
-                <li><span class="highlight-label">Statistical Modeling:</span> Applied statistical methods to analyze real-world data and identify meaningful patterns and relationships.</li>
-                <li><span class="highlight-label">Data Analysis:</span> Performed data preprocessing, exploratory analysis, feature engineering, and statistical inference.</li>
-                <li><span class="highlight-label">Data Science & Machine Learning:</span> Applied data science and machine learning for predictive modeling and data-driven research.</li>
-                <li><span class="highlight-label">Explainable & Causal Analysis:</span> Applied Explainable AI and causal inference for interpretable and data-driven research.</li>
-            </ul>
+            <span class="role-pill">Student Researcher | Statistics & Data Science</span>
+            
+            <div class="res-grid-container">
+                <div class="res-item-card">
+                    <div class="res-item-title">🔍 Applied Research</div>
+                    <div class="res-item-desc">Applied statistical and data-driven approaches to real-world research problems across diverse domains.</div>
+                </div>
+                <div class="res-item-card">
+                    <div class="res-item-title">📊 Modeling & Analytics</div>
+                    <div class="res-item-desc">Developed and evaluated statistical and machine learning models for predictive and explanatory analysis.</div>
+                </div>
+                <div class="res-item-card">
+                    <div class="res-item-title">🧬 Advanced Methods</div>
+                    <div class="res-item-desc">Experienced in applying modern analytical and computational methods to complex research questions.</div>
+                </div>
+                <div class="res-item-card">
+                    <div class="res-item-title">💡 Research Insights</div>
+                    <div class="res-item-desc">Transformed complex datasets and analytical results into clear, interpretable, and evidence-based insights.</div>
+                </div>
+            </div>
         </div>
 
         <!-- 3. Skills -->
@@ -362,6 +344,7 @@
             </div>
         </div>
     </section>
+
     <!-- Projects Section -->
     <section class="section" id="projects">
         <div class="section-title-wrap">
@@ -372,17 +355,17 @@
             <div class="title-line"></div>
         </div>
         
-     <!-- Project 1 -->
+        <!-- Project 1 -->
         <div class="card">
             <div class="project-header">
-                <div class="project-title">📄 Project 1: Applied Statistical Modeling, Causal Inference & Policy Simulation Research</div>
+                <h3 class="project-title">📄 Project 1: Applied Statistical Modeling, Causal Inference & Policy Simulation Research</h3>
                 <span class="status-badge status-completed">🟢 Completed</span>
             </div>
             <div class="card-sub">Project Title: Socioeconomic and Health-System Correlates of Cesarean Delivery in Bangladesh</div>
             <p class="project-desc">Population-level research using 5,052 nationally representative birth records from BDHS 2022, integrating survey-weighted GEE, machine learning, Stacking Ensemble, and SHAP-based Explainable AI (XAI) to investigate socioeconomic and health-system factors associated with cesarean delivery.</p>
             <div class="data-source">📌 Data Source: BDHS 2022 (Bangladesh Demographic and Health Survey)</div>
             <div class="tools-wrapper">
-                <span class="tools-label">🛠️Tools & Technologies:</span>
+                <span class="tools-label">🛠️ Tools & Technologies:</span>
                 <span class="tech-pill">Python</span>
                 <span class="tech-pill">Google Colab</span>
                 <span class="tech-pill">SPSS</span>
@@ -391,7 +374,6 @@
                 <span class="tech-pill">Policy Simulation</span>
             </div>
             <div class="card-links">
-                <!-- প্রজেক্ট ১: এখানে ক্লিক করলে সরাসরি আপনার গিটহাব প্রোফাইলে নিয়ে যাবে -->
                 <a href="https://github.com/MdObaidul-Islam" target="_blank" class="link-btn">⚙️ GitHub Repo (WIP)</a>
                 <a href="Research%20Summary.pdf" target="_blank" class="link-btn">📄 View About Project Summary</a>
             </div>
@@ -400,14 +382,14 @@
         <!-- Project 2 -->
         <div class="card">
             <div class="project-header">
-                <div class="project-title">📄 Project 2: Predictive Machine Learning & Explainable AI Research</div>
+                <h3 class="project-title">📄 Project 2: Predictive Machine Learning & Explainable AI Research</h3>
                 <span class="status-badge status-completed">🟢 Completed</span>
             </div>
             <div class="card-sub">Project Title: Socioeconomic Determinants of Cesarean Section Delivery: An EFAST 2026 Conference Paper</div>
             <p class="project-desc">Developed a 3-stage analytical framework integrating survey-weighted GEE, 6 machine learning classifiers, and SHAP-based Explainable AI to identify key socioeconomic and healthcare-system determinants of cesarean delivery, with private health facility usage showing the strongest association (Cramér's V = 0.763).</p>
             <div class="data-source">📌 Data Source: BDHS 2022 (Bangladesh Demographic and Health Survey)</div>
             <div class="tools-wrapper">
-                <span class="tools-label">🛠️Tools & Techniques:</span>
+                <span class="tools-label">🛠️ Tools & Techniques:</span>
                 <span class="tech-pill">Python</span>
                 <span class="tech-pill">Scikit-Learn</span>
                 <span class="tech-pill">Jupyter Notebook</span>
@@ -416,7 +398,6 @@
                 <span class="tech-pill">Explainable AI (XAI)</span>
             </div>
             <div class="card-links">
-                <!-- প্রজেক্ট ২: নির্দিষ্ট রেপোজিটরির সঠিক কোড লিংকটি যুক্ত করা হয়েছে -->
                 <a href="https://github.com/MdObaidul-Islam/cesarean-delivery-healthcare-bd" target="_blank" class="link-btn">💻 View Code (GitHub)</a>
                 <a href="https://github.com/MdObaidul-Islam/cesarean-delivery-healthcare-bd/blob/main/paper/Conference_Abstruct.pdf" target="_blank" class="link-btn">📄 Abstract & Slide</a>
             </div>
@@ -425,7 +406,7 @@
         <!-- Project 3 -->
         <div class="card">
             <div class="project-header">
-                <div class="project-title">📄 Project 3: E-Commerce & Retail Decision Support System (DSS)</div>
+                <h3 class="project-title">📄 Project 3: E-Commerce & Retail Decision Support System (DSS)</h3>
                 <span class="status-badge status-classwork">🔵 Class Work</span>
             </div>
             <div class="card-sub">Integrated Retail Analytics</div>
@@ -445,10 +426,7 @@
                 <span class="tech-pill">Clustering</span>
             </div>
             <div class="card-links">
-                <!-- ১. Retail_Analytic.pdf ফাইলের সরাসরি লিঙ্ক -->
                 <a href="https://github.com/MdObaidul-Islam/Integrated-Retail-Analytics/blob/main/Retail_Analytic.pdf" target="_blank" class="link-btn">📄 View Assignment (PDF)</a>
-                
-                <!-- ২. Retail_Analytics.ipynb কোড ফাইলের সরাসরি লিঙ্ক -->
                 <a href="https://github.com/MdObaidul-Islam/Integrated-Retail-Analytics/blob/main/Retail_Analytics.ipynb" target="_blank" class="link-btn">💻 View Code</a>
             </div>
         </div>
@@ -456,14 +434,14 @@
         <!-- Project 4 -->
         <div class="card">
             <div class="project-header">
-                <div class="project-title">📄 Project 4: Applied Time Series & Forecasting Research</div>
+                <h3 class="project-title">📄 Project 4: Applied Time Series & Forecasting Research</h3>
                 <span class="status-badge status-progress">🟡 In Progress</span>
             </div>
             <div class="card-sub">Project Title: Forecasting Agricultural Commodity Prices and Inflation Trends in Bangladesh</div>
             <p class="project-desc">Currently developing an automated statistical forecasting pipeline to analyze decade-long macroeconomic and food price indices, comparing classical statistical models and neural networks to identify seasonal patterns, volatility, and price shocks.</p>
             <div class="data-source">📌 Data Source: Bangladesh Bureau of Statistics (BBS) / Open Data</div>
             <div class="tools-wrapper">
-                <span class="tools-label">🛠️Tools & Techniques:</span>
+                <span class="tools-label">🛠️ Tools & Techniques:</span>
                 <span class="tech-pill">R</span>
                 <span class="tech-pill">ARIMA / SARIMAX</span>
                 <span class="tech-pill">Excel</span>
@@ -479,14 +457,14 @@
         <!-- Project 5 -->
         <div class="card">
             <div class="project-header">
-                <div class="project-title">📄 Project 5: Applied Biostatistics & Survival Analysis Research</div>
+                <h3 class="project-title">📄 Project 5: Applied Biostatistics & Survival Analysis Research</h3>
                 <span class="status-badge status-progress">🟡 In Progress</span>
             </div>
             <div class="card-sub">Project Title: Risk Factor Mapping and Survival Analysis of Non-Communicable Diseases (NCDs)</div>
             <p class="project-desc">Ongoing biostatistical research focused on evaluating risk factors and survival patterns of chronic diseases, using survival analysis to estimate survival probabilities and adjusted hazard ratios across different exposure groups.</p>
             <div class="data-source">📌 Data Source: Regional Hospital Records / Public Health Registry</div>
             <div class="tools-wrapper">
-                <span class="tools-label">🛠️Tools & Techniques:</span>
+                <span class="tools-label">🛠️ Tools & Techniques:</span>
                 <span class="tech-pill">R</span>
                 <span class="tech-pill">SPSS</span>
                 <span class="tech-pill">Excel</span>
@@ -498,7 +476,6 @@
                 <a href="https://github.com/MdObaidul-Islam" target="_blank" class="link-btn">⚙️ GitHub Repo (WIP)</a>
             </div>
         </div>
-
     </section>
 
     <!-- Publications Section -->
@@ -514,9 +491,9 @@
         <div class="card">
             <span class="card-tag">Submitted Manuscript</span>
             <h3>Journal Manuscript</h3>
-            <p><strong>Title:</strong> Socioeconomic and Health-System Correlates of Cesarean Delivery in Bangladesh: Survey-Weighted Statistical Analysis and Explainable Machine Learning Using BDHS 2022.</p>
-            <p style="margin-top: 4px;"><strong>Journal:</strong> <em>Scientific Reports</em> (Springer Nature).</p>
-            <div class="card-links" style="margin-top: 10px;">
+            <p style="margin-top: 6px;"><strong>Title:</strong> Socioeconomic and Health-System Correlates of Cesarean Delivery in Bangladesh: Survey-Weighted Statistical Analysis and Explainable Machine Learning Using BDHS 2022.</p>
+            <p style="margin-top: 4px;"><strong>Journal:</strong> <em>Scientific Reports</em> (Springer Nature)</p>
+            <div class="card-links" style="margin-top: 12px;">
                 <a href="Research%20Summary.pdf" target="_blank" class="link-btn">📄 View About Manuscript</a>
             </div>
         </div>
@@ -524,58 +501,58 @@
         <div class="card">
             <span class="card-tag">Conference Presentation</span>
             <h3>EFAST 2026 Conference</h3>
-            <p><strong>Title:</strong> Socioeconomic Determinants of Cesarean Section Delivery in Bangladesh: A Survey-Weighted Statistical and Explainable Machine Learning Analysis.</p>
+            <p style="margin-top: 6px;"><strong>Title:</strong> Socioeconomic Determinants of Cesarean Section Delivery in Bangladesh: A Survey-Weighted Statistical and Explainable Machine Learning Analysis.</p>
             <p style="margin-top: 4px;"><strong>Role:</strong> First Author & Oral Presenter. Abstract published in the official booklet.</p>
-            <div class="card-links" style="margin-top: 10px;">
+            <div class="card-links" style="margin-top: 12px;">
                 <a href="https://github.com/MdObaidul-Islam/cesarean-delivery-healthcare-bd/blob/main/paper/Conference_Abstruct.pdf" target="_blank" class="link-btn">📄 View Abstract & Presentation Slide</a>
             </div>
         </div>
     </section>
-        
-<!-- Education Section -->
-<section class="section" id="education">
-    <div class="section-title-wrap">
-        <h2 class="section-title">
-            <svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6l9-4.91V17h2V9L12 3z"/></svg>
-            Education
-        </h2>
-        <div class="title-line"></div>
-    </div>
 
-    <!-- M.Sc. Degree -->
-    <div class="edu-card">
-        <div class="project-header">
-            <div class="project-title">🎓 Master of Science (M.Sc.) in Statistics and Data Science</div>
-            <span class="status-badge status-progress">2026 – Present</span>
+    <!-- Education Section -->
+    <section class="section" id="education">
+        <div class="section-title-wrap">
+            <h2 class="section-title">
+                <svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6l9-4.91V17h2V9L12 3z"/></svg>
+                Education
+            </h2>
+            <div class="title-line"></div>
         </div>
-        <div class="edu-dept">
-            <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6l9-4.91V17h2V9L12 3z"/></svg>
-            Department of Statistics and Data Science
-        </div>
-        <div class="edu-inst">
-            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5-2.5z"/></svg>
-            Pabna University of Science and Technology, Bangladesh
-        </div>
-    </div>
 
-    <!-- B.Sc. Degree -->
-    <div class="edu-card">
-        <div class="project-header">
-            <div class="project-title">🎓 Bachelor of Science (B.Sc. Honours) in Statistics</div>
-            <span class="status-badge status-completed">Graduated: 2026</span>
+        <!-- M.Sc. Degree -->
+        <div class="edu-card">
+            <div class="project-header">
+                <h3 class="project-title">🎓 Master of Science (M.Sc.) in Statistics and Data Science</h3>
+                <span class="status-badge status-progress">2026 – Present</span>
+            </div>
+            <div class="edu-dept">
+                <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6l9-4.91V17h2V9L12 3z"/></svg>
+                Department of Statistics and Data Science
+            </div>
+            <div class="edu-inst">
+                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5-2.5z"/></svg>
+                Pabna University of Science and Technology, Bangladesh
+            </div>
         </div>
-        <div class="edu-dept">
-            <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6l9-4.91V17h2V9L12 3z"/></svg>
-            Department of Statistics and Data Science
+
+        <!-- B.Sc. Degree -->
+        <div class="edu-card">
+            <div class="project-header">
+                <h3 class="project-title">🎓 Bachelor of Science (B.Sc. Honours) in Statistics</h3>
+                <span class="status-badge status-completed">Graduated: 2026</span>
+            </div>
+            <div class="edu-dept">
+                <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6l9-4.91V17h2V9L12 3z"/></svg>
+                Department of Statistics and Data Science
+            </div>
+            <div class="edu-inst">
+                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5-2.5z"/></svg>
+                Pabna University of Science and Technology, Bangladesh
+            </div>
         </div>
-        <div class="edu-inst">
-            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5-2.5z"/></svg>
-            Pabna University of Science and Technology, Bangladesh
-        </div>
-    </div>
-</section>
-    
-  <!-- Contact Section -->
+    </section>
+
+    <!-- Contact Section -->
     <section class="section section-alt" id="contact">
         <div class="section-title-wrap">
             <h2 class="section-title">
@@ -617,7 +594,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 Md. Obaidul Islam. All Rights Reserved.</p>
+        <p>&copy; 2026 Md. Obaidul Islam. All Rights Reserved.</p>
     </footer>
 
 </body>
