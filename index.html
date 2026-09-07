@@ -28,7 +28,21 @@
         nav a:hover { color: #2dd4bf; }
 
         /* Hero / About Section */
-        .hero { display: flex; align-items: center; justify-content: space-between; padding: 4rem 8%; gap: 3rem; background: linear-gradient(135deg, #f0fdfa 0%, #f8fafc 50%, #fff1f2 100%); border-bottom: 1px solid #e2e8f0; position: relative; overflow: hidden; }
+        .hero { 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            padding: 4rem 8%; 
+            gap: 3rem; 
+            background-image: 
+                linear-gradient(to right, rgba(13, 148, 136, 0.08) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(13, 148, 136, 0.08) 1px, transparent 1px),
+                linear-gradient(135deg, #f0fdfa 0%, #f8fafc 50%, #fff1f2 100%);
+            background-size: 30px 30px, 30px 30px, 100% 100%;
+            border-bottom: 1px solid #e2e8f0; 
+            position: relative; 
+            overflow: hidden; 
+        }
         .hero-text { flex: 1.2; z-index: 2; }
         .hero-text h1 { font-size: 2.6rem; color: #0f172a; margin-bottom: 0.4rem; font-weight: 800; letter-spacing: -0.02em; }
         
